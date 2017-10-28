@@ -2,7 +2,7 @@
 layout: default
 ---
 <!-- Sidebar -->
-<div class="vertical-menu" style = "width:25%">
+<div class="vertical-menu">
     {% for lin in site.pages %}
     {% if lin.name != "index.md" %}
     <a href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
@@ -10,7 +10,7 @@ layout: default
     {% endfor %}
 </div>
 
-<div style="margin-left:25%">
+<div class="c-content">
 <h2>{{ page.title }}</h2>
 
 {{ content }}

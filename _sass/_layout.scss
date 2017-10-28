@@ -1,17 +1,16 @@
 body {
 	color: $font-color;
 	font-family: $font-style;
-	font-size: 1.1em;
-	line-height: 1.6;
+	font-size: 1em;
+	line-height: 1.314em;
 	-webkit-font-smoothing: antialiased;
 	padding-bottom: 20em;
 	background: url('#{$baseurl}/assets/img/transition_docs_bottom.svg') 100% 100% / 1440px 220px repeat-x;
 	min-height: 100vh;
+	margin: 0;
 }
-h1,
-h2,
-h3 {
-	font-weight: 600;
+h1, h2, h3 {
+	font-weight: 300;
 	color: $heading-font-color;
 	font-family: $heading-font;
 	line-height: 1.5;
@@ -26,26 +25,29 @@ h1 {
 	}
 }
 h2 {
-	font-size: 2em;
+	font-size: 2.2em;
+	margin-bottom: 0;
 }
 
 .vertical-menu {
-	position:fixed!important;
+	position:fixed;
 	left: 10px;
-	z-index:1;
-	overflow:auto;
+	z-index: 1;
+	width: auto !important;
 }
 
 .vertical-menu a {
     background-color: #eee;
     color: black; 
     display: block; 
-    padding: 12px; 
-	text-decoration: none; 
+	text-decoration: none;
+	padding: 0.4em 0.6em;
 }
 
 .vertical-menu a:hover {
     background-color: #ccc; 
+    text-decoration: none;
+    color: #fff;
 }
 
 .vertical-menu a.active {
@@ -66,13 +68,12 @@ header {
 	padding: 0px 15px;
 	text-align: center;
 	margin: 50px 0 0;
-	height: 15vh;
+	min-height: 15vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 main {
-	padding: 0 15px;
 	max-width: $content-width;
 	margin: 0 auto;
 }
@@ -83,7 +84,17 @@ time {
 	max-width: $content-width;
 	margin: 0 auto;
 }
-.image.header{width:100%;}
+.top-bar_logo {
+	width: 100%;
+}
+
+.highlighter-rouge {
+	display:inline;
+    background-color: #f4f4f4;
+}
+.c-content {
+	background: #blue;
+}
 /* Aside */
 
 aside {
@@ -110,7 +121,6 @@ aside {
 					text-decoration: none;
 					display: block;
 					padding: 15px;
-					font-family: 'Muli', sans-serif;
 					line-height: 20px;
 					margin-bottom: -1px;
 					box-shadow: 0;
@@ -132,5 +142,5 @@ aside {
 }
 footer {
 	text-align: center;
-	padding: 40px;
+	padding: 10em 0 0 0;
 }
