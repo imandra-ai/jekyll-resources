@@ -1,0 +1,16 @@
+<aside>
+	  <div class="container">
+		    <nav>
+             <ul>
+						{% for topPage in site.pages %}
+						{% if topPage.title %}
+						 <li><a href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a></li>
+						{% endif %}
+						{% endfor %}
+             </ul>
+
+		    </nav>
+	  </div>
+</aside>
+
+<header> <h1><a href="{{site.baseurl}}"><img src = "{{ site.baseurl }}{% link assets/img/imandra_core.svg %}"</img></a></h1></header>
