@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<!-- Sidebar -->
+<div class="vertical-menu" style = "width:25%">
+    {% for lin in site.pages %}
+    {% if lin.name != "index.md" %}
+    <a href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
+    {% endif %}
+    {% endfor %}
+</div>
+
+<div style="margin-left:25%">
+<h2>{{ page.title }}</h2>
+
+{{ content }}
+</div>
