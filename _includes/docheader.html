@@ -1,10 +1,11 @@
 <aside>
 	  <div class="container">
 		    <nav>
-             <ul>
+            <ul>
+            {% assign jd = site.url | append: "/jekyll-resources/assets/img/" %}
 						{% for topPage in site.pages %}
 						{% if topPage.title %}
-						     <li><img class = image-header height = 22px src="{{topPage.img | prepend: "jekyll-resources/assets/img/"}}"></img><a href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a></li>
+						     <li><img class = image-header height = 22px src="{{topPage.img | prepend: jd}}"></img><a href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a></li>
 						{% endif %}
 						{% endfor %}
              </ul>
