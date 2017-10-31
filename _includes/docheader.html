@@ -4,7 +4,7 @@
              <ul>
 						{% for topPage in site.pages %}
 						{% if topPage.title %}
-						 <li><a href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a></li>
+						     <li><img class = image-header height = 22px src="{{topPage.img | prepend: "jekyll-resources/assets/img/"}}"></img><a href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a></li>
 						{% endif %}
 						{% endfor %}
              </ul>
@@ -13,4 +13,4 @@
 	  </div>
 </aside>
 
-<header> <h1><a href="{{site.url}}"><img src = "{{ site.baseurl }}{% link assets/img/imandra_core.svg %}"</img></a></h1></header>
+<header> <h1><a href="{{site.url}}"><img src = "{{ site.baseurl }}{% link jekyll-resources/assets/img/imandra_core.svg %}"</img></a></h1></header>
