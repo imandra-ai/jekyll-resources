@@ -3,7 +3,7 @@
 		    <nav>
             <ul>
 				 	      <li><a href="{{ site.url }}">
-						        <img class = image-header height = 22px src = "{{ site.baseurl }}{% link jekyll-resources/assets/img/imandra_markets_sign.svg %}"</img>
+						        <img class = image-header height = 22px src = "{{ site.baseurl }}{% link jekyll-resources/assets/img/imandra_markets_sign.svg %}">
 					      </a></li>
 						    {% for collection in site.collections %} 
 						    {% assign colName = collection.label %}
@@ -16,5 +16,5 @@
 	  </div>
 </aside>
 
-<header> <h1><a href="{{site.baseurl}}"><img class = image-header img src = "{{ site.baseurl }}{% link assets/img/site_specific_image.svg %}"</img></a></h1></header>
+<header><img class="site_specific_image" src="{{ site.baseurl }}{% link assets/img/site_specific_image.svg %}"></header>
   

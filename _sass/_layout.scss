@@ -5,7 +5,7 @@ body {
 	line-height: 1.314em;
 	-webkit-font-smoothing: antialiased;
 	padding-bottom: 20em;
-	background: url('#{$baseurl}/assets/img/transition_docs_bottom.svg') 100% 100% / 1440px 220px repeat-x;
+	background: url('#{$baseurl}/assets/img/transition_footer.svg') 100% 100% / 1440px 220px repeat-x;
 	min-height: 100vh;
 	margin: 0;
 }
@@ -65,15 +65,15 @@ a:hover {
 }
 header {
 	display: flex;
+	min-height: 41vh;
+	margin: 0;
+	padding-top: 2em 0 0 0;
 	justify-content: center;
 	align-items: center;
-	margin: 0;
-	min-height: 15vh;
-	padding: 0px 15px;
 	text-align: center;
 	background:
-		url("../jekyll-resources/assets/img/ai_dc.svg") 95% 105% / 45% no-repeat,
-		url("../jekyll-resources/assets/img/ai_dc.svg") bottom center / 150% no-repeat;
+		url('../jekyll-resources/assets/img/imandra_background_transition.svg')bottom center / 50% no-repeat,
+		url('../jekyll-resources/assets/img/bg_regions') center center / 100% no-repeat;
 	background-color: #f4f4f4;
 }
 main {
@@ -97,6 +97,9 @@ time {
 }
 .c-content {
 	background: #blue;
+}
+.site_specific_image {
+	align-self: flex-start;
 }
 /* Aside */
 
@@ -144,8 +147,18 @@ aside {
 	}
 }
 footer {
-	text-align: center;
-	padding: 10em 0 0 0;
+	position: absolute;
+	bottom: 1em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center
+	color: #fff;
+}
+.copyrights {
+	text-decoration: none;
+	color:#fff;
 }
 
 /* Toplist */
