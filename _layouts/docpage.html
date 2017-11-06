@@ -4,8 +4,9 @@ layout: docdefault
 
 <h2 class="WelcomeText">{{ page.title }}</h2>
 
-{{ content }}
-
+<div class="WelcomeExcerpt">
+    {{ content }}
+</div>
     <ul class="Repositories">
                 {% assign jd = site.url | append: "/jekyll-resources/assets/img/" %}
                             {% for topPage in site.pages %}
