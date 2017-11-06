@@ -111,7 +111,9 @@ time {
 .site_specific_image {
 	align-self: flex-start;
 }
-
+.WelcomeText {
+	text-align: center;
+}
 .Repositories {
 	margin: 0;
 	padding: 0;
@@ -138,18 +140,28 @@ time {
 }
 
 .RepositoryDescription {
-	font-family: 'Merriweather', serif;
+
 }
 
 .RepositoryDescription_Title {
+	font-family: 'Merriweather', serif;
 	font-size: 26px;
+	text-decoration: none;
+	color: $font-color;
 
 }
 
 .RepositoryDescription_Excerpt {
+	font-family: 'Merriweather', serif;
 	font-size: 14px;
+	text-decoration: none;
+	color: $font-color;
 }
 
+.RepositoryDescription_Excerpt:hover,
+.RepositoryDescription_Title:hover {
+	text-decoration: none;
+}
 
 /* Aside */
 
