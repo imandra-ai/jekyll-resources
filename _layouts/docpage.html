@@ -6,19 +6,21 @@ layout: docdefault
 
 {{ content }}
 
-
-
     <ul>
                 {% assign jd = site.url | append: "/jekyll-resources/assets/img/" %}
                             {% for topPage in site.pages %}
                             {% if topPage.title %}
-                            <li>
-                                {{topPage.Excerpt}}
 
-                                 <img class = image-header height = 22px src="{{topPage.img | prepend: jd}}">
-                                 </img>
+                            <li class="RepositoryList">
+                                <a class="RepositoryLink" href="{{ topPage.doclink | prepend: site.baseurl }}">
+                                <img class="RepositoryIcon" src=" {{topPage.img | prepend: jd}} ">
+                                <div class="RepositoryDescription">    
+                                    <h1 class=" RepositoryDescription_Title">{{ topPage.title }}</h1>
+                                    <p class="RepositoryDescription_">{{topPage.Excerpt}}</p>
+                                </div>
+                                </a>
+                            </li>
 
-                                 <a href="{{ topPage.doclink | prepend: site.baseurl }}">{{ topPage.title }}</a></li>
                             {% endif %}
                             {% endfor %}
     </ul>
