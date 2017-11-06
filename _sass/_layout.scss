@@ -130,7 +130,6 @@ time {
     padding: 1em 2em;
     margin-bottom: 2em;
     background-color: #f4f4f4;
-    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.17);
     text-decoration: none;
     
 }
@@ -161,7 +160,11 @@ time {
 	margin: 0;
 }
 
-.RepositoryLink:hover,
+.RepositoryLink:hover {
+	text-decoration: none;
+    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.17);
+}
+
 .RepositoryDescription_Excerpt:hover,
 .RepositoryDescription_Title:hover {
 	text-decoration: none;
@@ -223,6 +226,7 @@ footer {
     justify-content: flex-end;
     align-items: center;
     text-align: center;
+    font-size: 11px;
     color: #fff;
     padding-bottom: 1em;
 	background: url('#{$baseurl}/jekyll-resources/assets/img/transition_footer.svg') 100% 100% / 1400px 220px repeat-x;
