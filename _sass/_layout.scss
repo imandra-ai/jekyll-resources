@@ -112,24 +112,32 @@ time {
 	align-self: flex-start;
 }
 
+.Repositories {
+	margin: 0;
+	padding: 0;
+}
 .RepositoryList {
-  list-style: none;
+  	list-style: none;
 }
 
 .RepositoryLink {
-	max-width: 660px;
-	height: 111px;
-	border-radius: 11px;
-	background-color: #f4f4f4;
-	box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.17);
+	display: flex;
+    max-width: 960px;
+    min-height: 111px;
+    border-radius: 11px;
+    padding: 1em 2em;
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.17);
+    
 }
 
 .RepositoryIcon {
-  width: 44px; 
+	width: 44px;
+	margin-right: 22px;
 }
 
 .RepositoryDescription {
-
+	font-family: 'Merriweather', serif;
 }
 
 .RepositoryDescription_Title {
