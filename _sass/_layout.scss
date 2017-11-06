@@ -59,8 +59,7 @@ h2 {
 
 a:visited {
 	color: $link-color;
-	text-decoration: underline;
-	font-weight: bold;
+	text-decoration: none;
 }
 
 a:hover {
@@ -114,13 +113,15 @@ time {
 }
 
 .RepositoryList {
-	
+  list-style: none;
 }
 
 .RepositoryLink {
-	display: block;
 	max-width: 660px;
 	height: 111px;
+	border-radius: 11px;
+	background-color: #f4f4f4;
+	box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.17);
 }
 
 .RepositoryIcon {
