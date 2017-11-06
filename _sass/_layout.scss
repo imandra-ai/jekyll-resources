@@ -111,9 +111,12 @@ time {
 .site_specific_image {
 	align-self: flex-start;
 }
-.WelcomeText {
+
+.WelcomeText,
+.WelcomeExcerpt {
 	text-align: center;
 }
+
 .Repositories {
 	margin: 0;
 	padding: 0;
