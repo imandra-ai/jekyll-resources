@@ -8,12 +8,14 @@ body {
 	-webkit-font-smoothing: antialiased;
 	margin: 0;
 }
+
 h1, h2, h3 {
 	font-weight: 300;
 	color: $heading-font-color;
 	font-family: $heading-font;
 	line-height: 1.5;
 }
+
 h1 {
 	color: $main;
 	font-size: 2.5em;
@@ -23,6 +25,7 @@ h1 {
 		color: $main;
 	}
 }
+
 h2 {
 	font-size: 2.2em;
 	margin-bottom: 0;
@@ -59,10 +62,12 @@ a:visited {
 	text-decoration: underline;
 	font-weight: bold;
 }
+
 a:hover {
 	color: $link-hover-color;
 	text-decoration: underline;
 }
+
 header {
 	display: flex;
 	min-height: 61vh;
@@ -76,17 +81,21 @@ header {
 		 url("/jekyll-resources/assets/img/bg_regions.svg") center center / cover no-repeat;
 	background-color: #f4f4f4;
 }
+
 main {
 	max-width: $content-width;
 	margin: 0 auto;
 }
+
 time {
 	color: #898989;
 }
+
 .container {
 	max-width: $content-width;
 	margin: 0 auto;
 }
+
 .top-bar_logo {
 	width: 100%;
 }
@@ -95,6 +104,7 @@ time {
 	display:inline;
     background-color: #f4f4f4;
 }
+
 .c-content {
 	background: #blue;
 }
@@ -106,17 +116,28 @@ time {
 .RepositoryList {
 	
 }
-.RepositoryIcon {
 
+.RepositoryLink {
+	display: block;
+	max-width: 660px;
+	height: 111px;
 }
+
+.RepositoryIcon {
+  width: 44px; 
+}
+
 .RepositoryDescription {
 
 }
+
 .RepositoryDescription_Title {
+	font-size: 26px;
 
 }
-.RepositoryDescription_Excerpt {
 
+.RepositoryDescription_Excerpt {
+	font-size: 14px;
 }
 
 
@@ -165,6 +186,7 @@ aside {
 		}
 	}
 }
+
 footer {
     bottom: 0;
     width: 100%;
@@ -179,11 +201,13 @@ footer {
     padding-bottom: 1em;
 	background: url('#{$baseurl}/jekyll-resources/assets/img/transition_footer.svg') 100% 100% / 1400px 220px repeat-x;
 }
+
 .copyrights {
 	text-decoration: none;
 	font-size: 1.1em;
 	color:#fff;
 }
+
 .copyrights:hover {
 	text-decoration: none !important;
 }
