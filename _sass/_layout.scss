@@ -144,7 +144,6 @@ time {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
 }
 
 .RepositoryDescription_Title {
@@ -152,14 +151,16 @@ time {
 	font-weight: 400;
 	font-size: 26px;
 	color: $font-color;
-
+	margin: 0;
 }
 
 .RepositoryDescription_Excerpt {
 	font-family: 'Merriweather Sans', sans-serif;
 	font-size: 14px;
 	color: $font-color;
+	margin: 0;
 }
+
 .RepositoryLink:hover,
 .RepositoryDescription_Excerpt:hover,
 .RepositoryDescription_Title:hover {
