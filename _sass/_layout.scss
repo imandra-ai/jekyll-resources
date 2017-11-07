@@ -94,12 +94,12 @@ header {
 	align-items: center;
 }
 
-.Docheader {
+.DocHeader {
 	min-height: 51vh;
 	align-items: flex-start;
 }
 
-.container {
+.TopNavContainer {
 	max-width: $content-width;
 	margin: 0 auto;
 }
@@ -111,15 +111,12 @@ header {
 }
 
 .TopNavLogo {
+	width: 33px;
 }
 
 .highlighter-rouge {
 	display:inline;
     background-color: #f4f4f4;
-}
-
-.c-content {
-	background: #blue;
 }
 
 .site_specific_image {
