@@ -112,13 +112,16 @@ header {
 	width: 33px;
 }
 
-.highlighter-rouge {
-	display:inline;
-	background-color: #f4f4f4;
+.WelcomeImage {
+	align-self: flex-start;
+	max-width: 700px;
+	min-width: 300px;
 }
 
 .SiteSpecificImage {
 	align-self: flex-start;
+	max-width: 900px;
+	min-width: 300px;
 }
 
 .WelcomeText,
