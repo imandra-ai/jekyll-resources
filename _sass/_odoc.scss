@@ -234,21 +234,17 @@ h1 + .modules, h1 + .sel { margin-top: 0.625rem }
   width: auto;
   height: 6.44rem;
 }
+
 .logo_main {
   width: auto;
   height: 8.03rem;
   margin-top: 1.24rem;
 }
+
 .space_after {
   margin-bottom: 2rem;
 }
-nav {
-  background: url('#{$baseurl}/assets/img/mandra_fix_engine_documentation.svg') 0 1.26rem / auto 8.01rem;
-  padding-top: 11rem;
-  height: 12rem;
-  padding-left: 0;
-  background-repeat: no-repeat;
-}
+
 /*---------------------------------------------------------------------------
    Copyright (c) 2016 Daniel C. Bünzli
 

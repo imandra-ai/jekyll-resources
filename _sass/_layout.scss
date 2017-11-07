@@ -51,30 +51,27 @@ time {
 	color: #898989;
 }
 
-.vertical-menu {
+.SideMenu {
 	position:fixed;
 	left: 10px;
 	z-index: 1;
 	width: auto !important;
-}
-
-.vertical-menu a {
-    background-color: #eee;
-    color: black; 
-    display: block; 
-	text-decoration: none;
-	padding: 0.4em 0.6em;
-}
-
-.vertical-menu a:hover {
-    background-color: #ccc; 
-    text-decoration: none;
-    color: #fff;
-}
-
-.vertical-menu a.active {
-    background-color: #4CAF50; 
-    color: white;
+	a {
+	    background-color: #eee;
+	    color: black; 
+	    display: block; 
+		text-decoration: none;
+		padding: 0.4em 0.6em;
+	}
+	a:hover {
+	    background-color: #ccc; 
+	    text-decoration: none;
+	    color: #fff;
+	}
+	a:active {
+    background-color: #fcfcfc; 
+    color: $main;
+	}
 }
 
 header {
@@ -197,7 +194,7 @@ aside {
 	box-shadow: 0px 1px 1px RGBA(4, 25, 54, .1);
 	nav {		
 		float: left;
-		max-width: 800px;
+		max-width: $content-width;
 		margin: 0 auto;
 		ul {
 			margin: 0;
@@ -244,14 +241,14 @@ footer {
 	background: url('#{$baseurl}/jekyll-resources/assets/img/transition_footer.svg') 100% 100% / 1400px 220px repeat-x;
 }
 
-.copyrights {
+.Copyrights {
 	text-decoration: none;
 	font-size: 1.1em;
 	color:#fff;
-}
 
-.copyrights:hover {
+	&:hover {
 	text-decoration: none !important;
+	}
 }
 
 /* Toplist */
