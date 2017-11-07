@@ -78,6 +78,7 @@ header {
 		 url('#{$baseurl}/jekyll-resources/assets/img/bg_regions.svg') center center / cover no-repeat;
 	background-color: #f4f4f4;
 }
+
 .MainHeader {
 	min-height: 61vh;
 	align-items: center;
@@ -142,7 +143,12 @@ time {
     margin-bottom: 2em;
     background-color: #f4f4f4;
     text-decoration: none;
-    
+}
+
+.RepositoryLink:hover {
+	text-decoration: none;
+	background-color: #fafafa;
+    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.17);
 }
 
 .RepositoryIcon {
@@ -169,11 +175,6 @@ time {
 	font-size: 14px;
 	color: $font-color;
 	margin: 0;
-}
-
-.RepositoryLink:hover {
-	text-decoration: none;
-    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.17);
 }
 
 .RepositoryDescription_Excerpt:hover,
