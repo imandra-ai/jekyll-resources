@@ -3,15 +3,14 @@ layout: docdefault
 ---
 <!-- Sidebar -->
 <div class="SideMenu">
-    {% for lin in site.pages %}
-    {% if lin.name != "index.md" %}
-    <a href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
-    {% endif %}
-    {% endfor %}
+	{% for lin in site.pages %}
+	{% if lin.name != "index.md" %}
+	<a href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
+	{% endif %}
+	{% endfor %}
 </div>
-
+<!--MainContent-->
 <div class="c-content">
-<h2>{{ page.title }}</h2>
-
-{{ content }}
+	<h2>{{ page.title }}</h2>
+	{{ content }}
 </div>
