@@ -53,24 +53,25 @@ time {
 
 .SideMenu {
 	position:fixed;
-	left: 10px;
+	top: 50px;
+	right: 2vw;
 	z-index: 1;
 	width: auto !important;
 	a {
-	    background-color: #eee;
-	    color: black; 
-	    display: block; 
+		background-color: #f5faf9;
+		color: black;
+		display: block; 
 		text-decoration: none;
 		padding: 0.4em 0.6em;
 	}
 	a:hover {
-	    background-color: #ccc; 
-	    text-decoration: none;
-	    color: #fff;
+		background-color: ; 
+		text-decoration: none;
+		color: #fff;
 	}
 	a:active {
-    background-color: #fcfcfc; 
-    color: $main;
+		background-color: #fcfcfc; 
+		color: $main;
 	}
 }
 
@@ -81,8 +82,8 @@ header {
 	justify-content: center;
 	text-align: center;
 	background:
-		 url('#{$baseurl}/jekyll-resources/assets/img/imandra_background_transition.svg') 100% 100% / 1440px 229px repeat-x,
-		 url('#{$baseurl}/jekyll-resources/assets/img/bg_regions.svg') center center / cover no-repeat;
+	url('#{$baseurl}/jekyll-resources/assets/img/imandra_background_transition.svg') 100% 100% / 1440px 229px repeat-x,
+	url('#{$baseurl}/jekyll-resources/assets/img/bg_regions.svg') center center / cover no-repeat;
 	background-color: #f4f4f4;
 }
 
@@ -113,7 +114,7 @@ header {
 
 .highlighter-rouge {
 	display:inline;
-    background-color: #f4f4f4;
+	background-color: #f4f4f4;
 }
 
 .SiteSpecificImage {
@@ -130,22 +131,22 @@ header {
 	padding: 0;
 }
 .RepositoryList {
-  	list-style: none;
+	list-style: none;
 }
 
 .RepositoryLink {
 	display: flex;
-    max-width: 960px;
-    min-height: 111px;	
-    border-radius: 11px;
-    padding: 1em 2em;
-    margin-bottom: 2em;
-    background-color: #f4f4f4;
-    text-decoration: none;
-	&:hover {
+	max-width: 960px;
+	min-height: 111px;	
+	border-radius: 11px;
+	padding: 1em 2em;
+	margin-bottom: 2em;
+	background-color: #f4f4f4;
 	text-decoration: none;
-	background-color: #fafafa;
-    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.17);
+	&:hover {
+		text-decoration: none;
+		background-color: #fafafa;
+		box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.17);
 	}
 }
 
@@ -225,18 +226,18 @@ aside {
 }
 
 footer {
-    bottom: 0;
-    width: 100%;
-    left: 0;
-    height: 220px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    text-align: center;
-    font-size: 11px;
-    color: #fff;
-    padding-bottom: 1em;
+	bottom: 0;
+	width: 100%;
+	left: 0;
+	height: 220px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	text-align: center;
+	font-size: 11px;
+	color: #fff;
+	padding-bottom: 1em;
 	background: url('#{$baseurl}/jekyll-resources/assets/img/transition_footer.svg') 100% 100% / 1400px 220px repeat-x;
 }
 
@@ -246,6 +247,6 @@ footer {
 	color:#fff;
 
 	&:hover {
-	text-decoration: none !important;
+		text-decoration: none !important;
 	}
 }
