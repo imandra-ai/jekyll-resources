@@ -3,7 +3,8 @@
 		<nav>
 			<ul>
 				<li><a class="TopNavLogoContainer" href="{{ site.url }}">
-					</li>
+					<img class="TopNavLogo" src = "{{ site.baseurl }}{% link jekyll-resources/assets/img/imandra_markets_sign.svg %}">
+				</a></li>
 				{% for collection in site.collections %} 
 				{% assign colName = collection.label %}
 				{% assign topPage = site.[colName] | first %}
