@@ -3,8 +3,8 @@
 body {
 	color: $font-color;
 	font-family: $font-style;
-	font-size: 1em;
-	line-height: 1.314em;
+	font-size: 15px;
+	line-height: 24px;
 	-webkit-font-smoothing: antialiased;
 	margin: 0;
 }
@@ -188,6 +188,12 @@ header {
 .RepositoryDescription_Excerpt:hover,
 .RepositoryDescription_Title:hover {
 	text-decoration: none;
+}
+
+.highlighter-rogue {
+	font-family: menlo, monospace; /*add source*/
+ 	background: #eee;
+	padding: 0 5px;
 }
 
 /* Aside */
