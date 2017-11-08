@@ -87,6 +87,10 @@ header {
 	background-color: #f4f4f4;
 }
 
+.MainContentColumn {
+	min-height: 40vh;	
+}
+
 .WelcomeHeader  {
 	min-height: 61vh;
 	align-items: center;
@@ -241,7 +245,7 @@ footer {
 	font-size: 11px;
 	color: #fff;
 	padding-bottom: 1em;
-	background: url('#{$baseurl}/jekyll-resources/assets/img/transition_footer.svg') 100% 100% / 1400px 220px repeat-x;
+	background: url('#{$baseurl}/jekyll-resources/assets/img/transition_footer.svg') center 101% / 1400px 220px repeat-x;
 }
 
 .Copyrights {
