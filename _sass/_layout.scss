@@ -152,10 +152,12 @@ header {
 	margin-bottom: 2em;
 	background-color: #f4f4f4;
 	text-decoration: none;
+	transition: all 0.1s ease-out;
 	&:hover {
 		text-decoration: none;
 		background-color: #fafafa;
 		box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.17);
+		transform: translateY(-2px) scale(1.003);
 	}
 }
 
