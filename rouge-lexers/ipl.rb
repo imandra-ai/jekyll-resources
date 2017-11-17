@@ -33,7 +33,7 @@ module Rouge
         rule %r(//.*?$), Comment::Single
         rule %r(/\*), Comment, :comment
         rule %r(#{ keywords.to_a.join('|') }), Keyword
-        rule %r(#{ keyopts }), Operator
+        rule %r(#{ keyopts.to_a.join('|') }), Operator
         rule %r((#{ infix_syms }|#{ prefix_syms })?#{ operators }), Operator
         rule %r(\b(#{ word_operators.to_a.join('|') })\b), Operator::Word
         rule %r(\b(#{ primitives.to_a.join('|') })\b), Keyword::Type
