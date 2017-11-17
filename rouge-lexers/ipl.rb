@@ -12,11 +12,11 @@ module Rouge
       keywords = Set.new %w(
           VerificationPacks action alias assignFrom assignable case
           datatype declare default description enum events extend false
-          focusOn ign ignored imandramarkets import in interLibraryCheck internal
+          focusOn ign ignored imandramarkets import int in interLibraryCheck internal
           invalid invalidfield let library libraryMarker message missingfield name
           opt optional outbound overloadFunction precision present receive record
           reject repeating req require return scenario send testfile toFloat
-          toInt true truncate unique valid validate when with int string bool float
+          toInt true truncate unique valid validate when with string bool float
         )
       keyopts = Set.new %w(
           != && \\( \\) \*\ + , - ==> : ; < == <= >= = > } \? \[ \] \{ \} ! / \|\| @
