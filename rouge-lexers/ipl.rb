@@ -19,7 +19,7 @@ module Rouge
           toInt true truncate unique valid validate when with
         )
       keyopts = Set.new %w(
-          != && \\( \\) \*\ + , - ==> : ; < == <= >= = > } \? \[ \] \{ \} ! / \|\|
+          != && \\( \\) \*\ + , - ==> : ; < == <= >= = > } \? \[ \] \{ \} ! / \|\| @
         )
       word_operators = Set.new %w(None Some Case if then else)
       operators = %r([!*+<=>\-\/]+)
