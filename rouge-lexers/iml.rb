@@ -27,8 +27,8 @@ module Rouge
         @primitives ||= Set.new %w(unit int float bool string char list array)
       end
 
-      def self.imandra_keywords = (
-        'theorem', 'thm', 'proved', 'Counterexample', 'instance', 'check', ':testgen', 'verify'
+      def self.imandra_keywords ||= Set.new %w(
+        theorem thm proved Counterexample instance check :testgen verify
       )
 
       operator = %r([;,_!$%&*+./:<=>?@^|~#-]+)
