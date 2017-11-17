@@ -19,7 +19,7 @@ module Rouge
           toInt true truncate unique valid validate when with
         )
       keyopts = Set.new %w(
-          != && \( \) * + , - ==> : ; < == <= >= = > } ? [ ] { } ! / \|\|
+          != && \\( \\) \*\ + , - ==> : ; < == <= >= = > } \? \[ \] \{ \} ! / \|\|
         )
       word_operators = Set.new %w(None Some Case if then else)
       operators = %r([!*+<=>\-\/]+)
@@ -33,12 +33,12 @@ module Rouge
         rule %r(//.*?$), Comment::Single
         rule %r(/\*), Comment, :comment
         rule %r(#{ keywords.to_a.join('|') }), Keyword
-        rule %r(#{ keyopts.to_a.join('|') }), Operator
+        rule %r(#{ keyopts.to_a.reverse.join('|') }), Operator
         rule %r((#{ infix_syms }|#{ prefix_syms })?#{ operators }), Operator
         rule %r(\b(#{ word_operators.to_a.join('|') })\b), Operator::Word
         rule %r(\b(#{ primitives.to_a.join('|') })\b), Keyword::Type
         rule %r([\.]?([a-zA-Z_$][a-zA-Z\d_$]*\.)*[a-zA-Z_$][a-zA-Z\d_$]*), Name
-        rule %r(-?\d[\d_]*(.[\d_]*)*), Num::Float
+        rule %r(-?\d[\d_]*(\.[\d_]*)*), Num::Float
         rule %r(\d[\d_]*), Num::Integer
         rule %r("), Str::Double, :string
       end
