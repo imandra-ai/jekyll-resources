@@ -50,8 +50,8 @@ module Rouge
             token Operator::Word
           elsif self.class.primitives.include? match
             token Keyword::Type
-          elseif self.class.imandra_keywords.include? match
-            token Keyword::Reserved 
+          elsif self.class.imandra_keywords.include? match
+            token Keyword::Type 
           else
             token Name
           end
