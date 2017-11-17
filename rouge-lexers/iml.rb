@@ -51,7 +51,7 @@ module Rouge
           elsif self.class.primitives.include? match
             token Keyword::Type
           elsif self.class.imandra_keywords.include? match
-            token Keyword::Type 
+            token Keyword::Reserved 
           else
             token Name
           end
