@@ -4,7 +4,7 @@ layout: default
 <!-- Sidebar -->
 <div class="SideMenu">
     {% assign pname = page.collection %}
-    {% assign col = site[pname] %}
+    {% assign col = site[pname] | shift %}
     {% for lin in col %}
     <a href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
     {% endfor %}
