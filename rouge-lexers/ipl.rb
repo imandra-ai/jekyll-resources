@@ -31,6 +31,8 @@ module Rouge
         rule %r(\s+), Text
         rule %r(false|true|it|this|\(\)|\[\]), Name::Builtin::Pseudo
         rule %r(//.*?$), Comment::Single
+        rule %r(@description:), Keyword, :descComment
+        rule %r(\.\.\.), Text
         rule %r(/\*), Comment, :comment
         rule %r(#{ keywords.to_a.join('|') }), Keyword
         rule %r(#{ keyopts.to_a.reverse.join('|') }), Operator
@@ -41,6 +43,10 @@ module Rouge
         rule %r(-?\d[\d_]*(\.[\d_]*)*), Num::Float
         rule %r(\d[\d_]*), Num::Integer
         rule %r("), Str::Double, :string
+      end
+
+      state :descComment do
+        rule %r(.*$), Comment, :pop!
       end
 
       state :comment do
