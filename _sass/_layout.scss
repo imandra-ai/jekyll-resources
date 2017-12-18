@@ -24,7 +24,7 @@ h1, h2, h3 {
 }
 
 h1 {
-	font-size: 2.5em;
+	font-size: 2.52rem;
 	margin-bottom: 0;
 	margin-after: 0;
 	a,
@@ -35,9 +35,8 @@ h1 {
 }
 
 h2,h3 {
-	font-size: 2.2em;
+	font-size: 2.2rem;
 	margin-bottom: 0;
-	margin-after: 0;
 }
 a {
 	color: #249ef1;
@@ -126,6 +125,10 @@ header {
 
 .TopNavLogo {
 	width: 54px;
+}
+
+.TopNavLink {
+	font-size: 18px;
 }
 
 .WelcomeImage {
