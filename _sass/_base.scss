@@ -27,8 +27,9 @@ $heading-font-color: $font-color;
 	  box-sizing: border-box;
 }
 pre {
-  padding: 0;
+  padding: 0 0 0 1.5em;
   margin: 0;
   overflow-x: scroll;
   margin-right: 0.55rem;
+  border-left: solid #e2e2e2;
 }
