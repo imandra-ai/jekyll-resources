@@ -1,14 +1,24 @@
+/* Layout variables */
 $content-width: 988px;
-$main: #27D798;
-$font-style: 'Merriweather', serif;
-$font-color: #3D3E40;
-$link-color: #425469;
-$link-hover-color: $main;
-$heading-font: 'Merriweather Sans', serif;
-$heading-font-color: #425469;
-$light: #E7EDF4;
-$header:  #fafafa;
 
+/* Font families */
+$font-family-upper: 'Merriweather', serif;
+$font-family-upper-sans: 'Merriweather Sans', sans-serif;
+$font-family-main: 'Roboto Slab', serif;
+$heading-font: $font-family-upper;
+
+/* Color variables */
+$imandra-mint: #27d798;
+$font-color: #405267;
+$link-color: #249ef1;
+$link-visited: $link-color;
+$link-active: #425469;
+$link-hover-color: $imandra-mint;
+$light: #e7edf4;
+$header: #fafafa;
+$heading-font-color: $font-color;
+
+/* Base */
 *,
 *::before,
 *::after {
