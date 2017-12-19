@@ -16,7 +16,7 @@ table {
 
 body {
   font-family: $font-family-main;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height:1.25rem;
   text-align: left;
@@ -89,7 +89,7 @@ a.anchor {
    we restart the sequence there like h2  */
 
 h1, h2, h3, h4, h5, h6, .h7, .h8, .h9, .h10
-{ font-weight: 400; margin-top: 1.25rem; }
+{ font-weight: 300; margin-top: 1.25rem; }
 
 h1 + *, h2 + *, .h7 + * { margin-top: 0.625rem; }
 h1, h2, .h7
