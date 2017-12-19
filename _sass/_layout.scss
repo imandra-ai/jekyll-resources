@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5 {
 	font-weight: 300;
 	color: $heading-font-color;
 	font-family: $heading-font;
-	line-height: 1.5;
+	line-height: 1.1;
 }
 
 h1 {
@@ -45,7 +45,7 @@ h4 {
 }
 
 a {
-	color: #249ef1;
+	color: $link-color;
 }
 a:visited {
 	color: $link-color;
