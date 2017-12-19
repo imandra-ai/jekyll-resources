@@ -65,10 +65,12 @@ main {
 time {
 	color: #898989;
 }
+article {
+	display: flex;
+	flex-direction: row-reverse;
+}
 
 .SideMenu {
-	position:fixed;
-	top: 50px;
 	right: 2vw;
 	z-index: 1;
 	width: auto !important;
