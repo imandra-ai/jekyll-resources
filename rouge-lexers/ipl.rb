@@ -12,11 +12,11 @@ module Rouge
       keywords = Set.new %w(
           VerificationPacks action alias assignFrom assignable case
           datatype declare default description enum events extend false
-          focusOn ign ignored imandramarkets import int in interLibraryCheck internal
-          invalid invalidfield let library libraryMarker message missingfield name
-          opt optional outbound overloadFunction precision present receive record
-          reject repeating req require return scenario send testfile toFloat
-          toInt true truncate unique valid validate when with string bool float
+          focusOn ignored ign imandramarkets import interLibraryCheck internal int in
+          invalidfield invalid let library libraryMarker message missingfield name
+          optional opt outbound overloadFunction precision present receive record
+          reject repeating require req return scenario send testfile toFloat
+          toInt true truncate unique validate valid when with string bool float
         )
       keyopts = Set.new %w(
           != && \\( \\) \*\ + , - ==> : ; < == <= >= = > } \? \[ \] \{ \} ! / \|\| @
@@ -33,7 +33,7 @@ module Rouge
         rule %r(//.*?$), Comment::Single
         rule %r(@description:), Keyword, :descComment
         rule %r(\.\.\.), Text
-        rule %r(/\*), Comment, :comment
+        rule %r(/\*.*?\*/)m, Comment::Multiline
         rule %r(#{ keywords.to_a.join('|') }), Keyword
         rule %r(#{ keyopts.to_a.reverse.join('|') }), Operator
         rule %r((#{ infix_syms }|#{ prefix_syms })?#{ operators }), Operator
@@ -47,11 +47,6 @@ module Rouge
 
       state :descComment do
         rule %r(.*$), Comment, :pop!
-      end
-
-      state :comment do
-        rule( %r(/\*)) { token Comment; push }
-        rule %r(\*/), Comment, :pop!
       end
 
       state :string do
