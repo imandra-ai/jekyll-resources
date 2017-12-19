@@ -59,19 +59,26 @@ a:hover {
 main {
 	max-width: $content-width;
 	margin: 0 auto;
-	padding: 5px;
+	padding: 0;
 }
 
 time {
 	color: #898989;
 }
+
 article {
+	max-width: 988px;
+	display: flex;
+	flex-direction: row-reverse;
+}
+.MainContent {
+	width: 75%;
 }
 
 .SideMenu {
-	right: 2vw;
-	z-index: 1;
-	width: auto !important;
+	width: 25%;
+	margin-top: 1.6rem;
+	margin-left: 1rem;
 	a {
 		background-color: #f5faf9;
 		color: black;
