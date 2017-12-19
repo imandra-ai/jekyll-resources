@@ -5,7 +5,7 @@ $content-width: 988px;
 $font-family-upper: 'Merriweather', serif;
 $font-family-upper-sans: 'Merriweather Sans', sans-serif;
 $font-family-main: 'Roboto Slab', serif;
-$heading-font: $font-family-upper;
+$heading-font: $font-family-upper-sans;
 
 /* Color variables */
 $imandra-mint: #27d798;
@@ -31,5 +31,5 @@ pre {
   margin: 0;
   overflow-x: scroll;
   margin-right: 0.55rem;
-  border-left: solid #e2e2e2;
+  border-left: solid #e8e8e8;
 }

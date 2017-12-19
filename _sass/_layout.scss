@@ -9,7 +9,7 @@ figure {
 body {
 	color: $font-color;
 	font-family: $font-family-main;
-	font-size: 14px;
+	font-size: 15px;
 	line-height: 21px;
 	font-weight: 400;
 	-webkit-font-smoothing: antialiased;
@@ -34,14 +34,14 @@ h1 {
 }
 
 h2 {
-	font-size: 22px;
+	font-size: 2.2rem;
 	margin-bottom: 0;
 }
 h3 {
-	font-size: 16px;
+	font-size: 1.8px;
 } 
 h4 {
-	font-size: 14px;
+	font-size: 15px;
 }
 
 a {
@@ -134,7 +134,7 @@ header {
 }
 
 .TopNavLink {
-	font-size: 18px;
+	font-size: 14px;
 }
 
 .WelcomeImage {
@@ -192,16 +192,11 @@ header {
 }
 
 .RepositoryDescription_Title {
-	font-family: 'Merriweather', serif;
-	font-weight: 400;
-	font-size: 26px;
 	color: $font-color;
 	margin: 0;
 }
 
 .RepositoryDescription_Excerpt {
-	font-family: 'Merriweather Sans', sans-serif;
-	font-size: 14px;
 	color: $font-color;
 	margin: 0;
 }
