@@ -72,19 +72,18 @@ article {
 	flex-direction: row-reverse;
 }
 .MainContent {
-	width: 75%;
+	width: 80%;
 }
 .DummySideMenu,
 .SideMenu {
-	width: 25%;
+	width: 20%;
 	margin-top: 1.6rem;
 	margin-left: 1rem;
-	border-left: solid #f5faf9;;
 	a {
-		color: black;
 		display: block; 
 		text-decoration: none;
 		padding: 0.4em 0.6em;
+		border-left: solid #f5faf9;
 	}
 	a:hover {
 		background: $header;
