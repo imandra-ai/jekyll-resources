@@ -120,7 +120,9 @@ header {
 	min-height: 61vh;
 	align-items: center;
 }
-
+.WelcomeContentContainer {
+	flex-direction: column;
+}
 .TemplateHeader {
 	min-height: 55vh;
 	align-items: flex-start;

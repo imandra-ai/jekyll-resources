@@ -4,24 +4,26 @@ layout: welcomedefault
 
 <h2 class="WelcomeText">{{ page.title }}</h2>
 
-<div class="WelcomeExcerpt">
-    {{ content }}
-</div>
-    <ul class="Repositories">
-                {% assign jd = site.url | append: "/jekyll-resources/assets/img/" %}
-                            {% for topPage in site.pages %}
-                            {% if topPage.title %}
+<div class="WelcomeContentContainer">
+    <div class="WelcomeExcerpt">
+        {{ content }}
+    </div>
+        <ul class="Repositories">
+                    {% assign jd = site.url | append: "/jekyll-resources/assets/img/" %}
+                                {% for topPage in site.pages %}
+                                {% if topPage.title %}
 
-                            <li class="RepositoryList">
-                                <a class="RepositoryLink" href="{{ topPage.doclink | prepend: site.baseurl }}">
-                                <img class="RepositoryIcon" src=" {{topPage.img | prepend: jd}} ">
-                                <div class="RepositoryDescription">    
-                                    <h2 class=" RepositoryDescription_Title">{{ topPage.title }}</h1>
-                                    <p class="RepositoryDescription_Excerpt">{{topPage.Excerpt}}</p>
-                                </div>
-                                </a>
-                            </li>
+                                <li class="RepositoryList">
+                                    <a class="RepositoryLink" href="{{ topPage.doclink | prepend: site.baseurl }}">
+                                    <img class="RepositoryIcon" src=" {{topPage.img | prepend: jd}} ">
+                                    <div class="RepositoryDescription">    
+                                        <h2 class=" RepositoryDescription_Title">{{ topPage.title }}</h2>
+                                        <p class="RepositoryDescription_Excerpt">{{topPage.Excerpt}}</p>
+                                    </div>
+                                    </a>
+                                </li>
 
-                            {% endif %}
-                            {% endfor %}
+                                {% endif %}
+                                {% endfor %}
     </ul>
+</div>>
