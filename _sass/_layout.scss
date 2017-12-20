@@ -79,21 +79,20 @@ article {
 	width: 25%;
 	margin-top: 1.6rem;
 	margin-left: 1rem;
+	border-left: solid #f5faf9;;
 	a {
-		background-color: #f5faf9;
 		color: black;
 		display: block; 
 		text-decoration: none;
 		padding: 0.4em 0.6em;
 	}
 	a:hover {
-		background-color: #aed4ce; 
+		background: $header;
 		text-decoration: none;
-		color: #fff;
+		color: $imandra-mint;
 	}
 	a:active {
-		background-color: #fcfcfc; 
-		color: $imandra-mint;
+		color: $font-color;
 	}
 }
 
@@ -246,11 +245,14 @@ aside {
 					display: block;
 					height: 48px;
 					padding: 15px 7px;
-					&:hover,
-					&:active {
+					&:hover{
 						background: $header;
 						text-decoration: none;
 						color: $imandra-mint;
+					}
+					&:active {
+						text-decoration: none;
+						color: $font-color;
 					}
 				}
 			}
