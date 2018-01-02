@@ -221,6 +221,7 @@ header {
 	font-family: menlo, monospace; /*add source*/
  	background: #f1f1f1;
 	padding: 0 5px;
+	font-size: 90%;
 }
 
 /* Aside */
@@ -257,8 +258,9 @@ aside {
 						color: $imandra-mint;
 					}
 					&:active {
+						background: $header;
 						text-decoration: none;
-						color: $font-color;
+						color: $imandra-mint;
 					}
 				}
 			}
