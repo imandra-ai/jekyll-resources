@@ -169,6 +169,12 @@ header {
 .Repositories {
 	margin: 0;
 	padding: 0;
+	@media #{$media-mobile}{
+		margin: 0 1em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 }
 .RepositoryList {
 	list-style: none;
@@ -189,6 +195,11 @@ header {
 		background-color: #fafafa;
 		box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.17);
 		transform: translateY(-2px) scale(1.003);
+	}
+	@media #{$media-small-mobile}{
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
 	}
 }
 
