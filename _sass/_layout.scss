@@ -129,7 +129,8 @@ header {
 	min-height: 63vh;
 	align-items: center;
 		@media #{$media-mobile}{
-		height: 500px;
+			min-height: 43vh;
+			padding-top: 1em;
 		}
 }
 .WelcomeContentContainer {
