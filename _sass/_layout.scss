@@ -115,7 +115,7 @@ header {
 		@media #{$media-mobile}{
 		padding: 0;
 		background:
-		url('#{$baseurl}/jekyll-resources/assets/img/imandra_background_transition.svg') center 101% / 1440px 100px repeat-x,
+		url('#{$baseurl}/jekyll-resources/assets/img/imandra_background_transition.svg') center 101% / 1440px 166px repeat-x,
 		url('#{$baseurl}/jekyll-resources/assets/img/bg_regions.svg') center center / cover no-repeat;
 		}
 
@@ -126,8 +126,11 @@ header {
 }
 
 .WelcomeHeader  {
-	min-height: 61vh;
+	min-height: 63vh;
 	align-items: center;
+		@media #{$media-mobile}{
+		height: 500px;
+		}
 }
 .WelcomeContentContainer {
 	flex-direction: column;
