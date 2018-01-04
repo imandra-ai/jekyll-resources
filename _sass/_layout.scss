@@ -80,10 +80,10 @@ article {
 
 .MainContent {
 	width: 80%;
+	padding: 0 1em;
 	
 	@media #{$media-small-mobile}{
 		width: 100%;
-		padding: 0 1em;
 	}
 
 }
@@ -111,8 +111,7 @@ article {
 
 .DummySideMenu{
 	width: 20%;
-	margin-top: 1.6rem;
-	margin-left: 1rem;
+	margin: 0;
 	
 	@media #{$media-small-mobile}{
 		width: 0;
