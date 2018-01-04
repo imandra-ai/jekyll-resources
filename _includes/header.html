@@ -11,7 +11,7 @@
 				{% assign colName = collection.label %}
 				{% assign topPage = site.[colName] | sort: 'sequence' | first %}
 				{% if page.collection == topPage.collection %}
-				<li><a class="TopNavLink Active" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.colName }}</a></li>
+				<li><a class="TopNavLink TopNavLink__Active" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.colName }}</a></li>
 				{% else %}
 				<li><a class="TopNavLink" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.colName }}</a></li>
 				{% endif %}
