@@ -6,15 +6,20 @@ layout: default
     {% assign pname = page.collection %}
     {% assign col = site[pname] | sort: 'sequence' | shift %}
     {% for lin in col %}
-    <a href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
+    <A href=#{{lin.tag}}>{{lin.title}}</A>
     {% endfor %}
-    {% if page.colName == "Documentation" and site.baseurl == "/fix-engine" %}
+    {% if page.title == "Documentation" and site.baseurl == "/fix-engine" %}
     <a href = "{{ site.baseurl }}{% link _pages/doc/index.html %}">Technical Documentation</a>
     {% endif %}
 </div>
 <!--MainContent-->
 <div class="MainContent">
-    <h2>{{ page.title }}</h2>
-
-    {{ content }}
+    {% if col.size == 0 %}
+    {{content}}
+    {% else %}
+    {% for colPage in col %}
+    <h2 id={{colPage.tag}}>{{colPage.title}}</h2>
+    {{ colPage.content | markdownify }}
+    {% endfor %}
+    {% endif %}
 </div>

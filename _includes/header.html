@@ -10,7 +10,7 @@
 				{% if collection.label != 'posts' %}
 				{% assign colName = collection.label %}
 				{% assign topPage = site.[colName] | sort: 'sequence' | first %}
-				<li><a class="TopNavLink" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.colName }}</a></li>
+				<li><a class="TopNavLink" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a></li>
 				{% endif %}
 				{% endfor %}
 			</ul>
