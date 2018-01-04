@@ -282,6 +282,12 @@ header {
 	font-size: 90%;
 }
 
+.TopNavLink__Active{
+	background: $header;
+	text-decoration: none;
+	color: $imandra-mint;
+}
+
 /* Aside */
 
 aside {
