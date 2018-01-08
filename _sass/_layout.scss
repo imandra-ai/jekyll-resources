@@ -26,7 +26,6 @@ h1 {
 	a,
 	a:visited {
 		text-decoration: none;
-		color: $imandra-mint;
 	}
 }
 
@@ -101,7 +100,6 @@ article {
 
 .TopNavContainer {
  	justify-content: flex-start;
-
  	@media #{$media-mobile}{
 		justify-content: flex-end;
 	}
@@ -112,10 +110,14 @@ article {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	display: flex;
+	@media #{$media-mobile}{
+		justify-content: flex-end;
+	}
+
 }
+
 .TopNavListItem {
-	float: left;
-	position: relative;
 }
 
 .TopNavLogoContainer {
@@ -127,6 +129,11 @@ article {
 	height: 48px;
 	&:hover{
 		background: $header;
+	}
+
+	@media #{$media-small-mobile}{
+		padding: 0 5px;
+		margin-right: 0;
 	}
 
 }
@@ -152,7 +159,7 @@ article {
 .TopNavLink__Active {
 	background: $header;
 	text-decoration: none;
-	color: $imandra-mint;
+	color: $font-color;
 }
 
 
