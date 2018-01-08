@@ -92,9 +92,13 @@ article {
 	box-shadow: 0px 1px 1px RGBA(4, 25, 54, .1);
 }
 
-.TopNavContainer {
+.TopRow {
 	max-width: $content-width;
 	margin: 0 auto;
+}
+
+.TopNavContainer {
+ 	
 }
 
 .TopNavList {
