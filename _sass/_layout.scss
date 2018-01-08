@@ -111,6 +111,7 @@ article {
 	padding: 0;
 	list-style: none;
 	display: flex;
+	flex-wrap: wrap;
 	@media #{$media-mobile}{
 		justify-content: flex-end;
 	}
