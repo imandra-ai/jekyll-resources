@@ -95,10 +95,16 @@ article {
 .TopRow {
 	max-width: $content-width;
 	margin: 0 auto;
+	display: flex;
 }
 
 .TopNavContainer {
- 	
+ 	justify-content: flex-start;
+
+ 	@media #{$media-mobile}{
+		justify-content: flex-end;
+	}
+
 }
 
 .TopNavList {
