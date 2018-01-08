@@ -1,10 +1,6 @@
-/* Reset */
-figure {
-	margin: 0;
-	padding: 0;
-}
-
-/* Layout */
+/*  ---------------------------------------------------
+	Layout 
+--------------------------------------------------- */
 
 body {
 	color: $font-color;
@@ -78,6 +74,78 @@ article {
 	flex-direction: row-reverse;
 }
 
+
+
+
+/*  ---------------------------------------------------
+	Top Navigation
+--------------------------------------------------- */
+
+.TopRowContainer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #fff;
+	width: 100%;
+	z-index: 2;
+	border-bottom: 1px solid lighten($light, 30%);
+	box-shadow: 0px 1px 1px RGBA(4, 25, 54, .1);
+}
+
+.TopNavContainer {
+
+	float: left;
+	max-width: $content-width;
+	margin: 0 auto;
+}
+
+.TopNavList {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.TopNavListItem {
+	float: left;
+	position: relative;
+}
+
+.TopNavLogoContainer {
+	display: flex;
+	justify-content: center;
+	align-items:center;
+}
+
+.TopNavLogo {
+	width: 54px;
+}
+
+.TopNavLink {
+	font-size: 14px;
+	text-decoration: none;
+	font-size: 14px;
+	display: block;
+	height: 48px;
+	padding: 15px 7px;
+	&:hover{
+		background: $header;
+		text-decoration: none;
+		color: $imandra-mint;
+	}
+}
+
+.TopNavLink__Active {
+	background: $header;
+	text-decoration: none;
+	color: $imandra-mint;
+}
+
+
+
+
+/*  ---------------------------------------------------
+	Main Content
+--------------------------------------------------- */
+
 .MainContent {
 	width: 80%;
 	padding: 0 1em;
@@ -88,47 +156,12 @@ article {
 
 }
 
-.SideMenu {
-	width: 20%;
-	margin-top: 1.6rem;
-	margin-left: 1rem;
-	a {
-		display: block; 
-		text-decoration: none;
-		padding: 0.4em 0.6em;
-		border-left: solid #f5faf9;
-	}
-	a:hover {
-		background: $header;
-		text-decoration: none;
-		color: $imandra-mint;
-	}
-	a:active {
-		color: $font-color;
-	}
-
-	@media #{$media-small-mobile}{
-	display: none;
-	}
-
-}
-
-
-.DummySideMenu{
-	width: 20%;
-	margin: 0;
-	
-	@media #{$media-small-mobile}{
-		width: 0;
-		padding: 0;
-	}
-
-}
-
-header {
+.TemplateHeader {
 	display: flex;
+	align-items: flex-start;
+	min-height: 500px;
+	padding-top: 55px;
 	margin: 0;
-	padding-top: 2em;
 	justify-content: center;
 	text-align: center;
 	background:
@@ -150,39 +183,16 @@ header {
 }
 
 .WelcomeHeader  {
-	min-height: 63vh;
+	min-height: 550px;
 	align-items: center;
 		@media #{$media-mobile}{
-			min-height: 43vh;
+			min-height: 266px;
 			padding-top: 1em;
 		}
 }
+
 .WelcomeContentContainer {
 	flex-direction: column;
-}
-.TemplateHeader {
-	min-height: 55vh;
-	align-items: flex-start;
-	padding-top: 55px;
-}
-
-.TopNavContainer {
-	max-width: $content-width;
-	margin: 0 auto;
-}
-
-.TopNavLogoContainer {
-	display: flex;
-	justify-content: center;
-	align-items:center;
-}
-
-.TopNavLogo {
-	width: 54px;
-}
-
-.TopNavLink {
-	font-size: 14px;
 }
 
 .WelcomeImage {
@@ -211,6 +221,89 @@ header {
 	text-align: center;
 }
 
+
+
+
+/*  ---------------------------------------------------
+	Side Menus
+--------------------------------------------------- */
+
+.SideMenu {
+	width: 20%;
+	margin-top: 1.6rem;
+	margin-left: 1rem;
+	a {
+		display: block; 
+		text-decoration: none;
+		padding: 0.4em 0.6em;
+		border-left: solid #f5faf9;
+	}
+	a:hover {
+		background: $header;
+		text-decoration: none;
+		color: $imandra-mint;
+	}
+	a:active {
+		color: $font-color;
+	}
+
+	@media #{$media-small-mobile}{
+	display: none;
+	}
+
+}
+
+.DummySideMenu{
+	width: 20%;
+	margin: 0;
+	
+	@media #{$media-small-mobile}{
+		width: 0;
+		padding: 0;
+	}
+
+}
+
+
+
+
+/*  ---------------------------------------------------
+	Footer
+--------------------------------------------------- */
+
+.Footer {
+	bottom: 0;
+	width: 100%;
+	left: 0;
+	height: 220px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	text-align: center;
+	font-size: 11px;
+	color: #fff;
+	padding-bottom: 1em;
+	background: url('#{$baseurl}/jekyll-resources/assets/img/transition_footer.svg') center 101% / 1400px 220px repeat-x;
+}
+
+.Copyrights {
+	text-decoration: none;
+	font-size: 1.1em;
+	color:#fff;
+
+	&:hover {
+		text-decoration: none !important;
+	}
+}
+
+
+
+
+/*  ---------------------------------------------------
+	Main Doc Welcome Page
+--------------------------------------------------- */
+
 .Repositories {
 	margin: 0 1em;
 	padding: 0;
@@ -221,6 +314,7 @@ header {
 		align-items: center;
 	}
 }
+
 .RepositoryList {
 	list-style: none;
 }
@@ -275,6 +369,13 @@ header {
 	text-decoration: none;
 }
 
+
+
+
+/*  ---------------------------------------------------
+	Code Examples
+--------------------------------------------------- */
+
 .highlighter-rouge {
 	font-family: menlo, monospace; /*add source*/
  	background: #f1f1f1;
@@ -282,83 +383,24 @@ header {
 	font-size: 90%;
 }
 
-.TopNavLink__Active{
-	background: $header;
-	text-decoration: none;
-	color: $imandra-mint;
+figure {
+	margin: 0;
+	padding: 0;
 }
 
-/* Aside */
+
+
+
+/*  ---------------------------------------------------
+	ToDo
+--------------------------------------------------- */
 
 aside {
-	position: fixed;
-	top: 0;
-	left: 0;
-	background: #fff;
-	width: 100%;
-	z-index: 2;
-	border-bottom: 1px solid lighten($light, 30%);
-	box-shadow: 0px 1px 1px RGBA(4, 25, 54, .1);
-	nav {		
-		float: left;
-		max-width: $content-width;
-		margin: 0 auto;
-		ul {
-			margin: 0;
-			padding: 0;
-			list-style: none;
-			li {
-				float: left;
-				position: relative;
-				a {
-					text-decoration: none;
-					font-size: 14px;
-					display: block;
-					height: 48px;
-					padding: 15px 7px;
-					&:hover{
-						background: $header;
-						text-decoration: none;
-						color: $imandra-mint;
-					}
-					&:active {
-						background: $header;
-						text-decoration: none;
-						color: $imandra-mint;
-					}
-				}
-			}
-		}
+	nav {
 		&:after {
 			content: '';
 			display: table;
 			clear: both;
 		}
-	}
-}
-
-footer {
-	bottom: 0;
-	width: 100%;
-	left: 0;
-	height: 220px;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	align-items: center;
-	text-align: center;
-	font-size: 11px;
-	color: #fff;
-	padding-bottom: 1em;
-	background: url('#{$baseurl}/jekyll-resources/assets/img/transition_footer.svg') center 101% / 1400px 220px repeat-x;
-}
-
-.Copyrights {
-	text-decoration: none;
-	font-size: 1.1em;
-	color:#fff;
-
-	&:hover {
-		text-decoration: none !important;
 	}
 }
