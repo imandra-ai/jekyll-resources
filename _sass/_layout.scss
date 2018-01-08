@@ -93,8 +93,6 @@ article {
 }
 
 .TopNavContainer {
-
-	float: left;
 	max-width: $content-width;
 	margin: 0 auto;
 }
@@ -113,6 +111,11 @@ article {
 	display: flex;
 	justify-content: center;
 	align-items:center;
+	height: 48px;
+	&:hover{
+		background: $header;
+	}
+
 }
 
 .TopNavLogo {

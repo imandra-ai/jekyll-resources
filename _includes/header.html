@@ -1,9 +1,11 @@
 <div class="TopRowContainer">
+	<div class="TopNavLogoContainer">
+		<a class="TopNavLogoLink" href="{{ site.url }}">
+			<img class="TopNavLogo" src = "{{ site.baseurl }}{% link jekyll-resources/assets/img/imandra_doc_logo_main.svg %}">
+		</a>
+	</div>
 	<nav class="TopNavContainer">
 		<ul class="TopNavList">
-			<li class=" TopNavListItem TopNavLogoContainer"><a class="TopNavLogoLink" href="{{ site.url }}">
-				<img class="TopNavLogo" src = "{{ site.baseurl }}{% link jekyll-resources/assets/img/imandra_doc_logo_main.svg %}">
-			</a></li>
 			{% assign collections = (site.collections | sort: 'sequence') %}
 			{% for collection in collections %} 
 			{% if collection.label != 'posts' %}
