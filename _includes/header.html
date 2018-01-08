@@ -1,30 +1,28 @@
-<aside>
-	<div class="TopNavContainer">
-		<nav>
-			<ul>
-				<li><a class="TopNavLogoContainer" href="{{ site.url }}">
-					<img class="TopNavLogo" src = "{{ site.baseurl }}{% link jekyll-resources/assets/img/imandra_doc_logo_main.svg %}">
-				</a></li>
-				{% assign collections = (site.collections | sort: 'sequence') %}
-				{% for collection in collections %} 
-				{% if collection.label != 'posts' %}
-				{% assign colName = collection.label %}
-				{% assign topPage = site.[colName] | sort: 'sequence' | first %}
-				{% if page.collection == topPage.collection %}
-				<li><a class="TopNavLink TopNavLink__Active" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a></li>
-				{% else %}
-				<li><a class="TopNavLink" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a></li>
-				{% endif %}
-				{% endif %}
-				{% endfor %}
-			</ul>
-		</nav>
-	</div>
-</aside>
+<div class="TopRowContainer">
+	<nav class="TopNavContainer">
+		<ul class="TopNavList">
+			<li class=" TopNavListItem TopNavLogoContainer"><a class="TopNavLogoLink" href="{{ site.url }}">
+				<img class="TopNavLogo" src = "{{ site.baseurl }}{% link jekyll-resources/assets/img/imandra_doc_logo_main.svg %}">
+			</a></li>
+			{% assign collections = (site.collections | sort: 'sequence') %}
+			{% for collection in collections %} 
+			{% if collection.label != 'posts' %}
+			{% assign colName = collection.label %}
+			{% assign topPage = site.[colName] | sort: 'sequence' | first %}
+			{% if page.collection == topPage.collection %}
+			<li class="TopNavListItem"><a class="TopNavLink TopNavLink__Active" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a></li>
+			{% else %}
+			<li class="TopNavListItem"><a class="TopNavLink" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a></li>
+			{% endif %}
+			{% endif %}
+			{% endfor %}
+		</ul>
+	</nav>
+</div>
 
 <header class="TemplateHeader">
 	<a href ="{{site.baseurl}}">
 		<img class="SiteSpecificImage" src="{{ site.baseurl }}{% link assets/img/site_specific_image.svg %}">
 	</a>
 </header>
-  
+
