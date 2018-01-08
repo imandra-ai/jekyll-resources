@@ -1,4 +1,5 @@
-/*  ---------------------------------------------------
+/*  By AI Team!
+---------------------------------------------------
 	Layout 
 --------------------------------------------------- */
 
@@ -121,6 +122,8 @@ article {
 	display: flex;
 	justify-content: center;
 	align-items:center;
+	padding: 0 10px;
+	margin-right: 30px;
 	height: 48px;
 	&:hover{
 		background: $header;
@@ -399,21 +402,4 @@ article {
 figure {
 	margin: 0;
 	padding: 0;
-}
-
-
-
-
-/*  ---------------------------------------------------
-	ToDo
---------------------------------------------------- */
-
-aside {
-	nav {
-		&:after {
-			content: '';
-			display: table;
-			clear: both;
-		}
-	}
 }
