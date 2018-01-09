@@ -2,19 +2,20 @@
 layout: default
 ---
 <!-- Sidebar -->
-<div id="StickMenu" class="SideMenu">
-    {% assign pname = page.collection %}
-    {% assign col = site[pname] | sort: 'sequence' | shift %}
-    {% for lin in col %}
-    <a href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
-    {% endfor %}
-    {% if page.colName == "Documentation" and site.baseurl == "/fix-engine" %}
-    <a href = "{{ site.baseurl }}{% link _pages/doc/index.html %}">Technical Documentation</a>
-    {% endif %}
+<div class="SideMenuContainer">
+    <div id="StickMenu" class="SideMenu">
+        {% assign pname = page.collection %}
+        {% assign col = site[pname] | sort: 'sequence' | shift %}
+        {% for lin in col %}
+        <a href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
+        {% endfor %}
+        {% if page.colName == "Documentation" and site.baseurl == "/fix-engine" %}
+        <a href = "{{ site.baseurl }}{% link _pages/doc/index.html %}">Technical Documentation</a>
+        {% endif %}
+    </div>
 </div>
 <!--MainContent-->
 <div class="MainContent">
     <h2>{{ page.title }}</h2>
-
     {{ content }}
 </div>
