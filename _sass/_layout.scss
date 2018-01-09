@@ -3,6 +3,22 @@
 	Layout 
 --------------------------------------------------- */
 
+*,
+*::before,
+*::after {
+	  -webkit-box-sizing: border-box;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+}
+
+pre {
+	padding: 1.5em;
+	margin: 0;
+	overflow-x: scroll;
+	margin-right: 0.55rem;
+	border-left: solid #e8e8e8;
+}
+
 body {
 	color: $font-color;
 	font-family: $font-family-main;
