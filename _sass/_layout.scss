@@ -179,7 +179,7 @@ article {
 	}
 
 }
-
+.WelcomeHeader,
 .TemplateHeader {
 	display: flex;
 	align-items: flex-start;
@@ -205,15 +205,6 @@ article {
 
 .MainContentColumn {
 	min-height: 40vh;	
-}
-
-.WelcomeHeader  {
-	min-height: 550px;
-	align-items: center;
-		@media #{$media-mobile}{
-			min-height: 266px;
-			padding-top: 1em;
-		}
 }
 
 .WelcomeContentContainer {
