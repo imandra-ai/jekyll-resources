@@ -58,12 +58,6 @@ a:hover {
 	text-decoration: none;
 }
 
-main {
-	max-width: $content-width;
-	margin: 0 auto;
-	padding: 0;
-}
-
 time {
 	color: #898989;
 }
@@ -170,6 +164,13 @@ article {
 	Main Content
 --------------------------------------------------- */
 
+.MainContentColumn {
+	max-width: $content-width;
+	margin: 0 auto;
+	padding: 0;
+	min-height: 40vh;	
+}
+
 .MainContent {
 	width: 80%;
 	padding: 0 1em;
@@ -179,6 +180,11 @@ article {
 	}
 
 }
+
+.ArticleContainer {
+	
+}
+
 .WelcomeHeader,
 .TemplateHeader {
 	display: flex;
@@ -203,9 +209,7 @@ article {
 
 }
 
-.MainContentColumn {
-	min-height: 40vh;	
-}
+/* Welcompage Template Classes */
 
 .WelcomeContentContainer {
 	flex-direction: column;
@@ -221,6 +225,19 @@ article {
 
 }
 
+.WelcomeText,
+.WelcomeExcerpt {
+	text-align: center;
+}
+
+/* Page Template Classes */
+
+.TemplateHeaderImageContainer {
+	max-width: $content-width;
+	margin: 0 auto;
+	padding: 0;
+}
+
 .SiteSpecificImage {
 	max-width: 700px;
 	min-width: 200px;
@@ -230,11 +247,6 @@ article {
 		margin-top: 2em;
 	}
 
-}
-
-.WelcomeText,
-.WelcomeExcerpt {
-	text-align: center;
 }
 
 
