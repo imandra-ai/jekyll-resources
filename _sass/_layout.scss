@@ -113,6 +113,7 @@ article {
 }
 
 .TopNavListItem {
+
 }
 
 .TopNavLogoContainer {
@@ -185,15 +186,33 @@ article {
 	
 }
 
-.WelcomeHeader,
-.TemplateHeader {
+.WelcomeHeader {
 	display: flex;
-	align-items: flex-start;
 	min-height: 400px;
-	padding-top: 55px;
+	padding-top: 35px;
 	margin: 0;
 	justify-content: center;
-	text-align: center;
+	background:
+	url('#{$baseurl}/jekyll-resources/assets/img/imandra_background_transition_v_2.svg') center 101% / 1440px 200px repeat-x,
+	url('#{$baseurl}/jekyll-resources/assets/img/bg_regions.svg') center center / cover no-repeat;
+	background-color: #f4f4f4;
+		
+		@media #{$media-mobile}{
+		min-height: 300px;
+		padding-top: 45px;
+		background:
+		url('#{$baseurl}/jekyll-resources/assets/img/imandra_background_transition_v_2.svg') center 101% / 1440px 140px repeat-x,
+		url('#{$baseurl}/jekyll-resources/assets/img/bg_regions.svg') center center / cover no-repeat;
+		}
+
+}
+
+.TemplateHeader {
+	display: flex;
+	min-height: 313px;
+	padding-top: 75px;
+	margin: 0;
+	justify-content: center;
 	background:
 	url('#{$baseurl}/jekyll-resources/assets/img/imandra_background_transition_v_2.svg') center 101% / 1440px 200px repeat-x,
 	url('#{$baseurl}/jekyll-resources/assets/img/bg_regions.svg') center center / cover no-repeat;
