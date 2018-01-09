@@ -2,12 +2,7 @@
 layout: default
 ---
 <!-- Sidebar -->
-<div class="SideMenu animateme"
-      data-when="span"
-      data-from="0"
-      data-to="1"
-      data-easing="easeinout"
-      data-rotatey="360">
+<div id="StickMenu" class="SideMenu">
     {% assign pname = page.collection %}
     {% assign col = site[pname] | sort: 'sequence' | shift %}
     {% for lin in col %}

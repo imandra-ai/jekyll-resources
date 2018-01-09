@@ -10,7 +10,15 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i%7CMerriweather:300,300i,400,400i%7CRoboto+Slab:300,300i,400,400i">
 
 	  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-	  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
 	  <script type="text/javascript" src = "{{ site.baseurl }}{% link jekyll-resources/assets/scripts/jquery.scrollme.min.js %}"></script>
+	  <script type="text/javascript" src = "{{ site.baseurl }}{% link jekyll-resources/assets/scripts/jquery.sticky.min.js %}"></script>
+	  <script type="text/javascript">
+	  	 
+		$(document).ready(function(){
+			$("#StickMenu").sticky({topSpacing:49});
+		});
+
+	  </script>
 
 </head> 
