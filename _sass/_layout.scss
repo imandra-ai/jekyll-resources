@@ -254,7 +254,10 @@ article {
 .TemplateHeaderImageContainer {
 	max-width: $content-width;
 	margin: 0 auto;
-	padding: 0;
+	padding-left: 10px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
 }
 
 .SiteSpecificImage {
