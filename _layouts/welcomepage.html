@@ -8,12 +8,16 @@ layout: welcomedefault
     <div class="WelcomeExcerpt">
         {{ content }}
     </div>
-        <ul class="Repositories">
+        <div class="VerticalsContainer">
+        <div class="Vertical"> 
+            
+            <h3 class="VerticalTitle">Products</h3> 
+            <ul class="Repositories">
                     {% assign jd = site.url | append: "/jekyll-resources/assets/img/" %}
                                 {% for topPage in site.pages %}
                                 {% if topPage.title %}
 
-                                <li class="RepositoryList">
+                                <li class="RepositoryItem">
                                     <a class="RepositoryLink" href="{{ topPage.doclink | prepend: site.baseurl }}">
                                     <img class="RepositoryIcon" src=" {{topPage.img | prepend: jd}} ">
                                     <div class="RepositoryDescription">    
@@ -25,5 +29,63 @@ layout: welcomedefault
 
                                 {% endif %}
                                 {% endfor %}
-    </ul>
+            </ul>
+            </div>
+        
+
+            <div class="Vertical"> 
+            
+            <h3 class="VerticalTitle">Technology</h3> 
+            <ul class="Repositories">
+                    {% assign jd = site.url | append: "/jekyll-resources/assets/img/" %}
+                                {% for topPage in site.pages %}
+                                {% if topPage.title %}
+
+                                <li class="RepositoryItem">
+                                    <a class="RepositoryLink" href="{{ topPage.doclink | prepend: site.baseurl }}">
+                                    <img class="RepositoryIcon" src=" {{topPage.img | prepend: jd}} ">
+                                    <div class="RepositoryDescription">    
+                                        <h2 class=" RepositoryDescription_Title">{{ topPage.title }}</h2>
+                                        <p class="RepositoryDescription_Excerpt">{{topPage.Excerpt}}</p>
+                                    </div>
+                                    </a>
+                                </li>
+
+                                {% endif %}
+                                {% endfor %}
+            </ul>
+        </div>
+
+
+
+
+        <div class="Vertical"> 
+            
+            <h3 class="VerticalTitle">Models</h3> 
+            <ul class="Repositories">
+                    {% assign jd = site.url | append: "/jekyll-resources/assets/img/" %}
+                                {% for topPage in site.pages %}
+                                {% if topPage.title %}
+
+                                <li class="RepositoryItem">
+                                    <a class="RepositoryLink" href="{{ topPage.doclink | prepend: site.baseurl }}">
+                                    <img class="RepositoryIcon" src=" {{topPage.img | prepend: jd}} ">
+                                    <div class="RepositoryDescription">    
+                                        <h2 class=" RepositoryDescription_Title">{{ topPage.title }}</h2>
+                                        <p class="RepositoryDescription_Excerpt">{{topPage.Excerpt}}</p>
+                                    </div>
+                                    </a>
+                                </li>
+
+                                {% endif %}
+                                {% endfor %}
+            </ul>
+        </div>
+
+
+
+
+    </div>
+
+
 </div>
