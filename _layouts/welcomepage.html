@@ -39,7 +39,7 @@ layout: welcomedefault
             <ul class="Repositories">
                     {% assign jd = site.url | append: "/jekyll-resources/assets/img/" %}
                                 {% for topPage in site.pages %}
-                                {% if topPage.title and topPage.vertical == Technology %}
+                                {% if topPage.title and topPage.vertical == "Technology" %}
 
                                 <li class="RepositoryItem">
                                     <a class="RepositoryLink" href="{{ topPage.doclink | prepend: site.baseurl }}">
@@ -65,7 +65,7 @@ layout: welcomedefault
             <ul class="Repositories">
                     {% assign jd = site.url | append: "/jekyll-resources/assets/img/" %}
                                 {% for topPage in site.pages %}
-                                {% if topPage.title and topPage.vertical == Models %}
+                                {% if topPage.title and topPage.vertical == "Models" %}
 
                                 <li class="RepositoryItem">
                                     <a class="RepositoryLink" href="{{ topPage.doclink | prepend: site.baseurl }}">
