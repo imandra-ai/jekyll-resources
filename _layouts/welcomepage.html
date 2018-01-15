@@ -40,7 +40,7 @@ layout: welcomedefault
                     {% assign jd = site.url | append: "/jekyll-resources/assets/img/" %}
                                 {% for topPage in site.pages %}
                                 {% if topPage.title %}
-                                {% if topPage.vertical = "Products" %}
+                                {% if topPage.vertical == "Products" %}
 
                                 <li class="RepositoryItem">
                                     <a class="RepositoryLink" href="{{ topPage.doclink | prepend: site.baseurl }}">
@@ -51,7 +51,7 @@ layout: welcomedefault
                                     </div>
                                     </a>
                                 </li>
-                                
+
                                 {% endif %}
                                 {% endif %}
                                 {% endfor %}
