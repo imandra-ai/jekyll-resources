@@ -373,9 +373,39 @@ article {
 /*  ---------------------------------------------------
 	Main Doc Welcome Page
 --------------------------------------------------- */
+.VerticalsContainer {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	flex-grow: 1;
+	&:first-child {
+		margin-left: 10px;
+	}
+	&:last-child {
+		margin-right: 10px;
+	}
+	@media #{$media-mobile}{
+		flex-direction: column;
+		align-items: center;
+	}
+
+}
+
+.Vertical {
+	display: flex;
+	flex-direction: column;
+	width: 33.33%;
+
+}
+
+.VerticlaTitle {
+	color: #4A596D; /*test*/
+}
 
 .Repositories {
-	margin: 0 1em;
+	margin: 0 10px;
 	padding: 0;
 	@media #{$media-mobile}{
 		margin: 0 1em;
@@ -385,7 +415,7 @@ article {
 	}
 }
 
-.RepositoryList {
+.RepositoryItem {
 	list-style: none;
 }
 
@@ -393,17 +423,15 @@ article {
 	display: flex;
 	max-width: 960px;
 	min-height: 111px;	
-	border-radius: 11px;
-	padding: 1em 2em;
-	margin-bottom: 2em;
-	background-color: #f4f4f4;
+	border-radius: 6px;
+	padding: 0;
+	margin-bottom: 1em;
+	background-color: #fcfcfc;
 	text-decoration: none;
 	transition: all 0.1s ease-out;
 	&:hover {
 		text-decoration: none;
-		background-color: #fafafa;
-		box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.17);
-		transform: translateY(-2px) scale(1.003);
+		background-color: #f0f0f0;
 	}
 	@media #{$media-small-mobile}{
 		flex-direction: column;
@@ -415,7 +443,6 @@ article {
 
 .RepositoryIcon {
 	width: 44px;
-	margin-right: 22px;
 }
 
 .RepositoryDescription {
