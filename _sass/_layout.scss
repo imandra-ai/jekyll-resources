@@ -406,6 +406,7 @@ article {
 .VerticalTitle {
 	color: #4A596D; /*test*/
 	margin-left: 1.44em;
+	margin-bottom: 1em;
 
 	@media #{$media-mobile}{
 		align-self: center;
@@ -453,6 +454,8 @@ article {
 
 .RepositoryIcon {
 	width: 44px;
+	align-self: flex-start;
+	margin: 10px
 }
 
 .RepositoryDescription {
