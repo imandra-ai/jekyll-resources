@@ -1,91 +1,38 @@
 ---
 layout: welcomedefault
 ---
-
+{% assign jd = site.url | append: "/jekyll-resources/assets/img/" %}
 <h2 class="WelcomeText">{{ page.title }}</h2>
-
 <div class="WelcomeContentContainer">
     <div class="WelcomeExcerpt">
         {{ content }}
     </div>
-        <div class="VerticalsContainer">
+    <div class="VerticalsContainer">
+    {% assign sortedCollections = site.collections | sort: 'sequence' %}
+    {% for collection in sortedCollections %}
+    {% if collection.label != 'posts' %}
         <div class="Vertical"> 
-            
-            <h2 class="VerticalTitle">Products</h2> 
-            <ul class="Repositories">
-                    {% assign jd = site.url | append: "/jekyll-resources/assets/img/" %}
-                                {% for topPage in site.pages %}
-                                {% if topPage.title and topPage.vertical == "Products" %}
-
-                                <li class="RepositoryItem">
-                                    <a class="RepositoryLink" href="{{ topPage.doclink | prepend: site.baseurl }}">
-                                    <img class="RepositoryIcon" src=" {{topPage.img | prepend: jd}} ">
-                                    <div class="RepositoryDescription">    
-                                        <h3 class=" RepositoryDescription_Title">{{ topPage.title }}</h3>
-                                        <p class="RepositoryDescription_Excerpt">{{topPage.Excerpt}}</p>
-                                    </div>
-                                    </a>
-                                </li>
-
-                                {% endif %}
-                                {% endfor %}
-            </ul>
+        {% assign colPages = collection.docs %}
+        {% assign colPageName = colPages | first %}
+        {% if colPages.empty %}
+        {% else %}     
+        <h2 class = "VerticalTitle">{{colPageName.vertical}}</h2>
+        <ul class = "Repositories"></ul>
+        {% for colPage in colPages %}
+        <li class="RepositoryItem">
+        <a class="RepositoryLink" href="{% if colPage.docAbs%}{{colPage.doclink}}{% else %}{{colPage.doclink | prepend: site.baseurl}}{% endif %}">
+        <img class="RepositoryIcon" src=" {{colPage.img | prepend: jd}} ">
+            <div class="RepositoryDescription">    
+                <h3 class=" RepositoryDescription_Title">{{ colPage.title }}</h3>
+                <p class="RepositoryDescription_Excerpt">{{colPage.Excerpt}}</p>
             </div>
-        
-
-            <div class="Vertical"> 
-            
-            <h2 class="VerticalTitle">Technology</h2> 
-            <ul class="Repositories">
-                    {% assign jd = site.url | append: "/jekyll-resources/assets/img/" %}
-                                {% for topPage in site.pages %}
-                                {% if topPage.title and topPage.vertical == "Technology" %}
-
-                                <li class="RepositoryItem">
-                                    <a class="RepositoryLink" href="{{ topPage.doclink | prepend: site.baseurl }}">
-                                    <img class="RepositoryIcon" src=" {{topPage.img | prepend: jd}} ">
-                                    <div class="RepositoryDescription">    
-                                        <h3 class=" RepositoryDescription_Title">{{ topPage.title }}</h3>
-                                        <p class="RepositoryDescription_Excerpt">{{topPage.Excerpt}}</p>
-                                    </div>
-                                    </a>
-                                </li>
-
-                                {% endif %}
-                                {% endfor %}
-            </ul>
+        </a>
+        </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
         </div>
-
-
-
-
-        <div class="Vertical"> 
-            
-            <h2 class="VerticalTitle">Models</h2> 
-            <ul class="Repositories">
-                    {% assign jd = site.url | append: "/jekyll-resources/assets/img/" %}
-                                {% for topPage in site.pages %}
-                                {% if topPage.title and topPage.vertical == "Models" %}
-
-                                <li class="RepositoryItem">
-                                    <a class="RepositoryLink" href="{{ topPage.doclink | prepend: site.baseurl }}">
-                                    <img class="RepositoryIcon" src=" {{topPage.img | prepend: jd}} ">
-                                    <div class="RepositoryDescription">    
-                                        <h3 class=" RepositoryDescription_Title">{{ topPage.title }}</h3>
-                                        <p class="RepositoryDescription_Excerpt">{{topPage.Excerpt}}</p>
-                                    </div>
-                                    </a>
-                                </li>
-
-                                {% endif %}
-                                {% endfor %}
-            </ul>
-        </div>
-
-
-
-
+    {% endif %}
+    {% endfor %}
     </div>
-
-
 </div>
