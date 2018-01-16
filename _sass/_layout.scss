@@ -405,6 +405,13 @@ article {
 
 .VerticlaTitle {
 	color: #4A596D; /*test*/
+	margin-left: 1.44em;
+
+	@media #{$media-mobile}{
+		align-self: center;
+		margin: 0;
+	}
+
 }
 
 .Repositories {
