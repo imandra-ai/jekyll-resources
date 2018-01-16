@@ -407,17 +407,11 @@ article {
 }
 
 .VerticalTitle {
-	color: #4A596D;
+	color: $title-color;
 	height: 1.2em;
-	margin-left: 1.44em;
 	margin-bottom: 1em;
 	font-weight: 100;
-
-	@media #{$media-mobile}{
-		align-self: center;
-		margin: 0;
-	}
-
+	align-self: center;
 }
 
 .Repositories {
