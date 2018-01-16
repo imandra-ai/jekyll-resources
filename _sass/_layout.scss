@@ -393,11 +393,9 @@ article {
 	flex-direction: column;
 	width: 33.33%;
 	&:first-child {
-		margin-left: 10px;
 		border-right: solid 1px #f0f0f0;
 	}
 	&:last-child {
-		margin-right: 10px;
 		border-left: solid 1px #f0f0f0;
 	}
 
@@ -407,6 +405,7 @@ article {
 	color: #4A596D; /*test*/
 	margin-left: 1.44em;
 	margin-bottom: 1em;
+	font-weight: 100;
 
 	@media #{$media-mobile}{
 		align-self: center;
@@ -435,7 +434,7 @@ article {
 	max-width: 960px;
 	min-height: 111px;	
 	border-radius: 6px;
-	padding: 0;
+	padding: 1em 0;
 	margin-bottom: 1em;
 	background-color: #fcfcfc;
 	text-decoration: none;
@@ -467,6 +466,7 @@ article {
 .RepositoryDescription_Title {
 	color: $font-color;
 	margin: 0;
+	font-weight: 100;
 }
 
 .RepositoryDescription_Excerpt {
