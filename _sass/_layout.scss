@@ -199,6 +199,7 @@ article {
 }
 
 .ArticleContainer {
+	min-height: 80vh;
 	
 }
 
@@ -392,6 +393,7 @@ article {
 	display: flex;
 	flex-direction: column;
 	width: 33.33%;
+	padding: 0 0.2em;
 	&:first-child {
 		border-right: solid 1px #f0f0f0;
 	}
