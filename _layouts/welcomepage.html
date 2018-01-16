@@ -11,7 +11,7 @@ layout: welcomedefault
         <div class="VerticalsContainer">
         <div class="Vertical"> 
             
-            <h3 class="VerticalTitle">Products</h3> 
+            <h2 class="VerticalTitle">Products</h2> 
             <ul class="Repositories">
                     {% assign jd = site.url | append: "/jekyll-resources/assets/img/" %}
                                 {% for topPage in site.pages %}
@@ -21,7 +21,7 @@ layout: welcomedefault
                                     <a class="RepositoryLink" href="{{ topPage.doclink | prepend: site.baseurl }}">
                                     <img class="RepositoryIcon" src=" {{topPage.img | prepend: jd}} ">
                                     <div class="RepositoryDescription">    
-                                        <h2 class=" RepositoryDescription_Title">{{ topPage.title }}</h2>
+                                        <h3 class=" RepositoryDescription_Title">{{ topPage.title }}</h3>
                                         <p class="RepositoryDescription_Excerpt">{{topPage.Excerpt}}</p>
                                     </div>
                                     </a>
@@ -35,7 +35,7 @@ layout: welcomedefault
 
             <div class="Vertical"> 
             
-            <h3 class="VerticalTitle">Technology</h3> 
+            <h2 class="VerticalTitle">Technology</h2> 
             <ul class="Repositories">
                     {% assign jd = site.url | append: "/jekyll-resources/assets/img/" %}
                                 {% for topPage in site.pages %}
@@ -45,7 +45,7 @@ layout: welcomedefault
                                     <a class="RepositoryLink" href="{{ topPage.doclink | prepend: site.baseurl }}">
                                     <img class="RepositoryIcon" src=" {{topPage.img | prepend: jd}} ">
                                     <div class="RepositoryDescription">    
-                                        <h2 class=" RepositoryDescription_Title">{{ topPage.title }}</h2>
+                                        <h3 class=" RepositoryDescription_Title">{{ topPage.title }}</h3>
                                         <p class="RepositoryDescription_Excerpt">{{topPage.Excerpt}}</p>
                                     </div>
                                     </a>
@@ -61,7 +61,7 @@ layout: welcomedefault
 
         <div class="Vertical"> 
             
-            <h3 class="VerticalTitle">Models</h3> 
+            <h2 class="VerticalTitle">Models</h2> 
             <ul class="Repositories">
                     {% assign jd = site.url | append: "/jekyll-resources/assets/img/" %}
                                 {% for topPage in site.pages %}
@@ -71,7 +71,7 @@ layout: welcomedefault
                                     <a class="RepositoryLink" href="{{ topPage.doclink | prepend: site.baseurl }}">
                                     <img class="RepositoryIcon" src=" {{topPage.img | prepend: jd}} ">
                                     <div class="RepositoryDescription">    
-                                        <h2 class=" RepositoryDescription_Title">{{ topPage.title }}</h2>
+                                        <h3 class=" RepositoryDescription_Title">{{ topPage.title }}</h3>
                                         <p class="RepositoryDescription_Excerpt">{{topPage.Excerpt}}</p>
                                     </div>
                                     </a>
