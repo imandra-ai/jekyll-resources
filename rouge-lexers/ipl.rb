@@ -12,8 +12,8 @@ module Rouge
       keywords = Set.new %w(
           VerificationPacks action alias assignFrom assignable case
           datatype declare default description enum events extend false
-          focusOn ignored ign imandramarkets import interLibraryCheck internal int in
-          invalidfield invalid let library libraryMarker message missingfield name
+          focusOn ignored ign imandramarkets import interLibraryCheck internal int
+          invalidfield invalid in let library libraryMarker message missingfield name
           optional opt outbound overloadFunction precision present receive record
           reject repeating require req return scenario send testfile toFloat
           toInt true truncate unique validate valid when with string bool float
