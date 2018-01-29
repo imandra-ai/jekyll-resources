@@ -47,6 +47,9 @@ h1 {
 
 h2 {
 	font-size: 2.2rem;
+	&:not(:first-of-type){
+		padding-top: 4.4rem;
+	}
 }
 
 h3 {
