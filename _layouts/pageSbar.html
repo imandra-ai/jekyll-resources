@@ -20,7 +20,7 @@ layout: default
     {{content}}
     {% else %}
     {% for colPage in col %}
-    <h2 id={{colPage.tag}}>{{colPage.title}}</h2>
+    <h2 class ="internalLink-padding" id={{colPage.tag}}>{{colPage.title}}</h2>
     {{ colPage.content | markdownify }}
     {% endfor %}
     {% endif %}

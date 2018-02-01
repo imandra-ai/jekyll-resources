@@ -47,9 +47,6 @@ h1 {
 
 h2 {
 	font-size: 2.2rem;
-	&:not(:first-of-type){
-		padding-top: 4.4rem;
-	}
 }
 
 h3 {
@@ -508,4 +505,8 @@ article {
 figure {
 	margin: 0;
 	padding: 0;
+}
+
+h2.internalLink-padding {
+	padding-top: 4.4rem;
 }
