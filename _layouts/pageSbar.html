@@ -7,7 +7,11 @@ layout: default
         {% assign pname = page.collection %}
         {% assign col = site[pname] | sort: 'sequence' | shift %}
         {% for lin in col %}
+        {% if forloop.index == 1 %}
+        <A href=#>{{lin.title}}</A>
+        {% else %}
         <A href=#{{lin.tag}}>{{lin.title}}</A>
+        {% endif %}
         {% endfor %}
         {% if page.title == "Documentation" and site.baseurl == "/fix-engine" %}
         <a href = "{{ site.baseurl }}{% link _pages/doc/index.html %}">Technical Documentation</a>
