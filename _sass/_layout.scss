@@ -266,6 +266,11 @@ article {
 	text-align: center;
 	display: flex;
 	justify-content: center;
+	
+	@media #{$media-mobile}{
+		flex-direction: column;
+	}
+
 }
 
 .WelcomeAILink {
