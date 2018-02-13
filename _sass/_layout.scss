@@ -264,11 +264,14 @@ article {
 .WelcomeText,
 .WelcomeExcerpt {
 	text-align: center;
+	display: flex;
+	justify-content: center;
 }
 
 .WelcomeAILink {
 	text-decoration: none;
 	color: $link-color;
+	margin-left: 3px;
 }
 
 /* Page Template Classes */
