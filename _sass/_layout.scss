@@ -523,3 +523,14 @@ figure {
 h2.internalLink-padding {
 	padding-top: 4.4rem;
 }
+
+.box{
+    display: none;
+    width: 100%;
+}
+
+a:hover + .box,.box:hover{
+    display: block;
+    position: relative;
+    z-index: 100;
+}
