@@ -520,11 +520,20 @@ figure {
 	padding: 0;
 }
 
-h2.internalLink-padding {
-	padding-top: 4.4rem;
+h2.internalLink-padding:before {
+	display: block; 
+	content: " "; 
+	margin-top: -60px; 
+	height: 60px; 
+	visibility: hidden; 
+	pointer-events: none;
 }
 
-.box{
+h2.internalLink-padding {
+	padding-top: 1.6em;
+}
+
+.box {
     display: none;
     width: 100%;
 }
