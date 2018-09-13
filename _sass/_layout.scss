@@ -21,10 +21,10 @@ pre {
 
 body {
 	color: $font-color;
-	font-family: $font-family-main;
-	font-size: 15px;
-	line-height: 21px;
-	font-weight: 400;
+	font-family: $font-family-upper-sans;
+	font-size: 1em;
+	line-height: 1.6;
+	font-weight: 300;
 	-webkit-font-smoothing: antialiased;
 	margin: 0;
 }
@@ -65,12 +65,11 @@ a {
 }
 
 a:visited {
-	color: $link-color;
 	text-decoration: none;
 }
 
 a:hover {
-	color: $link-hover-color;
+	color: $imandra-mint;
 	text-decoration: none;
 }
 
@@ -88,91 +87,243 @@ article {
 
 
 /*  ---------------------------------------------------
-	Top Navigation
+    Navigation
 --------------------------------------------------- */
 
+// Top row with Sidemenu
 .TopRowContainer {
 	position: fixed;
 	top: 0;
 	left: 0;
-	background: #fff;
-	width: 100%;
+	background: rgba(255,255,255,0);
+	height: 100%;
 	z-index: 2;
 	border-bottom: 1px solid lighten($light, 30%);
 	box-shadow: 0px 1px 1px RGBA(4, 25, 54, .1);
+	@media #{$media-mobile}{
+		position: relative;
+	}
 }
 
 .TopRow {
 	max-width: $content-width;
 	margin: 0 auto;
 	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	@media #{$media-mobile} {
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: row;
+	}
 }
 
-.TopNavContainer {
- 	justify-content: flex-start;
- 	@media #{$media-mobile}{
-		justify-content: flex-end;
+.side {
+	&__logo-container {
+		display: flex;
+		width: 30%;
+		padding: 10px;
+		
+		&:hover {
+			background: $header;
+		}
+
+		@media #{$media-mobile} {
+			justify-content: center;
+		}
+
 	}
 
-}
-
-.TopNavList {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	display: flex;
-	flex-wrap: wrap;
-	@media #{$media-mobile}{
-		justify-content: flex-end;
+	&__logo {
+		width:29px;
+		height:30px;
 	}
 
-}
+	&__logo-link {
+		margin: 0;
+		padding: 0;
+		height: 30px;
+	}
 
-.TopNavListItem {
+	&__nav-container {
+		justify-content: flex-start;
+		margin-top: 2em;
+		@media #{$media-mobile} {
+			position: absolute;
+			background: #ffffff;
+			width: 100%;
+			top: 20px;
+			height: 100vh;
+		}
+	}
 
-}
+	&__nav-container--hidden {
+		@media #{$media-mobile} {
+			display: none;
+		}
+	}
 
-.TopNavLogoContainer {
-	display: flex;
-	justify-content: center;
-	align-items:center;
-	padding: 0 10px;
-	margin-right: 30px;
-	height: 48px;
-	&:hover{
+	&__nav-list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;	
+		@media #{$media-mobile} {
+			justify-content: flex-end;
+			}
+		&--sub-level-1 {
+			font-size: 13px;
+			list-style: none;
+			padding: 0 0 1em 1em;
+		}
+	}
+	
+	&__nav-link--active {
 		background: $header;
 	}
 
-	@media #{$media-small-mobile}{
-		padding: 0 5px;
-		margin-right: 0;
+	&__nav-list-item {
+		&--sub-level-1 a {
+			color: #505B76;
+			&:hover {
+				color: black;
+			}
+		}
 	}
 
-}
-
-.TopNavLogo {
-	width: 54px;
-}
-
-.TopNavLink {
-	font-size: 14px;
-	text-decoration: none;
-	font-size: 14px;
-	display: block;
-	height: 48px;
-	padding: 15px 7px;
-	&:hover{
-		background: $header;
+	&__nav-link {
+		font-size: 1rem;
 		text-decoration: none;
-		color: $imandra-mint;
+		display: block;
+		padding: 0 7px;
+		&:hover {
+			background: $header;
+			text-decoration: none;
+			color: $imandra-mint;
+			}
+		@media #{$media-mobile} {
+			padding: 0.5em;
+			}
+
+	}
+
+	&__toggle {
+		text-decoration: none;
+		font-size: 50px;
+		display: flex;
+		line-height: 30px;
+		align-items: baseline;
+		height: 40px;
+		}
+
+	&__toggle-text {
+		font-size: 13px;
+		align-self: center;
+    	margin: 0 5px;
+		}
+
+	&__left-menu-toggler {
+		display: none;
+		@media #{$media-mobile} {
+			display: flex;
+			margin-left: 5px;
+		}
+	}
+
+	&__right-menu-toggler {
+		display: none;
+		@media #{$media-mobile} {
+			display: flex;
+			margin-right: 5px;
+		}
 	}
 }
 
-.TopNavLink__Active {
-	background: $header;
-	text-decoration: none;
-	color: $font-color;
+
+
+
+// Top Navigation with links to pages 
+
+.top-bar {
+	display: flex;
+	justify-content: flex-end;
+
+	&__nav-container{
+		display:flex;
+		justify-content: flex-end;
+		@media #{$media-mobile} {
+			justify-content: flex-start;
+			width: 100%;
+		}
+	}
+
+	&__nav-list {
+		list-style: none;
+		display: flex;
+		margin:1rem;
+		font-size: 0.5em;
+		@media #{$media-mobile} {
+			position: absolute;
+			background: #ffffff;
+			width: 100%;
+			top: 50px;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+			flex-direction: column;	
+		}
+	}
+
+	&__nav-list--hidden {
+		@media #{$media-mobile} {
+			display: none;
+		}
+	}
+
+	&__toggle {
+
+	}
+
+	&__nav-list-item {
+		padding: 0 10px;
+		@media #{$media-mobile} {
+			padding: 0;
+		}
+	}
+
+	&__nav-link {
+		padding: 0.8em 0;
+		font-weight: 400;
+		font-size: 13px;
+		text-decoration: none;
+		text-transform: uppercase !important;
+		text-align: right;
+		white-space: nowrap;
+		color: #576483;
+		@media #{$media-mobile} {
+			text-transform: none !important;
+			font-size: 1rem;
+			text-decoration: none;
+			display: block;
+			padding: 0.8em;
+			font-weight: 300;
+			&:hover {
+				background: $header;
+				text-decoration: none;
+				color: black;
+				}
+			}
+	}
+
+	&__toggle{
+		display:none;
+	}
+
 }
+
+
 
 
 
@@ -182,7 +333,6 @@ article {
 --------------------------------------------------- */
 
 .MainContentColumn {
-	max-width: $content-width;
 	margin: 0 auto;
 	padding: 0;
 	min-height: 50vh;	
@@ -190,17 +340,23 @@ article {
 
 .MainContent {
 	width: 80%;
-	padding: 0 1em;
+	padding: 0 2em;
 	
-	@media #{$media-small-mobile}{
+	@media #{$media-mobile} {
 		width: 100%;
+		padding: 0 1em;
 	}
 
 }
 
 .ArticleContainer {
 	min-height: 80vh;
-	
+	margin-left: $sidebar-width;
+	margin-top: -60vh;
+	@media #{$media-mobile} {
+		margin-top: 0;
+		margin-left: 0;
+	}
 }
 
 .WelcomeHeader {
@@ -215,7 +371,7 @@ article {
 	url('#{$baseurl}/jekyll-resources/assets/img/bg_regions.svg') center center / cover no-repeat;
 	background-color: #f4f4f4;
 		
-		@media #{$media-mobile}{
+		@media #{$media-mobile} {
 		min-height: 300px;
 		padding-top: 45px;
 		background:
@@ -227,23 +383,38 @@ article {
 
 .TemplateHeader {
 	display: flex;
-	min-height: 313px;
-	padding-top: 75px;
+	flex-direction: column;
+	min-height: 90vh;
 	margin: 0;
 	justify-content: center;
 	background:
-	url('#{$baseurl}/jekyll-resources/assets/img/imandra_background_transition_v_2.svg') center 101% / 1440px 200px repeat-x,
-	url('#{$baseurl}/jekyll-resources/assets/img/bg_regions.svg') center center / cover no-repeat;
-	background-color: #f4f4f4;
+		url('#{$baseurl}/jekyll-resources/assets/img/bg_image_cover.svg') center 10% / cover no-repeat,
+		url('#{$baseurl}/jekyll-resources/assets/img/bg_regions.svg') center center / cover no-repeat;
+	background-color: #ffffff;
 		
-		@media #{$media-mobile}{
-		min-height: 240px;
+		@media #{$media-mobile} {
+		min-height: 140px;
 		background:
-		url('#{$baseurl}/jekyll-resources/assets/img/imandra_background_transition_v_2.svg') center 101% / 1440px 140px repeat-x,
+		url('#{$baseurl}/jekyll-resources/assets/img/bg_image_cover.svg') center 10% / cover no-repeat,
 		url('#{$baseurl}/jekyll-resources/assets/img/bg_regions.svg') center center / cover no-repeat;
 		}
 
 }
+
+.template-header {
+
+	&__image {
+		display: flex;
+		width: 100%;
+		height: 7rem;
+	}
+}
+
+
+
+
+
+
 
 /* Welcompage Template Classes */
 
@@ -255,7 +426,7 @@ article {
 	max-width: 700px;
 	min-width: 200px;
 
-		@media #{$media-small-mobile}{
+		@media #{$media-small-mobile} {
 		width: 80%;
 	}
 
@@ -267,7 +438,7 @@ article {
 	display: flex;
 	justify-content: center;
 	
-	@media #{$media-mobile}{
+	@media #{$media-mobile} {
 		flex-direction: column;
 	}
 
@@ -282,21 +453,26 @@ article {
 /* Page Template Classes */
 
 .TemplateHeaderImageContainer {
-	max-width: $content-width;
-	margin: 0 auto;
+	margin-left: $sidebar-width;
 	padding-left: 10px;
     display: flex;
     flex-grow: 1;
     justify-content: flex-start;
+	@media #{$media-mobile} {
+		margin-left: 0;
+	}
+
 }
+
 
 .SiteSpecificImage {
 	max-width: 700px;
 	min-width: 200px;
+	margin: 1em;
 
-	@media #{$media-mobile}{
-		width: 80%;
-		margin-top: 2em;
+	@media #{$media-mobile} {
+		width: 90%;
+
 	}
 
 }
@@ -310,38 +486,42 @@ article {
 
 .SideMenuContainer {
 	width: 20%;
+	@media #{$media-mobile}{
+		display: none;
+	}
 }
-
 .SideMenu {
-	width: 100%;
-	margin-left: 1rem;
-	padding-top: 1.6rem;
+	
 	a {
 		display: block; 
 		text-decoration: none;
-		padding: 0.4em 0.6em;
+		padding: 0 0.6em;
 		border-left: solid #f5faf9;
 	}
 	a:hover {
 		background: $header;
 		text-decoration: none;
-		color: $imandra-mint;
+		color: $link-hover-color;
 	}
 	a:active {
 		color: $font-color;
 	}
-
-	@media #{$media-small-mobile}{
-	display: none;
+	@media #{$media-mobile} {
+		font-size: 13px;
+		margin-left: 0;
+		display: none;
+	}
+	@media #{$media-small-mobile} {
+		display: none;
 	}
 
 }
 
-.DummySideMenu{
+.DummySideMenu {
 	width: 20%;
 	margin: 0;
 	
-	@media #{$media-small-mobile}{
+	@media #{$media-small-mobile} {
 		width: 0;
 		padding: 0;
 	}
@@ -394,7 +574,7 @@ article {
 	margin: 0;
 	padding: 0;
 	flex-grow: 1;
-	@media #{$media-mobile}{
+	@media #{$media-mobile} {
 		flex-direction: column;
 		align-items: center;
 		border: none;
@@ -413,7 +593,7 @@ article {
 	&:last-child {
 		border-left: solid 1px #f0f0f0;
 	}
-	@media #{$media-mobile}{
+	@media #{$media-mobile} {
 		width: 100%;
 		flex-direction: column;
 		align-items: center;
@@ -432,7 +612,7 @@ article {
 .Repositories {
 	margin: 0 10px;
 	padding: 0;
-	@media #{$media-mobile}{
+	@media #{$media-mobile} {
 		margin: 0 1em;
 		display: flex;
 		flex-direction: column;
@@ -458,7 +638,7 @@ article {
 		text-decoration: none;
 		background-color: #f0f0f0;
 	}
-	@media #{$media-mobile}{
+	@media #{$media-mobile} {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -472,7 +652,7 @@ article {
 	align-self: flex-start;
 	margin: 10px;
 
-	@media #{$media-mobile}{
+	@media #{$media-mobile} {
 	align-self: center;
 	}
 
@@ -563,5 +743,3 @@ a:hover + .box, .box:hover {
 .template-image:hover {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
-
