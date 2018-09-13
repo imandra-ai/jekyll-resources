@@ -23,8 +23,18 @@
 						<ul class="side__nav-list--sub-level-1">
 							{% assign pname = page.collection %}
 							{% assign col = site[pname] | sort: 'sequence' | shift %}
+							{% assign topCol = site[pname] | sort: 'sequence' | first %}
 							{% for lin in col %}
+							{% if topCol.layout == "pageSbar" %}
+							{% if forloop.index == 1 %}
+							{% assign newLin = "#" | prepend: topCol.permalink %}
+							{% else %}
+							{% assign newLin = lin.tag | prepend: "#" | prepend: topCol.permalink %}
+							{% endif %}
+							<li class="side__nav-list-item--sub-level-1"><a class="side__nav-link" href="{{ newLin | prepend: site.baseurl }}">{{lin.title}}</a></li>
+							{% else %}
 							<li class="side__nav-list-item--sub-level-1"><a class="side__nav-link" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a></li>
+							{% endif %}
 							{% endfor %}
 							{% if page.colName == "Documentation" and site.baseurl == "/fix-engine" %}
 							<li class="side__nav-list-item--sub-level-1"><a class="side__nav-link" href = "{{ site.baseurl }}{% link _pages/doc/index.html %}">Technical Documentation</a></li>
