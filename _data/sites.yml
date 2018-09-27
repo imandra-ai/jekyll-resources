@@ -1,5 +1,5 @@
 - name: Intro
-  baseurl: /
+  baseurl: 
 
 - name: Imandra
   baseurl: /imandra-docs
