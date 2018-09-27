@@ -10,43 +10,28 @@
 		<div id="toggler--right" class="side__left-menu-toggler"><a href="#" class="side__toggle"><span class="side__toggle-text">Pages</span> ≡</a></div>
 
 		<nav class="side__nav-container side__nav-container--hidden">
+			{% assign mainSites = %}
 			<ul class="side__nav-list">
+				{% for mainsite in site.data.sites %}
+				<li class="side__nav-list-item TopNavListItem"></li>
+				{% if site.baseurl == mainsite.baseurl %}
+				<a class="side__nav-link side__nav-link--active" href="{{ site.url | append: mainsite.baseurl }}">{{ mainsite.name }}</a>
+				<ul class="side__nav-list--sub-level-1">
 				{% assign collections = (site.collections | sort: 'sequence') %}
 				{% for collection in collections %} 
 				{% if collection.label != 'posts' %}
 				{% assign colName = collection.label %}
 				{% assign topPage = site.[colName] | sort: 'sequence' | first %}
 				{% if page.collection == topPage.collection %}
-				<li class="side__nav-list-item TopNavListItem">
-					<a class="side__nav-link side__nav-link--active" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a>
-						<!-- just testing below this line -->
-						<ul class="side__nav-list--sub-level-1">
-							{% assign pname = page.collection %}
-							{% assign col = site[pname] | sort: 'sequence' | shift %}
-							{% assign topCol = site[pname] | sort: 'sequence' | first %}
-							{% for lin in col %}
-							{% if topCol.layout == "pageSbar" %}
-							{% if forloop.index == 1 %}
-							{% assign newLin = "#" | prepend: topCol.permalink %}
-							{% else %}
-							{% assign newLin = lin.tag | prepend: "#" | prepend: topCol.permalink %}
-							{% endif %}
-							<li class="side__nav-list-item--sub-level-1"><a class="side__nav-link" href="{{ newLin | prepend: site.baseurl }}">{{lin.title}}</a></li>
-							{% else %}
-							<li class="side__nav-list-item--sub-level-1"><a class="side__nav-link" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a></li>
-							{% endif %}
-							{% endfor %}
-							{% if page.colName == "Documentation" and site.baseurl == "/fix-engine" %}
-							<li class="side__nav-list-item--sub-level-1"><a class="side__nav-link" href = "{{ site.baseurl }}{% link _pages/doc/index.html %}">Technical Documentation</a></li>
-							{% endif %}
-						</ul>
-						<!-- testing ends -->
-				</li>
+				<li class="side__nav-list-item--sub-level-1"><a class=a class="side__nav-link side__nav-link--active" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a></li>
 				{% else %}
-				<li class="side__nav-list-item ">
-					<a class="side__nav-link" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a>
-				</li>
+				<li class="side__nav-list-item--sub-level-1"><a class=a class="side__nav-link" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a></li>
 				{% endif %}
+				{% endif %}
+				{% endfor %}
+				</ul>
+				{% else %}
+				<a class="side__nav-link" href="{{ site.url | append: mainsite.baseurl }}">{{ mainsite.name }}</a>
 				{% endif %}
 				{% endfor %}
 			</ul>
