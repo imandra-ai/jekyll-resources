@@ -1,5 +1,6 @@
 /* Layout variables */
 $content-width: 988px;
+$sidebar-width: 177px;
 
 /* Media Queries breakpoints - please notice that we are using "desktop first" attitude. Variables as full query */
 $media-mobile: "screen and (max-width : 720px)";
@@ -11,13 +12,13 @@ $font-family-main: 'Roboto Slab', serif;
 $heading-font: $font-family-upper-sans;
 
 /* Color variables */
-$imandra-mint: #27d798;
-$font-color: #405267;
-$title-color: #4A596D;
-$link-color: #249ef1;
+$imandra-mint: #22e6b0;
+$font-color: #576483;
+$title-color: #7081AA;
+$link-color: #7E95CE;
 $link-visited: $link-color;
 $link-active: #425469;
-$link-hover-color: $imandra-mint;
+$link-hover-color:#3A4152;
 $light: #e7edf4;
 $header: #fafafa;
 $heading-font-color: $font-color;
