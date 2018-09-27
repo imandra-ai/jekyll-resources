@@ -15,7 +15,7 @@
 				{% for mainsite in site.data.sites %}
 				<li class="side__nav-list-item TopNavListItem"></li>
 				{% if site.baseurl == mainsite.baseurl %}
-				<a class="side__nav-link side__nav-link--active" href="{{ site.url | append: mainsite.baseurl }}">{{ mainsite.name }}</a>
+				<a class="side__nav-link side__nav-link--active" href="{{ mainsite.baseurl }}">{{ mainsite.name }}</a>
 				<ul class="side__nav-list--sub-level-1">
 				{% assign collections = (site.collections | sort: 'sequence') %}
 				{% for collection in collections %} 
@@ -31,7 +31,7 @@
 				{% endfor %}
 				</ul>
 				{% else %}
-				<a class="side__nav-link" href="{{ site.url | append: mainsite.baseurl }}">{{ mainsite.name }}</a>
+				<a class="side__nav-link" href="{{ mainsite.baseurl }}">{{ mainsite.name }}</a>
 				{% endif %}
 				{% endfor %}
 			</ul>
