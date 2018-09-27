@@ -14,7 +14,7 @@
 				<ul class="side__nav-list">
 					{% for mainsite in site.data.sites %}
 					<li class="side__nav-list-item TopNavListItem"></li>
-					{% if (mainsite.baseurl == null || mainsite.baseurl == '') %}
+					{% if mainsite.baseurl == "/" %}
 					<a class="side__nav-link side__nav-link--active" href="{{ mainsite.baseurl }}">{{ mainsite.name }}</a>
 					{% else %}
 					<a class="side__nav-link" href="{{ mainsite.baseurl }}">{{ mainsite.name }}</a>
