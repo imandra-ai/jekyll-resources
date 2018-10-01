@@ -12,7 +12,6 @@
 	  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
 	  <script type="text/javascript" src = "{{ site.baseurl }}{% link jekyll-resources/assets/scripts/jquery.scrollme.min.js %}"></script>
-	  <script type="text/javascript" src = "{{ site.baseurl }}{% link jekyll-resources/assets/scripts/jquery.sticky.min.js %}"></script>
 	  <script type="text/javascript">
 	  	 
 		$(document).ready(function() {
@@ -25,8 +24,6 @@
 				$(".side__nav-container").addClass("side__nav-container--hidden");
 				$(".top-bar__nav-list").toggleClass("top-bar__nav-list--hidden");
 			}); 
-
-			$("#StickMenu").sticky({topSpacing:0});
 		});
 
 	  </script>

@@ -488,6 +488,9 @@ time {
 
 .SideMenuContainer {
 	width: 20%;
+  position: sticky;
+  top: 0;
+
 	@media #{$media-mobile}{
 		display: none;
 	}
