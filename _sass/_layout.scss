@@ -14,9 +14,13 @@
 pre {
 	padding: 1.5em;
 	margin: 0;
-	overflow-x: scroll;
+	overflow-x: auto;
 	margin-right: 0.55rem;
 	border-left: solid #e8e8e8;
+}
+
+html {
+    font-size: 16px !important;
 }
 
 body {
@@ -341,6 +345,10 @@ time {
 		width: 100%;
 		padding: 0 1em;
 	}
+
+  h1, h2, h3, h4 {
+      font-weight: 300;
+  }
 
 }
 
