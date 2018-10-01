@@ -77,13 +77,6 @@ time {
 	color: #898989;
 }
 
-article {
-	max-width: 988px;
-	display: flex;
-	flex-direction: column;
-    align-items: flex-start;
-}
-
 
 
 
@@ -352,9 +345,15 @@ article {
 }
 
 .ArticleContainer {
+	max-width: 988px;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: flex-start;
+	
 	min-height: 80vh;
 	margin-left: $sidebar-width;
 	margin-top: -50vh;
+	
 	@media #{$media-mobile} {
 		margin-top: 0;
 		margin-left: 0;
@@ -602,6 +601,10 @@ article {
 		width: 50%;
 		padding-right: 4em;
 		margin-bottom: 4em;
+		@media #{$media-mobile} {
+			width: 100%;
+			padding: 0;
+		}
 	}
 
 	&__repository-brand-container {
