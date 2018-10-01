@@ -23,9 +23,9 @@
 				{% assign colName = collection.label %}
 				{% assign topPage = site.[colName] | sort: 'sequence' | first %}
 				{% if page.collection == topPage.collection %}
-				<li class="side__nav-list-item--sub-level-1"><a class=a class="side__nav-link side__nav-link--active" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a></li>
+				<li class="side__nav-list-item--sub-level-1"><a class="side__nav-link side__nav-link--active" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a></li>
 				{% else %}
-				<li class="side__nav-list-item--sub-level-1"><a class=a class="side__nav-link" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a></li>
+				<li class="side__nav-list-item--sub-level-1"><a class="side__nav-link" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a></li>
 				{% endif %}
 				{% endif %}
 				{% endfor %}
