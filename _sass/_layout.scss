@@ -271,7 +271,8 @@ time {
 			height: 100vh;
 			margin: 0;
 			padding: 0;
-			flex-direction: column;	
+			flex-direction: column;
+      z-index: 1;
 		}
 	}
 
