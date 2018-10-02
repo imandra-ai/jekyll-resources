@@ -13,11 +13,10 @@
   		<nav class="side__nav-container side__nav-container--hidden">
   			
   			<ul class="side__nav-list">
+          {% for site in data.sites %}
   				<li class="side__nav-list-item TopNavListItem">
-  				  <a class="side__nav-link" href="https://docs.imandra.ai">Intro</a>
-          </li>
-  				<li class="side__nav-list-item TopNavListItem">
-            <a class="side__nav-link side__nav-link--active" href="/{{ repo_dir }}">Imandra</a>
+  				  <a class="side__nav-link" href="{{ site.basurl }}">{{ site.name }}</a>
+            {% if site.name == 'Imandra' %}
             <ul class="side__nav-list--sub-level-1">
   				    <li class="side__nav-list-item--sub-level-1">
                 <a class="side__nav-link side__nav-link--active" href="/{{ repo_dir }}">Active link</a>
@@ -29,13 +28,9 @@
                 <a class="side__nav-link" href="/{{ repo_dir }}">lulwut</a>
               </li>
   				  </ul>
+            {% endif %}
           </li>
-  				<li class="side__nav-list-item TopNavListItem">
-  				  <a class="side__nav-link" href="/ipl/">IPL</a>
-          </li>
-  				<li class="side__nav-list-item TopNavListItem">
-  				  <a class="side__nav-link" href="/fix-engine/">Fix Engine</a>
-          </li>
+          {% endfor %}
   			</ul>
   		</nav>
   	</div>
