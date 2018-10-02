@@ -13,20 +13,23 @@
   		<nav class="side__nav-container side__nav-container--hidden">
   			
   			<ul class="side__nav-list">
-          {% for site in data.sites %}
+          {% for site in data.jekyllResources.sites %}
   				<li class="side__nav-list-item TopNavListItem">
   				  <a class="side__nav-link" href="{{ site.basurl }}">{{ site.name }}</a>
             {% if site.name == 'Imandra' %}
             <ul class="side__nav-list--sub-level-1">
+              {% for section in data.nav.sections %}
   				    <li class="side__nav-list-item--sub-level-1">
-                <a class="side__nav-link side__nav-link--active" href="/{{ repo_dir }}">Active link</a>
+                {{ section.name }}
+                <ul class="side__nav-list--sub-level-2">
+                  {% for child in section.children %}
+  				        <li class="side__nav-list-item--sub-level-2">
+                    <a class="side__nav-link" href="/{{ repo_dir }}/notebooks/{{ child.notebookSlug }}">{{ child.text }}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
               </li>
-  				    <li class="side__nav-list-item--sub-level-1">
-                <a class="side__nav-link" href="/{{ repo_dir }}">Inactive link</a>
-              </li>
-  				    <li class="side__nav-list-item--sub-level-1">
-                <a class="side__nav-link" href="/{{ repo_dir }}">lulwut</a>
-              </li>
+              {% endfor %}
   				  </ul>
             {% endif %}
           </li>

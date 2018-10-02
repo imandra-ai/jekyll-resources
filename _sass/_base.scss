@@ -1,9 +1,9 @@
 /* Layout variables */
 $content-width: 988px;
-$sidebar-width: 177px;
+$sidebar-width: 240px;
 
 /* Media Queries breakpoints - please notice that we are using "desktop first" attitude. Variables as full query */
-$media-mobile: "screen and (max-width : 720px)";
+$media-mobile: "screen and (max-width : 1024px)";
 $media-small-mobile: "screen and (max-width : 420px)";
 /* Font families */
 $font-family-upper: 'Merriweather', serif;
