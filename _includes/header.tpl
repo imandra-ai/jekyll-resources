@@ -20,7 +20,11 @@
             <ul class="side__nav-list--sub-level-1">
               {% for section in data.nav.sections %}
   				    <li class="side__nav-list-item--sub-level-1">
+                {% if section.notebookSlug %}
+                <a class="side__nav-link{% if section.notebookSlug == slug %} side__nav-link--active{% endif %}" href="/{{ repo_dir }}/notebooks/{{ section.notebookSlug }}">{{ section.name }}</a>
+                {% else %}
                 {{ section.name }}
+                {% endif %}
                 <ul class="side__nav-list--sub-level-2">
                   {% for child in section.children %}
   				        <li class="side__nav-list-item--sub-level-2">
