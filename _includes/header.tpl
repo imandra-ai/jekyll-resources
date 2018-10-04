@@ -58,9 +58,9 @@
   			  </nav>
   	</div>
     <div class="TemplateHeaderImageContainer">
-    	<a class="template-header__image" href ="/{{ repo_dir }}">
+    	<div class="template-header__image" href ="/{{ repo_dir }}">
     		<img class="SiteSpecificImage" src="/{{ repo_dir }}/static/img/site_specific_image_v_2.svg">
-    	</a>
+    	</div>
     </div>
   </div>
   <script>
