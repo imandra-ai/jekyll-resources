@@ -7,5 +7,5 @@
 - name: IPL
   baseurl: /ipl
 
-- name: Fix Engine
+- name: FIX Engine
   baseurl: /fix-engine
