@@ -365,7 +365,7 @@ time {
 
     @media #{$media-non-wide} {
         width: 100%;
-        padding: 0 1em;
+        padding: 0 2em;
         margin-left: 0;
     }
 
@@ -445,21 +445,29 @@ time {
             margin-left: 0;
         }
 
-        // &--jupyter {
-            padding-left: 150px;
+        padding-left: 150px;
+
+        @media #{$media-non-wide} {
+            padding-left: 30px;
+        }
+
+        @media #{$media-mobile} {
+            padding-left: 50px;
+        }
+
+        &--jupyter {
+            @media #{$media-mobile} {
+                padding-left: 150px;
+            }
 
             @media #{$media-non-wide} {
                 padding-left: 135px;
             }
 
-            @media #{$media-mobile} {
-                padding-left: 150px;
-            }
-
             @media #{$media-jupyter-mobile} {
                 padding-left: 40px;
             }
-        // }
+        }
     }
 
     &__image {
