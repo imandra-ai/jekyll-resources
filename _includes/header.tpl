@@ -64,7 +64,7 @@
                 </ul>
             </nav>
         </div>
-        <div class="template-header__image-container">
+        <div class="template-header__image-container template-header__image-container--jupyter">
             <div class="template-header__image" href ="/{{ repo_dir }}">
                 <img class="SiteSpecificImage" src="/{{ repo_dir }}/static/img/site_specific_image_v_2.svg">
             </div>

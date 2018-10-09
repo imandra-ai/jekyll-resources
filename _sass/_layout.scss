@@ -456,16 +456,18 @@ time {
         }
 
         &--jupyter {
-            @media #{$media-mobile} {
+            padding-left: 160px;
+
+            @media #{$media-non-wide} {
                 padding-left: 150px;
             }
 
-            @media #{$media-non-wide} {
-                padding-left: 135px;
+            @media #{$media-mobile} {
+                padding-left: 165px;
             }
 
             @media #{$media-jupyter-mobile} {
-                padding-left: 40px;
+                padding-left: 55px;
             }
         }
     }
