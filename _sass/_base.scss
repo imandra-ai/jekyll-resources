@@ -1,10 +1,12 @@
 /* Layout variables */
-$content-width: 988px;
+$content-width: 1008px;
 $sidebar-left-width: 260px;
-$sidebar-right-width: 200px;
+$sidebar-right-width: 240px;
 
 /* Media Queries breakpoints - please notice that we are using "desktop first" attitude. Variables as full query */
+$media-non-wide: "screen and (max-width : 1475px)";
 $media-mobile: "screen and (max-width : 1024px)";
+$media-jupyter-mobile: "screen and (max-width : 540px)";
 $media-small-mobile: "screen and (max-width : 420px)";
 /* Font families */
 $font-family-upper: 'Merriweather', serif;

@@ -350,15 +350,20 @@ time {
   Main Content
 --------------------------------------------------- */
 
-.MainContentColumn {
+.main-content-column {
     padding: 0;
 }
 
-.MainContent {
+.main-content {
     width: 80%;
     padding: 0 2em;
+    margin-left: 120px;
 
-    @media #{$media-mobile} {
+    &--jupyter {
+        margin-left: auto;
+    }
+
+    @media #{$media-non-wide} {
         width: 100%;
         padding: 0 1em;
     }
@@ -422,7 +427,33 @@ time {
     }
 
     &__image-container {
-        margin: 30px 0;
+        margin-left: $sidebar-left-width;
+        // padding-left: 20px;
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-start;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        @media #{$media-mobile} {
+            margin-left: 0;
+        }
+
+        // &--jupyter {
+            padding-left: 150px;
+
+            @media #{$media-non-wide} {
+                padding-left: 135px;
+            }
+
+            @media #{$media-mobile} {
+                padding-left: 150px;
+            }
+
+            @media #{$media-jupyter-mobile} {
+                padding-left: 40px;
+            }
+        // }
     }
 
     &__image {
@@ -472,19 +503,6 @@ time {
 
 /* Page Template Classes */
 
-.template-header__image-container {
-    margin-left: $sidebar-left-width;
-    padding-left: 20px;
-    display: flex;
-    flex-grow: 1;
-    justify-content: flex-start;
-    @media #{$media-mobile} {
-        margin-left: 0;
-    }
-
-}
-
-
 .SiteSpecificImage {
     min-width: 200px;
     // margin: 1em;
@@ -505,10 +523,12 @@ time {
 --------------------------------------------------- */
 
 .sidebar-right {
-    min-width: $sidebar-right-width;
+    width: $sidebar-right-width;
+    max-width: $sidebar-right-width;
+
     flex-shrink: 1;
 
-    @media #{$media-mobile}{
+    @media #{$media-non-wide}{
         display: none;
     }
 
@@ -532,7 +552,6 @@ time {
         font-size: 14px;
 
         &:hover {
-            background: $header;
             text-decoration: none;
             color: $link-hover-color;
         }
@@ -541,15 +560,17 @@ time {
         }
 
         &--h1 {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 500;
         }
         &--h2 {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 400;
+            margin-left: 10px;
         }
         &--h3 {
-            font-size: 14px;
+            font-size: 13px;
+            margin-left: 20px;
         }
     }
 }

@@ -3,8 +3,8 @@ layout: default
 ---
 {% assign pname = page.collection %}
 {% assign col = site[pname] | sort: 'sequence' | shift %}
-<!--MainContent-->
-<div class="MainContent">
+<!--main-content-->
+<div class="main-content">
     <h2>{{ page.title }}</h2>
     {{ content }}
 </div>
