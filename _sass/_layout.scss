@@ -366,6 +366,7 @@ time {
     @media #{$media-non-wide} {
         width: 100%;
         padding: 0 1em;
+        margin-left: 0;
     }
 
     h1, h2, h3, h4 {
