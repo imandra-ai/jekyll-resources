@@ -390,9 +390,14 @@ time {
 }
 
 .background {
-    background:
-    url('#{$baseurl}/jekyll-resources/assets/img/bg_image_cover.svg') top center / 100% auto no-repeat,
-    url('#{$baseurl}/jekyll-resources/assets/img/bg_regions.svg') top center / 100% auto no-repeat;
+    background-image:
+    url('#{$baseurl}/jekyll-resources/assets/img/bg_image_cover.svg'),
+    url('#{$baseurl}/jekyll-resources/assets/img/bg_regions.svg');
+
+    background-position: top center, top center;
+    background-size: 100% auto, 150% auto;
+    background-repeat: no-repeat;
+
     background-color: #ffffff;
     position: absolute;
     top: 0;
