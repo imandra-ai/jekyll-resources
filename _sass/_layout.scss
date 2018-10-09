@@ -529,6 +529,7 @@ time {
 --------------------------------------------------- */
 
 .sidebar-right {
+    min-width: $sidebar-right-width;
     width: $sidebar-right-width;
     max-width: $sidebar-right-width;
 
