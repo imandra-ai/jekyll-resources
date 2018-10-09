@@ -1,23 +1,8 @@
 ---
 layout: default
 ---
-<!-- Sidebar - pageSbar.html -->
-<div class="SideMenuContainer">
-    <div id="StickMenu" class="SideMenu">
-        {% assign pname = page.collection %}
-        {% assign col = site[pname] | sort: 'sequence' | shift %}
-        {% for lin in col %}
-        {% if forloop.index == 1 %}
-        <A href=#>{{lin.title}}</A>
-        {% else %}
-        <A href=#{{lin.tag}}>{{lin.title}}</A>
-        {% endif %}
-        {% endfor %}
-        {% if page.title == "Documentation" and site.baseurl == "/fix-engine" %}
-        <a href = "{{ site.baseurl }}{% link _pages/doc/index.html %}">Technical Documentation</a>
-        {% endif %}
-    </div>
-</div>
+{% assign pname = page.collection %}
+{% assign col = site[pname] | sort: 'sequence' | shift %}
 <!--MainContent-->
 <div class="MainContent">
     {% if col.size == 0 %}
@@ -32,4 +17,20 @@ layout: default
     {{ colPage.content | markdownify }}
     {% endfor %}
     {% endif %}
+</div>
+
+<!-- Sidebar - pageSbar.html -->
+<div class="sidebar-right">
+    <div class="sidebar-right__menu">
+        {% for lin in col %}
+        {% if forloop.index == 1 %}
+        <a class="sidebar-right__menu-item" href="#">{{lin.title}}</a>
+        {% else %}
+        <a class="sidebar-right__menu-item" href="#{{lin.tag}}">{{lin.title}}</a>
+        {% endif %}
+        {% endfor %}
+        {% if page.title == "Documentation" and site.baseurl == "/fix-engine" %}
+        <a class="sidebar-right__menu-item" href="{{ site.baseurl }}{% link _pages/doc/index.html %}">Technical Documentation</a>
+        {% endif %}
+    </div>
 </div>

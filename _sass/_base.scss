@@ -1,6 +1,7 @@
 /* Layout variables */
 $content-width: 988px;
-$sidebar-width: 240px;
+$sidebar-left-width: 260px;
+$sidebar-right-width: 200px;
 
 /* Media Queries breakpoints - please notice that we are using "desktop first" attitude. Variables as full query */
 $media-mobile: "screen and (max-width : 1024px)";

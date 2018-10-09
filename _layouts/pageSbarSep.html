@@ -1,21 +1,21 @@
 ---
 layout: default
 ---
-<!-- Sidebar - pageSbarSep.html-->
-<div class="SideMenuContainer">
-    <div id="StickMenu" class="SideMenu">
-        {% assign pname = page.collection %}
-        {% assign col = site[pname] | sort: 'sequence' | shift %}
-        {% for lin in col %}
-        <a href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
-        {% endfor %}
-        {% if page.colName == "Documentation" and site.baseurl == "/fix-engine" %}
-        <a href = "{{ site.baseurl }}{% link _pages/doc/index.html %}">Technical Documentation</a>
-        {% endif %}
-    </div>
-</div>
+{% assign pname = page.collection %}
+{% assign col = site[pname] | sort: 'sequence' | shift %}
 <!--MainContent-->
 <div class="MainContent">
     <h2>{{ page.title }}</h2>
     {{ content }}
+</div>
+<!-- Sidebar - pageSbarSep.html-->
+<div class="sidebar-right">
+    <div class="sidebar-right__menu">
+        {% for lin in col %}
+        <a class="sidebar-right__menu-item" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
+        {% endfor %}
+        {% if page.colName == "Documentation" and site.baseurl == "/fix-engine" %}
+        <a class="sidebar-right__menu-item" href = "{{ site.baseurl }}{% link _pages/doc/index.html %}">Technical Documentation</a>
+        {% endif %}
+    </div>
 </div>

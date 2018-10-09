@@ -3,14 +3,18 @@
     {% include head.html %}
 
     <body>
-	      
-	      <main class="MainContentColumn">
-				{% include header.html %}
-		        <article class="ArticleContainer">
-			          {{ content }}
-		        </article>
-	      </main>
-	      {% include footer.html %}
+        <div class="background">
+        </div>
+
+        <div class="page-container">
+	          <main class="MainContentColumn">
+				    {% include header.html %}
+		            <article class="ArticleContainer">
+			              {{ content }}
+		            </article>
+	          </main>
+	          {% include footer.html %}
+        </div>
     </body>
 
 </html>
