@@ -389,6 +389,13 @@ time {
     }
 }
 
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .background {
     background-image:
     url('#{$baseurl}/jekyll-resources/assets/img/bg_image_cover.svg'),
@@ -610,6 +617,7 @@ time {
     color: #fff;
     padding-bottom: 1em;
     background: url('#{$baseurl}/jekyll-resources/assets/img/transition_footer.svg') center 101% / 1400px 220px repeat-x;
+    z-index: 0;
 }
 
 .Copyrights {
