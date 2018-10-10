@@ -360,7 +360,7 @@ time {
     margin-left: 120px;
 
     &--jupyter {
-        margin-left: auto;
+        margin-left: unset;
     }
 
     @media #{$media-non-wide} {
