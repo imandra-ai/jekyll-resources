@@ -29,6 +29,15 @@
                                     {% for child in section.children %}
                                     <li class="side__nav-list-item--sub-level-2">
                                         <a class="side__nav-link{% if child.notebookSlug == slug %} side__nav-link--active{% endif %}" href="/{{ repo_dir }}/notebooks/{{ child.notebookSlug }}">{{ child.name }}</a>
+                                        {% if child.children %}
+                                        <ul class="side__nav-list--sub-level-3">
+                                            {% for child in child.children %}
+                                            <li class="side__nav-list-item--sub-level-3">
+                                              <a class="side__nav-link{% if child.notebookSlug == slug %} side__nav-link--active{% endif %}" href="/{{ repo_dir }}/notebooks/{{ child.notebookSlug }}">{{ child.name }}</a>
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                        {% endif %}
                                     </li>
                                     {% endfor %}
                                 </ul>
