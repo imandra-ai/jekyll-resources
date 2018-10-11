@@ -41,17 +41,19 @@
                                             {% else %}
                                                 {% assign newLin = lin.tag | prepend: "#" | prepend: topPage.permalink %}
                                             {% endif %}
-                                            <li class="side__nav-list-item--sub-level-1"></li><a class="side__nav-link" href="{{ newLin | prepend: site.baseurl }}">{{lin.title}}</a>
+                                            <li class="side__nav-list-item--sub-level-2"></li><a class="side__nav-link" href="{{ newLin | prepend: site.baseurl }}">{{lin.title}}</a>
                                         {% else %}
                                             {% if page.title == lin.title %}
-                                            <li class="side__nav-list-item--sub-level-1"></li><a class="side__nav-link side__nav-link--active" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
+                                            <li class="side__nav-list-item--sub-level-2"></li><a class="side__nav-link side__nav-link--active" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
                                             {% else %}
-                                            <li class="side__nav-list-item--sub-level-1"></li><a class="side__nav-link" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
+                                            <li class="side__nav-list-item--sub-level-2"></li><a class="side__nav-link" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
                                             {% endif %}
                                         {% endif %}
-                                    {% endfor %}                                          
+                                    {% endfor %}  
+                                    {% if colName == "Documentation" and site.baseurl == "/fix-engine" %}
+                                    <li class="side__nav-list-item--sub-level-2"><a class="side__nav-link" href = "{{ site.baseurl }}{% link _pages/doc/index.html %}">Technical Documentation</a></li>
+                                    {% endif %}                                        
                                 </ul>
-                                {% if page.colName == "Documentation" and site.baseurl == "/fix-engine" %}{% endif %}
                                 {% endif %}
                             {% endfor %}
                         </ul>
