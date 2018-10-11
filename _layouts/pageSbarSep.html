@@ -8,14 +8,3 @@ layout: default
     <h2>{{ page.title }}</h2>
     {{ content }}
 </div>
-<!-- Sidebar - pageSbarSep.html-->
-<div class="sidebar-right">
-    <div class="sidebar-right__menu">
-        {% for lin in col %}
-        <a class="sidebar-right__menu-item sidebar-right__menu-item--h1" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
-        {% endfor %}
-        {% if page.colName == "Documentation" and site.baseurl == "/fix-engine" %}
-        <a class="sidebar-right__menu-item sidebar-right__menu-item--h1" href = "{{ site.baseurl }}{% link _pages/doc/index.html %}">Technical Documentation</a>
-        {% endif %}
-    </div>
-</div>
