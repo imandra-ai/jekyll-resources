@@ -19,4 +19,19 @@ layout: default
     {% endif %}
 </div>
 
+<!-- Sidebar - pageSbar.html -->
+<div class="sidebar-right">
+    <div class="sidebar-right__menu">
+        {% for lin in col %}
+        {% if forloop.index == 1 %}
+        <a class="sidebar-right__menu-item sidebar-right__menu-item--h1" href="#">{{lin.title}}</a>
+        {% else %}
+        <a class="sidebar-right__menu-item sidebar-right__menu-item--h2" href="#{{lin.tag}}">{{lin.title}}</a>
+        {% endif %}
+        {% endfor %}
+        {% if page.title == "Documentation" and site.baseurl == "/fix-engine" %}
+        <a class="sidebar-right__menu-item sidebar-right__menu-item--h2" href="{{ site.baseurl }}{% link _pages/doc/index.html %}">Technical Documentation</a>
+        {% endif %}
+    </div>
 </div>
+
