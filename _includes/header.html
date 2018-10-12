@@ -16,7 +16,6 @@
                         <li class="side__nav-list-item TopNavListItem">
                         {% if site.baseurl == mainsite.baseurl %}
                         <a class="side__nav-link side__nav-link--active" href="{{ mainsite.baseurl }}">{{ mainsite.name }}</a>
-                        </li>
                         <ul class="side__nav-list--sub-level-1">
                             {% for collection in collections %} 
                                 {% if collection.label != 'posts' %}
@@ -54,6 +53,7 @@
                                 {% endif %}
                             {% endfor %}
                         </ul>
+                        </li>
                         {% else %}
                         <a class="side__nav-link" href="{{ mainsite.baseurl }}">{{ mainsite.name }}</a>
                         </li>
