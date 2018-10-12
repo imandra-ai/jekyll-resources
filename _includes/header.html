@@ -36,7 +36,7 @@
                                                 <li class="side__nav-list-item--sub-level-2"><a class="side__nav-link" href="{{ newLin | prepend: site.baseurl }}">{{lin.title}}</a>
                                             {% endif %}
                                             {% else %}
-                                            {% if page.title == lin.title %}
+                                            {% if page == lin %}
                                             <li class="side__nav-list-item--sub-level-2"><a class="side__nav-link side__nav-link--active" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
                                             {% else %}
                                             <li class="side__nav-list-item--sub-level-2"><a class="side__nav-link" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>

@@ -3,6 +3,7 @@ layout: default
 ---
 {% assign pname = page.collection %}
 {% assign col = site[pname] | sort: 'sequence' | shift %}
+{% assign topPage = site[pname] | sort: 'sequence' | first %}
 <!--main-content-->
 <div class="main-content">
     <h2>{{ page.title }}</h2>
@@ -11,11 +12,20 @@ layout: default
 <!-- Sidebar - pageSbarSep.html-->
 <div class="sidebar-right">
     <div class="sidebar-right__menu">
+        {% if page == topPage %}
+        <a class="sidebar-right__menu-item sidebar-right__menu-item--h1 sidebar-right__menu-item--active" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a>
+        {% else %}
+        <a class="sidebar-right__menu-item sidebar-right__menu-item--h1" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a>
+        {% endif %}
         {% for lin in col %}
-        <a class="sidebar-right__menu-item sidebar-right__menu-item--h1" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
+        {% if page == lin %}
+        <a class="sidebar-right__menu-item sidebar-right__menu-item--h2 sidebar-right__menu-item--active" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
+        {% else %}
+        <a class="sidebar-right__menu-item sidebar-right__menu-item--h2" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
+        {% endif %}
         {% endfor %}
         {% if page.colName == "Documentation" and site.baseurl == "/fix-engine" %}
-        <a class="sidebar-right__menu-item sidebar-right__menu-item--h1" href = "{{ site.baseurl }}{% link _pages/doc/index.html %}">Technical Documentation</a>
+        <a class="sidebar-right__menu-item sidebar-right__menu-item--h2" href = "{{ site.baseurl }}{% link _pages/doc/index.html %}">Technical Documentation</a>
         {% endif %}
     </div>
 </div>
