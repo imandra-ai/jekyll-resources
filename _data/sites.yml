@@ -4,7 +4,7 @@
 - name: Imandra
   baseurl: /imandra-docs
 
-- name: IPL
+- name: Imandra Protocol Language
   baseurl: /ipl
 
 - name: FIX Engine
