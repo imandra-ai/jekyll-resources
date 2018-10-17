@@ -15,7 +15,7 @@
                 <ul class="side__nav-list">
                     {% for site in data.jekyllResources.sites %}
                     <li class="side__nav-list-item TopNavListItem">
-                        <a class="side__nav-link" href="{{ site.baseurl }}">{{ site.name }}</a>
+                        <a class="side__nav-link{% if site.name == 'Imandra' %} side__nav-link--active{% endif %}" href="{{ site.baseurl }}">{{ site.name }}</a>
                         {% if site.name == 'Imandra' %}
                         <ul class="side__nav-list--sub-level-1">
                             {% for section in data.nav.sections %}
