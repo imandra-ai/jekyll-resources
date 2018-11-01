@@ -286,8 +286,7 @@ time {
     &__nav-list {
         list-style: none;
         display: flex;
-        margin:1rem;
-        font-size: 0.5em;
+        margin: 33px 32px 0 0;
         @media #{$media-mobile} {
             position: absolute;
             background: #ffffff;
@@ -311,24 +310,26 @@ time {
     }
 
     &__nav-list-item {
-        padding: 0 10px;
         @media #{$media-mobile} {
             padding: 0;
         }
     }
 
     &__nav-link {
-        padding: 0.8em 0;
+        padding: 0.5em 0.95em;
+        color: #576483;
+        display: block;
         font-weight: 400;
-        font-size: 13px;
+        font-size: 0.76em;
         text-decoration: none;
-        text-transform: uppercase !important;
+        text-transform: uppercase;
         text-align: right;
         white-space: nowrap;
-        color: #576483;
+
+
         @media #{$media-mobile} {
             text-transform: none !important;
-            font-size: 1rem;
+            font-size: 0.9rem;
             text-decoration: none;
             display: block;
             padding: 0.8em;
