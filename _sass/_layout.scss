@@ -203,9 +203,8 @@ time {
 
     &__nav-list-item {
         &--sub-level-1 a {
-            color: #505B76;
             &:hover {
-                color: black;
+                color: $imandra-mint;
             }
         }
     }
@@ -217,7 +216,7 @@ time {
         padding: 0;
         line-height: 1.4;
         &:hover {
-            background: $header;
+            background:$menu-hover-background;
             text-decoration: none;
             color: $imandra-mint;
         }
@@ -226,8 +225,8 @@ time {
         }
 
         &--active {
-            color: #22e0b6;
-            font-weight: 700;
+            color: $imandra-mint;
+            font-weight: 400;
         }
 
 
@@ -367,6 +366,7 @@ time {
     width: 80%;
     padding: 0 2em;
     margin-left: 120px;
+    margin-right: 120px;
 
     &--jupyter {
         margin-left: unset;
@@ -502,10 +502,6 @@ time {
 
 /* Welcompage Template Classes */
 
-// .welcomeAI {
-// 	flex-direction: column;
-// }
-
 .WelcomeImage {
     max-width: 700px;
     min-width: 200px;
@@ -528,24 +524,15 @@ time {
 
 }
 
-// .WelcomeAILink {
-// 	text-decoration: none;
-// 	color: $link-color;
-// 	margin-left: 3px;
-// }
-
 /* Page Template Classes */
 
 .SiteSpecificImage {
     min-width: 180px;
-    // margin: 1em;
-    //height: 100%;
+    margin-top: 2em;
 
     @media #{$media-mobile} {
         width: 90%;
-
     }
-
 }
 
 
@@ -560,7 +547,7 @@ time {
     width: $sidebar-right-width;
     max-width: $sidebar-right-width;
 
-    flex-shrink: 1;
+    // flex-shrink: 1;
 
     @media #{$media-non-wide}{
         display: none;
@@ -583,31 +570,35 @@ time {
         text-decoration: none;
         padding: 0 0.6em 3px;
         border-left: solid #f5faf9;
-        font-size: 14px;
+        font-size: 13px;
+        font-weight: 300;
 
         &:hover {
             text-decoration: none;
-            color: $link-hover-color;
+            color: $imandra-mint;
+            background: $menu-hover-background;
         }
+
         &:active {
-            color: $font-color;
+            color: $imandra-mint;
+            font-weight: 400;
         }
 
         &--h1 {
-            font-size: 16px;
-            font-weight: 500;
-        }
-        &--h2 {
-            font-size: 14px;
+            color: $imandra-mint;
             font-weight: 400;
-            margin-left: 10px;
         }
+
+        &--h2 {
+            padding-left: 1.5em;
+        }
+
         &--h3 {
-            font-size: 13px;
-            margin-left: 20px;
+            padding-left: 2em;
         }
+
         &--active {
-            font-weight: 700;
+            font-weight: 400;
         }
     }
 }
