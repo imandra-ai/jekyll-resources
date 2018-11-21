@@ -1,6 +1,6 @@
 /* Layout variables */
 $content-width: 1008px;
-$sidebar-left-width: 260px;
+$sidebar-left-width: 230px;
 $sidebar-right-width: 240px;
 
 /* Media Queries breakpoints - please notice that we are using "desktop first" attitude. Variables as full query */
@@ -8,6 +8,7 @@ $media-non-wide: "screen and (max-width : 1600px)";
 $media-mobile: "screen and (max-width : 1024px)";
 $media-jupyter-mobile: "screen and (max-width : 540px)";
 $media-small-mobile: "screen and (max-width : 420px)";
+
 /* Font families */
 $font-family-upper: 'Merriweather', serif;
 $font-family-upper-sans: 'Merriweather Sans', sans-serif;
@@ -18,10 +19,11 @@ $heading-font: $font-family-upper-sans;
 $imandra-mint: #22e6b0;
 $font-color: #576483;
 $title-color: #7081AA;
-$link-color: #7E95CE;
+$link-color: rgb(79, 146, 255);
 $link-visited: $link-color;
-$link-active: #425469;
+$link-active: $imandra-mint;
 $link-hover-color:#3A4152;
+$menu-hover-background: #3a72cd;
 $light: #e7edf4;
 $header: #fafafa;
 $heading-font-color: $font-color;
