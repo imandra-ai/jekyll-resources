@@ -4,10 +4,11 @@ $sidebar-left-width: 230px;
 $sidebar-right-width: 240px;
 
 /* Media Queries breakpoints - please notice that we are using "desktop first" attitude. Variables as full query */
-$media-non-wide: "screen and (max-width : 1600px)";
-$media-mobile: "screen and (max-width : 1024px)";
-$media-jupyter-mobile: "screen and (max-width : 540px)";
-$media-small-mobile: "screen and (max-width : 420px)";
+$max-wide: "screen and (max-width : 1600px)";
+$max-desktop: "screen and (max-width : 1440px)";
+$max-tablet: "screen and (max-width : 1024px)";
+$max-jupyter-mobile: "screen and (max-width : 540px)";
+$max-small-mobile: "screen and (max-width : 420px)";
 
 /* Font families */
 $font-family-upper: 'Merriweather', serif;

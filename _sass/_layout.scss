@@ -105,7 +105,7 @@ time {
     overflow-y: scroll;
     padding: 20px 0 0 20px;
 
-    @media #{$media-mobile}{
+    @media #{$max-tablet}{
         position: relative;
         overflow-y: visible;
         width: 100%;
@@ -120,7 +120,7 @@ time {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    @media #{$media-mobile} {
+    @media #{$max-tablet} {
         align-items: center;
         justify-content: space-between;
         flex-direction: row;
@@ -137,7 +137,7 @@ time {
             background: $header;
         }
 
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             justify-content: center;
         }
 
@@ -157,7 +157,7 @@ time {
     &__nav-container {
         justify-content: flex-start;
         margin-top: 2em;
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             position: absolute;
             background: #ffffff;
             width: 100%;
@@ -167,7 +167,7 @@ time {
     }
 
     &__nav-container--hidden {
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             display: none;
         }
     }
@@ -179,7 +179,7 @@ time {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             justify-content: flex-end;
         }
         &--sub-level-1 {
@@ -220,7 +220,7 @@ time {
             text-decoration: none;
             color: $imandra-mint;
         }
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             padding: 0.5em;
         }
 
@@ -249,7 +249,7 @@ time {
 
     &__left-menu-toggler {
         display: none;
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             display: flex;
             margin-left: 5px;
         }
@@ -257,7 +257,7 @@ time {
 
     &__right-menu-toggler {
         display: none;
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             display: flex;
             margin-right: 5px;
         }
@@ -278,7 +278,7 @@ time {
     &__nav-container{
         display:flex;
         justify-content: flex-end;
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             justify-content: flex-start;
             width: 100%;
         }
@@ -288,7 +288,7 @@ time {
         list-style: none;
         display: flex;
         margin: 33px 32px 0 0;
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             position: absolute;
             background: #ffffff;
             width: 100%;
@@ -301,7 +301,7 @@ time {
     }
 
     &__nav-list--hidden {
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             display: none;
         }
     }
@@ -311,7 +311,7 @@ time {
     }
 
     &__nav-list-item {
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             padding: 0;
         }
     }
@@ -328,7 +328,7 @@ time {
         white-space: nowrap;
 
 
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             text-transform: none !important;
             font-size: 0.9rem;
             text-decoration: none;
@@ -372,7 +372,7 @@ time {
         margin-left: unset;
     }
 
-    @media #{$media-non-wide} {
+    @media #{$max-wide} {
         width: 100%;
         padding: 0 2em;
         margin-left: 0;
@@ -384,18 +384,25 @@ time {
 
 }
 
-.ArticleContainer {
+.article__container {
     position: relative;
-    // max-width: $content-width + $sidebar-right-width;
-    max-width: 980px;
+    max-width: $content-width + $sidebar-right-width;
     display: flex;
 
     margin-left: $sidebar-left-width;
+    
+    @media #{$max-desktop} {
+        max-width: 980px;
+    }  
 
-    @media #{$media-mobile} {
+    @media #{$max-tablet} {
         margin-top: 0;
         margin-left: 0;
         padding: 0 1em;
+    }
+
+    &--notebooks {
+        background: rgba(0, 0, 0, 0.3) //for tests
     }
 }
 
@@ -422,7 +429,7 @@ time {
     right: 0;
     bottom: 0;
 
-    @media #{$media-mobile} {
+    @media #{$max-tablet} {
         background:
         url('#{$baseurl}/jekyll-resources/assets/img/bg_image_cover.svg') top center / 100% auto no-repeat,
         url('#{$baseurl}/jekyll-resources/assets/img/bg_regions.svg') top center / 100% auto no-repeat;
@@ -445,7 +452,7 @@ time {
     margin: 0;
     justify-content: center;
 
-    @media #{$media-mobile} {
+    @media #{$max-tablet} {
         min-height: 140px;
     }
 
@@ -458,32 +465,32 @@ time {
         // margin-top: 30px;
         // margin-bottom: 30px;
 
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             margin-left: 0;
         }
 
         padding-left: 150px;
 
-        @media #{$media-non-wide} {
+        @media #{$max-wide} {
             padding-left: 30px;
         }
 
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             padding-left: 50px;
         }
 
         &--jupyter {
             padding-left: 160px;
 
-            @media #{$media-non-wide} {
+            @media #{$max-wide} {
                 padding-left: 150px;
             }
 
-            @media #{$media-mobile} {
+            @media #{$max-tablet} {
                 padding-left: 165px;
             }
 
-            @media #{$media-jupyter-mobile} {
+            @media #{$max-jupyter-mobile} {
                 padding-left: 55px;
             }
         }
@@ -506,7 +513,7 @@ time {
     max-width: 700px;
     min-width: 200px;
 
-    @media #{$media-small-mobile} {
+    @media #{$max-small-mobile} {
         width: 80%;
     }
 
@@ -518,7 +525,7 @@ time {
     display: flex;
     justify-content: center;
 
-    @media #{$media-mobile} {
+    @media #{$max-tablet} {
         flex-direction: column;
     }
 
@@ -530,7 +537,7 @@ time {
     min-width: 180px;
     margin-top: 2em;
 
-    @media #{$media-mobile} {
+    @media #{$max-tablet} {
         width: 90%;
     }
 }
@@ -549,7 +556,7 @@ time {
 
     // flex-shrink: 1;
 
-    @media #{$media-non-wide}{
+    @media #{$max-desktop}{
         display: none;
     }
 
@@ -557,10 +564,10 @@ time {
         position: sticky;
         top: 20px;
 
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             display: none;
         }
-        @media #{$media-small-mobile} {
+        @media #{$max-small-mobile} {
             display: none;
         }
     }
@@ -672,7 +679,7 @@ time {
         width: 50%;
         padding-right: 4em;
         margin-bottom: 4em;
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             width: 100%;
             padding: 0;
         }
@@ -726,7 +733,7 @@ time {
     margin: 0;
     padding: 0;
     flex-grow: 1;
-    @media #{$media-mobile} {
+    @media #{$max-tablet} {
         flex-direction: column;
         align-items: center;
         border: none;
@@ -745,7 +752,7 @@ time {
     &:last-child {
         border-left: solid 1px #f0f0f0;
     }
-    @media #{$media-mobile} {
+    @media #{$max-tablet} {
         width: 100%;
         flex-direction: column;
         align-items: center;
@@ -766,7 +773,7 @@ time {
 .Repositories {
     margin: 0 10px;
     padding: 0;
-    @media #{$media-mobile} {
+    @media #{$max-tablet} {
         margin: 0 1em;
         display: flex;
         flex-direction: column;
@@ -792,7 +799,7 @@ time {
         text-decoration: none;
         background-color: #f0f0f0;
     }
-    @media #{$media-mobile} {
+    @media #{$max-tablet} {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -806,7 +813,7 @@ time {
     align-self: flex-start;
     margin: 10px;
 
-    @media #{$media-mobile} {
+    @media #{$max-tablet} {
         align-self: center;
     }
 
