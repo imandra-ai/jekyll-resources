@@ -105,7 +105,7 @@ time {
     overflow-y: scroll;
     padding: 20px 0 0 20px;
 
-    @media #{$media-mobile}{
+    @media #{$max-tablet}{
         position: relative;
         overflow-y: visible;
         width: 100%;
@@ -120,7 +120,7 @@ time {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    @media #{$media-mobile} {
+    @media #{$max-tablet} {
         align-items: center;
         justify-content: space-between;
         flex-direction: row;
@@ -137,7 +137,7 @@ time {
             background: $header;
         }
 
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             justify-content: center;
         }
 
@@ -157,7 +157,7 @@ time {
     &__nav-container {
         justify-content: flex-start;
         margin-top: 2em;
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             position: absolute;
             background: #ffffff;
             width: 100%;
@@ -167,7 +167,7 @@ time {
     }
 
     &__nav-container--hidden {
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             display: none;
         }
     }
@@ -179,7 +179,7 @@ time {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             justify-content: flex-end;
         }
         &--sub-level-1 {
@@ -204,23 +204,25 @@ time {
     &__nav-list-item {
         &--sub-level-1 a {
             &:hover {
-                color: $imandra-mint;
+                color: #ffffff;
             }
         }
     }
 
     &__nav-link {
+        display: block;
         font-size: 13px;
         text-decoration: none;
-        display: block;
+        line-height: 1.5;
         padding: 0;
-        line-height: 1.4;
+
         &:hover {
             background:$menu-hover-background;
             text-decoration: none;
-            color: $imandra-mint;
+            color: #ffffff;
+            padding-left: 0.2em;
         }
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             padding: 0.5em;
         }
 
@@ -249,7 +251,7 @@ time {
 
     &__left-menu-toggler {
         display: none;
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             display: flex;
             margin-left: 5px;
         }
@@ -257,7 +259,7 @@ time {
 
     &__right-menu-toggler {
         display: none;
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             display: flex;
             margin-right: 5px;
         }
@@ -278,7 +280,7 @@ time {
     &__nav-container{
         display:flex;
         justify-content: flex-end;
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             justify-content: flex-start;
             width: 100%;
         }
@@ -288,7 +290,7 @@ time {
         list-style: none;
         display: flex;
         margin: 33px 32px 0 0;
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             position: absolute;
             background: #ffffff;
             width: 100%;
@@ -301,7 +303,7 @@ time {
     }
 
     &__nav-list--hidden {
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             display: none;
         }
     }
@@ -311,7 +313,7 @@ time {
     }
 
     &__nav-list-item {
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             padding: 0;
         }
     }
@@ -328,7 +330,7 @@ time {
         white-space: nowrap;
 
 
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             text-transform: none !important;
             font-size: 0.9rem;
             text-decoration: none;
@@ -368,34 +370,76 @@ time {
     margin-left: 120px;
     margin-right: 120px;
 
-    &--jupyter {
-        margin-left: unset;
+    @media #{$max-wide} {
+        margin-left: 0;
+        margin-right: 0;
     }
 
-    @media #{$media-non-wide} {
+    @media #{$max-desktop} {
         width: 100%;
         padding: 0 2em;
-        margin-left: 0;
+    }
+
+    &--jupyter {
+        width: 100%;
+        margin-left: unset;
+        margin-right:120px;
+        
+        @media #{$max-wide} {
+            margin-right:0; 
+        }
+
+        @media #{$max-desktop} {
+            width: 100%;
+            padding: 0 2em 0 0;
+        }
+
+        @media #{$max-tablet} {
+            padding: 0;
+        }
+        & p {
+            color:$font-color;
+        }
     }
 
     h1, h2, h3, h4 {
         font-weight: 300;
     }
-
 }
 
-.ArticleContainer {
+.article__container {
     position: relative;
-    // max-width: $content-width + $sidebar-right-width;
-    max-width: 980px;
+    max-width: $content-width + $sidebar-right-width;
     display: flex;
-
     margin-left: $sidebar-left-width;
 
-    @media #{$media-mobile} {
+    @media #{$max-desktop} {
+        max-width: 980px;
+    }
+
+    @media #{$max-tablet} {
         margin-top: 0;
         margin-left: 0;
         padding: 0 1em;
+    }
+
+    &--notebooks {
+        max-width: $content-width + $sidebar-right-width + 120px;
+        
+        @media #{$max-desktop} {
+            max-width: 980px;
+            margin-left: 210px;
+        }
+
+        @media #{$max-tablet} {
+            margin-top: 0;
+            margin-left: 0;
+            padding: 0 2em 0 0;
+        }
+
+        @media #{$max-jupyter-mobile} {
+            padding: 0 2em;
+        }
     }
 }
 
@@ -422,7 +466,7 @@ time {
     right: 0;
     bottom: 0;
 
-    @media #{$media-mobile} {
+    @media #{$max-tablet} {
         background:
         url('#{$baseurl}/jekyll-resources/assets/img/bg_image_cover.svg') top center / 100% auto no-repeat,
         url('#{$baseurl}/jekyll-resources/assets/img/bg_regions.svg') top center / 100% auto no-repeat;
@@ -445,7 +489,7 @@ time {
     margin: 0;
     justify-content: center;
 
-    @media #{$media-mobile} {
+    @media #{$max-tablet} {
         min-height: 140px;
     }
 
@@ -458,44 +502,36 @@ time {
         // margin-top: 30px;
         // margin-bottom: 30px;
 
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             margin-left: 0;
         }
 
         padding-left: 150px;
 
-        @media #{$media-non-wide} {
+        @media #{$max-wide} {
             padding-left: 30px;
         }
 
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             padding-left: 50px;
         }
 
         &--jupyter {
-            padding-left: 160px;
+            padding-left: 9em;
 
-            @media #{$media-non-wide} {
-                padding-left: 150px;
+            @media #{$max-desktop} {
+                padding-left: 6em;
             }
 
-            @media #{$media-mobile} {
-                padding-left: 165px;
+            @media #{$max-tablet} {
+                padding-left: 7em;
             }
 
-            @media #{$media-jupyter-mobile} {
-                padding-left: 55px;
+            @media #{$max-jupyter-mobile} {
+                padding-left: 2em;
             }
         }
     }
-
-    &__image {
-        // display: flex;
-        // width: 100%;
-        // height: 7rem;
-        // justify-content: flex-start;
-    }
-
 }
 
 
@@ -506,7 +542,7 @@ time {
     max-width: 700px;
     min-width: 200px;
 
-    @media #{$media-small-mobile} {
+    @media #{$max-small-mobile} {
         width: 80%;
     }
 
@@ -518,7 +554,7 @@ time {
     display: flex;
     justify-content: center;
 
-    @media #{$media-mobile} {
+    @media #{$max-tablet} {
         flex-direction: column;
     }
 
@@ -530,7 +566,7 @@ time {
     min-width: 180px;
     margin-top: 2em;
 
-    @media #{$media-mobile} {
+    @media #{$max-tablet} {
         width: 90%;
     }
 }
@@ -543,40 +579,38 @@ time {
 --------------------------------------------------- */
 
 .sidebar-right {
+    display: block;
     min-width: $sidebar-right-width;
     width: $sidebar-right-width;
     max-width: $sidebar-right-width;
+    
+    font-weight: 300;
 
-    // flex-shrink: 1;
-
-    @media #{$media-non-wide}{
+    @media #{$max-desktop}{
         display: none;
     }
 
     &__menu {
         position: sticky;
         top: 20px;
+        border-left: solid 1px #f5faf9;
 
-        @media #{$media-mobile} {
-            display: none;
-        }
-        @media #{$media-small-mobile} {
+        @media #{$max-tablet} {
             display: none;
         }
     }
 
     &__menu-item {
         display: block;
-        text-decoration: none;
-        padding: 0 0.6em 3px;
-        border-left: solid #f5faf9;
         font-size: 13px;
-        font-weight: 300;
+        text-decoration: none;
+        line-height: 1.4;
 
         &:hover {
+            background:$menu-hover-background;
             text-decoration: none;
-            color: $imandra-mint;
-            background: $menu-hover-background;
+            color: #ffffff;
+            padding-left: 0.2em;
         }
 
         &:active {
@@ -585,20 +619,20 @@ time {
         }
 
         &--h1 {
-            color: $imandra-mint;
-            font-weight: 400;
+            margin-left: 0.3em;
         }
 
         &--h2 {
-            padding-left: 1.5em;
+            margin-left: 1.5em;
         }
 
         &--h3 {
-            padding-left: 2em;
+            margin-left: 2em;
         }
 
         &--active {
             font-weight: 400;
+            color: $imandra-mint;            
         }
     }
 }
@@ -672,7 +706,7 @@ time {
         width: 50%;
         padding-right: 4em;
         margin-bottom: 4em;
-        @media #{$media-mobile} {
+        @media #{$max-tablet} {
             width: 100%;
             padding: 0;
         }
@@ -726,7 +760,7 @@ time {
     margin: 0;
     padding: 0;
     flex-grow: 1;
-    @media #{$media-mobile} {
+    @media #{$max-tablet} {
         flex-direction: column;
         align-items: center;
         border: none;
@@ -745,7 +779,7 @@ time {
     &:last-child {
         border-left: solid 1px #f0f0f0;
     }
-    @media #{$media-mobile} {
+    @media #{$max-tablet} {
         width: 100%;
         flex-direction: column;
         align-items: center;
@@ -766,7 +800,7 @@ time {
 .Repositories {
     margin: 0 10px;
     padding: 0;
-    @media #{$media-mobile} {
+    @media #{$max-tablet} {
         margin: 0 1em;
         display: flex;
         flex-direction: column;
@@ -792,7 +826,7 @@ time {
         text-decoration: none;
         background-color: #f0f0f0;
     }
-    @media #{$media-mobile} {
+    @media #{$max-tablet} {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -806,7 +840,7 @@ time {
     align-self: flex-start;
     margin: 10px;
 
-    @media #{$media-mobile} {
+    @media #{$max-tablet} {
         align-self: center;
     }
 
