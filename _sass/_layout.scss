@@ -370,10 +370,6 @@ time {
     margin-left: 120px;
     margin-right: 120px;
 
-    &--jupyter {
-        margin-left: unset;
-    }
-    
     @media #{$max-wide} {
         margin-left: 0;
         margin-right: 0;
@@ -384,10 +380,31 @@ time {
         padding: 0 2em;
     }
 
+    &--jupyter {
+        width: 100%;
+        margin-left: unset;
+        margin-right:120px;
+        
+        @media #{$max-wide} {
+            margin-right:0; 
+        }
+
+        @media #{$max-desktop} {
+            width: 100%;
+            padding: 0 2em 0 0;
+        }
+
+        @media #{$max-tablet} {
+            padding: 0;
+        }
+        & p {
+            color:$font-color;
+        }
+    }
+
     h1, h2, h3, h4 {
         font-weight: 300;
     }
-
 }
 
 .article__container {
@@ -395,10 +412,10 @@ time {
     max-width: $content-width + $sidebar-right-width;
     display: flex;
     margin-left: $sidebar-left-width;
-    
+
     @media #{$max-desktop} {
         max-width: 980px;
-    }  
+    }
 
     @media #{$max-tablet} {
         margin-top: 0;
@@ -407,9 +424,22 @@ time {
     }
 
     &--notebooks {
-        margin-left: 190px;
-        background: rgba(0, 0, 0, 0.3); //for tests
-        padding: 0 1em;
+        max-width: $content-width + $sidebar-right-width + 120px;
+        
+        @media #{$max-desktop} {
+            max-width: 980px;
+            margin-left: 210px;
+        }
+
+        @media #{$max-tablet} {
+            margin-top: 0;
+            margin-left: 0;
+            padding: 0 2em 0 0;
+        }
+
+        @media #{$max-jupyter-mobile} {
+            padding: 0 2em;
+        }
     }
 }
 
@@ -487,29 +517,21 @@ time {
         }
 
         &--jupyter {
-            padding-left: 160px;
+            padding-left: 9em;
 
-            @media #{$max-wide} {
-                padding-left: 150px;
+            @media #{$max-desktop} {
+                padding-left: 6em;
             }
 
             @media #{$max-tablet} {
-                padding-left: 165px;
+                padding-left: 7em;
             }
 
             @media #{$max-jupyter-mobile} {
-                padding-left: 55px;
+                padding-left: 2em;
             }
         }
     }
-
-    &__image {
-        // display: flex;
-        // width: 100%;
-        // height: 7rem;
-        // justify-content: flex-start;
-    }
-
 }
 
 
@@ -597,8 +619,6 @@ time {
         }
 
         &--h1 {
-            color: $imandra-mint;
-            font-weight: 400;
             margin-left: 0.3em;
         }
 
@@ -612,6 +632,7 @@ time {
 
         &--active {
             font-weight: 400;
+            color: $imandra-mint;            
         }
     }
 }
