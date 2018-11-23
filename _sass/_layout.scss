@@ -179,6 +179,8 @@ time {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+        color: $link-color; 
+
         @media #{$max-tablet} {
             justify-content: flex-end;
         }
@@ -366,9 +368,10 @@ time {
 
 .main-content {
     width: 80%;
+    max-width: 1024px;
     padding: 0 2em;
-    margin-left: 120px;
-    margin-right: 120px;
+    margin-left: 106px;
+    margin-right: 106px;
 
     @media #{$max-wide} {
         margin-left: 0;
@@ -382,8 +385,9 @@ time {
 
     &--jupyter {
         width: 100%;
+        max-width: 1024px;
         margin-left: unset;
-        margin-right:120px;
+        margin-right:106px;
         
         @media #{$max-wide} {
             margin-right:0; 
