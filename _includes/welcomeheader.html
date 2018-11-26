@@ -1,63 +1,95 @@
 <header>
-	<div class="top-row-container">
-		<div class="top-row">
-			<div id="toggler--left" class="side__left-menu-toggler"><a href="#" class="side__toggle">≡ <span class="side__toggle-text">Docs</span></a></div>
-			<div class="side__logo-container">
-				<a class="side__logo-link" href="{{ site.url }}">
-					<img class="side__logo " src = "{{ site.baseurl }}{% link jekyll-resources/assets/img/ai_logo_green.svg %}">
-				</a>
-			</div>
-			<div id="toggler--right" class="side__right-menu-toggler"><a href="#" class="side__toggle"><span class="side__toggle-text">Pages</span> ≡</a></div>
-	
-			<nav class="side__nav-container side__nav-container--hidden">
-				
-				<ul class="side__nav-list">
-					{% for mainsite in site.data.sites %}
-					<li class="side__nav-list-item TopNavListItem"></li>
-					{% if mainsite.baseurl == "/" %}
-					<a class="side__nav-link side__nav-link--active" href="{{ mainsite.baseurl }}">{{ mainsite.name }}</a>
-					{% else %}
-					<a class="side__nav-link" href="{{ mainsite.baseurl }}">{{ mainsite.name }}</a>
-					{% endif %}
-					{% endfor %}
-				</ul>
-			</nav>
-		</div>
-	</div>
-	
-	<div class="template-header">
-		<div class="top-bar">
-			<nav class="top-bar__nav-container">
-					<a href="#" class="top-bar__toggle">≡</a>
-					<ul class="top-bar__nav-list top-bar__nav-list--hidden">
-            <li class="top-bar__nav-list-item"><a class="top-bar__nav-link" href="https://www.imandra.ai/">Home</a></li>
-            <li class="top-bar__nav-list-item"><a class="top-bar__nav-link" href="https://try.imandra.ai/">Try</a></li>
-            <li class="top-bar__nav-list-item"><a class="top-bar__nav-link" href="https://medium.com/imandra">Blog</a></li>
-            <li class="top-bar__nav-list-item"><a class="top-bar__nav-link" href="https://www.imandra.ai/research">Research</a></li>
-            <li class="top-bar__nav-list-item"><a class="top-bar__nav-link" href="https://docs.imandra.ai/">Docs</a></li>
-            <li class="top-bar__nav-list-item"><a class="top-bar__nav-link" href="https://www.imandra.ai/media">Media</a></li>
-            <li class="top-bar__nav-list-item"><a class="top-bar__nav-link" href="https://www.imandra.ai/about">About AI</a></li>
-            <li class="top-bar__nav-list-item"><a class="top-bar__nav-link" href="https://www.imandra.ai/careers">CAREERS</a></li>
-            <li class="top-bar__nav-list-item"><a class="top-bar__nav-link" href="https://www.imandra.ai/contact">CONTACT</a></li>
-					</ul>
-				  </nav>
-		</div>
-	<div class="template-header__image-container">
-		<a class="template-header__image" href ="{{site.baseurl}}">
-			<img class="SiteSpecificImage" src="{{ site.baseurl }}{% link assets/img/site_specific_image_v_2.svg %}">
-		</a>
-	</div>
-	</div>
-	<script>
-		document.getElementById('toggler--left').addEventListener('click', function () {
-			document.getElementsByClassName('side__nav-container')[0].classList.toggle('side__nav-container--hidden');
-			document.getElementsByClassName('top-bar__nav-list')[0].classList.add('top-bar__nav-list--hidden');
-		});
-		document.getElementById('toggler--right').addEventListener('click', function () {
-			document.getElementsByClassName('side__nav-container')[0].classList.add('side__nav-container--hidden');
-			document.getElementsByClassName('top-bar__nav-list')[0].classList.toggle('top-bar__nav-list--hidden');
-		});
-	   </script>
-	</header>
-	
-	
+    <div class="top-row-container">
+
+        <div class="top-row">
+            <div id="toggler--left" class="side__left-menu-toggler">
+                <div class="side__toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <!-- <p class="side__toggle-text">Docs</p> -->
+                </div>
+            </div>
+
+            <div class="side__logo-container">
+                <a class="side__logo-link" href="{{ site.url }}">
+                    <img class="side__logo " src="{{ site.baseurl }}{% link jekyll-resources/assets/img/ai_logo_green.svg %}">
+                </a>
+            </div>
+
+            <div id="toggler--right" class="side__right-menu-toggler">
+                <div class="side__toggle">
+                    <!-- <p class="side__toggle-text">Pages</p> -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <nav class="side__nav-container side__nav-container--hidden">
+                <ul class="side__nav-list">
+                    {% for mainsite in site.data.sites %}
+                    <li class="side__nav-list-item TopNavListItem"></li>
+                    {% if mainsite.baseurl == "/" %}
+                    <a class="side__nav-link side__nav-link--active" href="{{ mainsite.baseurl }}">{{ mainsite.name }}</a>
+                    {% else %}
+                    <a class="side__nav-link" href="{{ mainsite.baseurl }}">{{ mainsite.name }}</a>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="template-header">
+
+        <div class="top-bar">
+            <nav class="top-bar__nav-container">
+                <a href="#" class="top-bar__toggle">≡</a>
+                <ul class="top-bar__nav-list top-bar__nav-list--hidden">
+                    <li class="top-bar__nav-list-item"><a class="top-bar__nav-link" href="https://www.imandra.ai/">Home</a></li>
+                    <li class="top-bar__nav-list-item"><a class="top-bar__nav-link" href="https://try.imandra.ai/">Try</a></li>
+                    <li class="top-bar__nav-list-item"><a class="top-bar__nav-link" href="https://medium.com/imandra">Blog</a></li>
+                    <li class="top-bar__nav-list-item"><a class="top-bar__nav-link" href="https://www.imandra.ai/research">Research</a></li>
+                    <li class="top-bar__nav-list-item"><a class="top-bar__nav-link" href="https://docs.imandra.ai/">Docs</a></li>
+                    <li class="top-bar__nav-list-item"><a class="top-bar__nav-link" href="https://www.imandra.ai/media">Media</a></li>
+                    <li class="top-bar__nav-list-item"><a class="top-bar__nav-link" href="https://www.imandra.ai/about">About AI</a></li>
+                    <li class="top-bar__nav-list-item"><a class="top-bar__nav-link" href="https://www.imandra.ai/careers">CAREERS</a></li>
+                    <li class="top-bar__nav-list-item"><a class="top-bar__nav-link" href="https://www.imandra.ai/contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="template-header__image-container">
+            <a class="template-header__image" href="{{site.baseurl}}">
+                <img class="SiteSpecificImage" src="{{ site.baseurl }}{% link assets/img/site_specific_image_v_2.svg %}">
+            </a>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById('toggler--left').addEventListener('click', function () {
+            document.querySelector('.side__right-menu-toggler .side__toggle').classList.remove(
+                'side__toggle--active');
+            document.querySelector('.side__left-menu-toggler .side__toggle').classList.toggle(
+                'side__toggle--active');
+            document.getElementsByClassName('side__nav-container')[0].classList.toggle(
+                'side__nav-container--hidden');
+            document.getElementsByClassName('top-bar__nav-list')[0].classList.add('top-bar__nav-list--hidden');
+        });
+
+        document.getElementById('toggler--right').addEventListener('click', function () {
+            document.querySelector('.side__left-menu-toggler .side__toggle').classList.remove(
+                'side__toggle--active');
+            document.querySelector('.side__right-menu-toggler .side__toggle').classList.toggle(
+                'side__toggle--active');
+
+            document.getElementsByClassName('side__nav-container')[0].classList.add(
+                'side__nav-container--hidden');
+            document.getElementsByClassName('top-bar__nav-list')[0].classList.toggle(
+                'top-bar__nav-list--hidden');
+        });
+
+    </script>
+</header>

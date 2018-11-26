@@ -237,12 +237,103 @@ time {
     }
 
     &__toggle {
-        text-decoration: none;
-        font-size: 50px;
-        display: flex;
-        line-height: 30px;
-        align-items: baseline;
-        height: 40px;
+        // text-decoration: none;
+        // display: flex;
+        // line-height: 30px;
+        // align-items: baseline;
+        // height: 40px;
+        // cursor: pointer;
+        width: 26px;
+        height: 26px;
+        margin: 10px 10px;
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+
+        & span {
+            background-color: #4f92ff;
+            position: absolute;
+            border-radius: 0;
+            transition: 0.2s cubic-bezier(0.7, 0.6, 0.1, 1.6);
+            width: 100%;
+            height: 4px;
+        }
+
+        & span:nth-child(1) {
+            top:0px;
+            left: 0px;
+        }
+
+        & span:nth-child(2) {
+            top: 11px;
+            left: 0px;
+        }
+
+        & span:nth-child(3) {
+            bottom:0px;
+            left: 0px;
+        }
+
+        &:not(.side__toggle--active):hover span:nth-child(1){
+            background-color: $ai-mint;
+            transform:  scaleX(1);
+            top:3px;
+        }
+
+        &:not(.side__toggle--active):hover span:nth-child(2){
+            background-color: $ai-mint;
+
+            transform: scaleX(0.8);
+        }
+
+        &:not(.side__toggle--active):hover span:nth-child(3){
+            background-color: $ai-mint;
+            transform:  scaleX(1);
+            bottom: 3px;
+        }
+    }
+
+    &__toggle--active {
+
+        & span {
+            background: $ai-mint;
+        } 
+        & span:nth-child(1){
+            transform: rotate(45deg);
+            top: 13px;
+        }
+
+        & span:nth-child(2){
+            transform: scale(0);
+        }
+
+        & span:nth-child(3){
+            transform: rotate(-45deg);
+            top: 13px;
+        }
+    }
+
+    &__toggle--active--x {
+
+        & span {
+            background: $ai-mint;
+        } 
+        & span:nth-child(1) {
+            transform: rotate(45deg) scaleX(0.8);
+            top: 13PX;
+            left: -8px;
+        }
+
+        & span:nth-child(2){
+            transform: scale(0);
+            transition-duration: 50ms
+        }
+
+        & span:nth-child(3){
+            transform: rotate(-45deg) scaleX(0.8);
+            top: 13PX;
+            left: 7px;
+        }
     }
 
     &__toggle-text {
@@ -723,6 +814,7 @@ time {
     &__repository-brand-container {
         display: flex;
         justify-content: flex-start;
+        align-items: center;
     }
 
     &__repository-info-container {
