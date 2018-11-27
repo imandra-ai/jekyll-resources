@@ -237,14 +237,8 @@ time {
     }
 
     &__toggle {
-        // text-decoration: none;
-        // display: flex;
-        // line-height: 30px;
-        // align-items: baseline;
-        // height: 40px;
-        // cursor: pointer;
-        width: 26px;
-        height: 26px;
+        width: 22px;
+        height: 22px;
         margin: 10px 10px;
         position: relative;
         cursor: pointer;
@@ -256,7 +250,7 @@ time {
             border-radius: 0;
             transition: 0.2s cubic-bezier(0.7, 0.6, 0.1, 1.6);
             width: 100%;
-            height: 4px;
+            height: 3px;
         }
 
         & span:nth-child(1) {
@@ -265,7 +259,7 @@ time {
         }
 
         & span:nth-child(2) {
-            top: 11px;
+            top: 9px;
             left: 0px;
         }
 
@@ -277,7 +271,7 @@ time {
         &:not(.side__toggle--active):hover span:nth-child(1){
             background-color: $ai-mint;
             transform:  scaleX(1);
-            top:3px;
+            top:1px;
         }
 
         &:not(.side__toggle--active):hover span:nth-child(2){
@@ -289,7 +283,7 @@ time {
         &:not(.side__toggle--active):hover span:nth-child(3){
             background-color: $ai-mint;
             transform:  scaleX(1);
-            bottom: 3px;
+            bottom: 1px;
         }
     }
 
@@ -297,10 +291,11 @@ time {
 
         & span {
             background: $ai-mint;
-        } 
+        }
+
         & span:nth-child(1){
             transform: rotate(45deg);
-            top: 13px;
+            top: 11px;
         }
 
         & span:nth-child(2){
@@ -309,11 +304,11 @@ time {
 
         & span:nth-child(3){
             transform: rotate(-45deg);
-            top: 13px;
+            top: 11px;
         }
     }
 
-    &__toggle--active--x {
+    &__toggle--active--V {
 
         & span {
             background: $ai-mint;
@@ -336,10 +331,13 @@ time {
         }
     }
 
+
     &__toggle-text {
         font-size: 13px;
         align-self: center;
-        margin: 0 5px;
+        margin: 3px 0 0 0;
+        text-transform: uppercase;
+        color: #898989;
     }
 
     &__left-menu-toggler {
@@ -347,6 +345,7 @@ time {
         @media #{$max-tablet} {
             display: flex;
             margin-left: 5px;
+            cursor: pointer;        
         }
     }
 
@@ -355,6 +354,7 @@ time {
         @media #{$max-tablet} {
             display: flex;
             margin-right: 5px;
+            cursor: pointer;
         }
     }
 }
@@ -383,6 +383,7 @@ time {
         list-style: none;
         display: flex;
         margin: 33px 32px 0 0;
+        
         @media #{$max-tablet} {
             position: absolute;
             background: #ffffff;
@@ -424,18 +425,21 @@ time {
 
 
         @media #{$max-tablet} {
-            text-transform: none !important;
-            font-size: 0.9rem;
+            text-transform: uppercase;
+            font-size: 1.2rem;
             text-decoration: none;
             display: block;
-            padding: 0.8em;
+            padding: 0.5em 1em;
             font-weight: 300;
+            border-bottom: solid 1px $header;
+
             &:hover {
                 background: $header;
                 text-decoration: none;
                 color: black;
             }
         }
+
     }
 
     &__toggle{
