@@ -33,7 +33,11 @@ body {
     margin: 0;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-weight: 300;
     color: $heading-font-color;
     font-family: $heading-font;
@@ -43,6 +47,7 @@ h1, h2, h3, h4, h5 {
 
 h1 {
     font-size: 2.52rem;
+
     a,
     a:visited {
         text-decoration: none;
@@ -85,6 +90,9 @@ time {
     color: #898989;
 }
 
+code {
+    color: $code;
+}
 
 
 /*  ---------------------------------------------------
@@ -97,7 +105,7 @@ time {
     top: 0;
     left: 0;
     width: $sidebar-left-width;
-    background: rgba(255,255,255,0);
+    background: rgba(255, 255, 255, 0);
     height: 100%;
     z-index: 3;
     border-bottom: 1px solid lighten($light, 30%);
@@ -105,7 +113,7 @@ time {
     overflow-y: scroll;
     padding: 20px 0 0 20px;
 
-    @media #{$max-tablet}{
+    @media #{$max-tablet} {
         position: relative;
         overflow-y: visible;
         width: 100%;
@@ -120,6 +128,7 @@ time {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
     @media #{$max-tablet} {
         align-items: center;
         justify-content: space-between;
@@ -144,8 +153,8 @@ time {
     }
 
     &__logo {
-        width:29px;
-        height:30px;
+        width: 29px;
+        height: 30px;
     }
 
     &__logo-link {
@@ -157,6 +166,7 @@ time {
     &__nav-container {
         justify-content: flex-start;
         margin-top: 2em;
+
         @media #{$max-tablet} {
             position: absolute;
             background: #ffffff;
@@ -179,11 +189,12 @@ time {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        color: $link-color; 
+        color: $link-color;
 
         @media #{$max-tablet} {
             justify-content: flex-end;
         }
+
         &--sub-level-1 {
             font-size: 0.9rem;
             list-style: none;
@@ -219,11 +230,12 @@ time {
         padding: 0;
 
         &:hover {
-            background:$menu-hover-background;
+            background: $menu-hover-background;
             text-decoration: none;
             color: #ffffff;
             padding-left: 0.2em;
         }
+
         @media #{$max-tablet} {
             padding: 0.5em;
         }
@@ -237,33 +249,127 @@ time {
     }
 
     &__toggle {
-        text-decoration: none;
-        font-size: 50px;
-        display: flex;
-        line-height: 30px;
-        align-items: baseline;
-        height: 40px;
+        width: 22px;
+        height: 22px;
+        margin: 10px 10px;
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+
+        & span {
+            background-color: #4f92ff;
+            position: absolute;
+            border-radius: 0;
+            transition: 0.2s cubic-bezier(0.7, 0.6, 0.1, 1.6);
+            width: 100%;
+            height: 3px;
+        }
+
+        & span:nth-child(1) {
+            top: 0px;
+            left: 0px;
+        }
+
+        & span:nth-child(2) {
+            top: 9px;
+            left: 0px;
+        }
+
+        & span:nth-child(3) {
+            bottom: 0px;
+            left: 0px;
+        }
+
+        &:not(.side__toggle--active):hover span:nth-child(1) {
+            background-color: $ai-mint;
+            transform: scaleX(1);
+            top: 1px;
+        }
+
+        &:not(.side__toggle--active):hover span:nth-child(2) {
+            background-color: $ai-mint;
+
+            transform: scaleX(0.8);
+        }
+
+        &:not(.side__toggle--active):hover span:nth-child(3) {
+            background-color: $ai-mint;
+            transform: scaleX(1);
+            bottom: 1px;
+        }
     }
+
+    &__toggle--active {
+
+        & span {
+            background: $ai-mint;
+        }
+
+        & span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 11px;
+        }
+
+        & span:nth-child(2) {
+            transform: scale(0);
+        }
+
+        & span:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 11px;
+        }
+    }
+
+    &__toggle--active--V {
+
+        & span {
+            background: $ai-mint;
+        }
+
+        & span:nth-child(1) {
+            transform: rotate(45deg) scaleX(0.8);
+            top: 13PX;
+            left: -8px;
+        }
+
+        & span:nth-child(2) {
+            transform: scale(0);
+            transition-duration: 50ms
+        }
+
+        & span:nth-child(3) {
+            transform: rotate(-45deg) scaleX(0.8);
+            top: 13PX;
+            left: 7px;
+        }
+    }
+
 
     &__toggle-text {
         font-size: 13px;
         align-self: center;
-        margin: 0 5px;
+        margin: 3px 0 0 0;
+        text-transform: uppercase;
+        color: #898989;
     }
 
     &__left-menu-toggler {
         display: none;
+
         @media #{$max-tablet} {
             display: flex;
             margin-left: 5px;
+            cursor: pointer;
         }
     }
 
     &__right-menu-toggler {
         display: none;
+
         @media #{$max-tablet} {
             display: flex;
             margin-right: 5px;
+            cursor: pointer;
         }
     }
 }
@@ -279,9 +385,10 @@ time {
     z-index: 2;
     font-size: 16px;
 
-    &__nav-container{
-        display:flex;
+    &__nav-container {
+        display: flex;
         justify-content: flex-end;
+
         @media #{$max-tablet} {
             justify-content: flex-start;
             width: 100%;
@@ -292,6 +399,7 @@ time {
         list-style: none;
         display: flex;
         margin: 33px 32px 0 0;
+
         @media #{$max-tablet} {
             position: absolute;
             background: #ffffff;
@@ -310,9 +418,7 @@ time {
         }
     }
 
-    &__toggle {
-
-    }
+    &__toggle {}
 
     &__nav-list-item {
         @media #{$max-tablet} {
@@ -333,22 +439,25 @@ time {
 
 
         @media #{$max-tablet} {
-            text-transform: none !important;
-            font-size: 0.9rem;
+            text-transform: uppercase;
+            font-size: 1.2rem;
             text-decoration: none;
             display: block;
-            padding: 0.8em;
+            padding: 0.5em 1em;
             font-weight: 300;
+            border-bottom: solid 1px $header;
+
             &:hover {
                 background: $header;
                 text-decoration: none;
-                color: black;
+                color: $link-color;
             }
         }
+
     }
 
-    &__toggle{
-        display:none;
+    &__toggle {
+        display: none;
     }
 
 }
@@ -387,10 +496,10 @@ time {
         width: 100%;
         max-width: 1024px;
         margin-left: unset;
-        margin-right:106px;
-        
+        margin-right: 106px;
+
         @media #{$max-wide} {
-            margin-right:0; 
+            margin-right: 0;
         }
 
         @media #{$max-desktop} {
@@ -401,12 +510,16 @@ time {
         @media #{$max-tablet} {
             padding: 0;
         }
+
         & p {
-            color:$font-color;
+            color: $font-color;
         }
     }
 
-    h1, h2, h3, h4 {
+    h1,
+    h2,
+    h3,
+    h4 {
         font-weight: 300;
     }
 }
@@ -429,7 +542,7 @@ time {
 
     &--notebooks {
         max-width: $content-width + $sidebar-right-width + 120px;
-        
+
         @media #{$max-desktop} {
             max-width: 980px;
             margin-left: 210px;
@@ -455,8 +568,7 @@ time {
 }
 
 .background {
-    background-image:
-    url('#{$baseurl}/jekyll-resources/assets/img/bg_image_cover.svg'),
+    background-image: url('#{$baseurl}/jekyll-resources/assets/img/bg_image_cover.svg'),
     url('#{$baseurl}/jekyll-resources/assets/img/bg_regions.svg');
 
     background-position: top center, top center;
@@ -471,8 +583,7 @@ time {
     bottom: 0;
 
     @media #{$max-tablet} {
-        background:
-        url('#{$baseurl}/jekyll-resources/assets/img/bg_image_cover.svg') top center / 100% auto no-repeat,
+        background: url('#{$baseurl}/jekyll-resources/assets/img/bg_image_cover.svg') top center / 100% auto no-repeat,
         url('#{$baseurl}/jekyll-resources/assets/img/bg_regions.svg') top center / 100% auto no-repeat;
     }
 }
@@ -587,10 +698,10 @@ time {
     min-width: $sidebar-right-width;
     width: $sidebar-right-width;
     max-width: $sidebar-right-width;
-    
+
     font-weight: 300;
 
-    @media #{$max-desktop}{
+    @media #{$max-desktop} {
         display: none;
     }
 
@@ -611,7 +722,7 @@ time {
         line-height: 1.4;
 
         &:hover {
-            background:$menu-hover-background;
+            background: $menu-hover-background;
             text-decoration: none;
             color: #ffffff;
             padding-left: 0.2em;
@@ -640,7 +751,7 @@ time {
 
         &--active {
             font-weight: 400;
-            color: $imandra-mint;            
+            color: $imandra-mint;
         }
     }
 }
@@ -714,6 +825,7 @@ time {
         width: 50%;
         padding-right: 4em;
         margin-bottom: 4em;
+
         @media #{$max-tablet} {
             width: 100%;
             padding: 0;
@@ -723,6 +835,7 @@ time {
     &__repository-brand-container {
         display: flex;
         justify-content: flex-start;
+        align-items: center;
     }
 
     &__repository-info-container {
@@ -747,6 +860,7 @@ time {
         width: 3em;
         margin: 0 1em 0 0;
     }
+
     &__repository-link {
         color: #00A7FF;
         margin-top: 1em;
@@ -754,12 +868,7 @@ time {
 
 }
 
-.repositories {
-
-}
-
-
-
+.repositories {}
 
 .VerticalsContainer {
     display: flex;
@@ -768,6 +877,7 @@ time {
     margin: 0;
     padding: 0;
     flex-grow: 1;
+
     @media #{$max-tablet} {
         flex-direction: column;
         align-items: center;
@@ -781,12 +891,15 @@ time {
     flex-direction: column;
     width: 33.33%;
     padding: 0 0.2em;
+
     &:first-child {
         border-right: solid 1px #f0f0f0;
     }
+
     &:last-child {
         border-left: solid 1px #f0f0f0;
     }
+
     @media #{$max-tablet} {
         width: 100%;
         flex-direction: column;
@@ -808,6 +921,7 @@ time {
 .Repositories {
     margin: 0 10px;
     padding: 0;
+
     @media #{$max-tablet} {
         margin: 0 1em;
         display: flex;
@@ -830,10 +944,12 @@ time {
     background-color: #fcfcfc;
     text-decoration: none;
     transition: all 0.1s ease-out;
+
     &:hover {
         text-decoration: none;
         background-color: #f0f0f0;
     }
+
     @media #{$max-tablet} {
         display: flex;
         flex-direction: column;
@@ -857,24 +973,24 @@ time {
 .RepositoryDescription {
     display: flex;
     flex-direction: column;
-	  justify-content: center;
+    justify-content: center;
 
 }
 
 .RepositoryDescription_Title {
-	  color: $font-color;
-	  margin: 0;
-	  font-weight: 100;
+    color: $font-color;
+    margin: 0;
+    font-weight: 100;
 }
 
 .RepositoryDescription_Excerpt {
-	  color: $font-color;
-	  margin: 0;
+    color: $font-color;
+    margin: 0;
 }
 
 .RepositoryDescription_Excerpt:hover,
 .RepositoryDescription_Title:hover {
-	  text-decoration: none;
+    text-decoration: none;
 }
 
 
@@ -884,29 +1000,37 @@ time {
 	Code Examples
 --------------------------------------------------- */
 
+// inline code variations
+.rendered_html li code,
+.rendered_html p code,
+.highlight.language-ipl,
 .highlighter-rouge {
-	  font-family: menlo, monospace; /*add source*/
- 	  background: #f1f1f1;
-	  padding: 0 5px;
-	  font-size: 90%;
+    font-family: monospace;
+    background: #fbf8f8;
+    padding: 1px 3px;
+    font-size: 1em;
+    color: $code;
+    border: solid 1px #f3e7f5;
+    border-radius: 4px;
+    margin-right: 3px;
 }
 
 figure {
-	  margin: 0;
-	  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 h2.internalLink-padding:before {
-	  display: block;
-	  content: " ";
-	  margin-top: -60px;
-	  height: 60px;
-	  visibility: hidden;
-	  pointer-events: none;
+    display: block;
+    content: " ";
+    margin-top: -60px;
+    height: 60px;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 h2.internalLink-padding {
-	  padding-top: 1.6rem;
+    padding-top: 1.6rem;
 }
 
 .box {
@@ -914,7 +1038,8 @@ h2.internalLink-padding {
     width: 100%;
 }
 
-a:hover + .box, .box:hover {
+a:hover+.box,
+.box:hover {
     display: block;
     position: relative;
     z-index: 100;
@@ -929,28 +1054,28 @@ a:hover + .box, .box:hover {
     width: 100%;
     display: block;
     border-radius: 4px;
-	  border-top: solid 10px #f2f2f2;
-	  border-left: solid 1px #f2f2f2;
-	  border-right: solid 1px #f2f2f2;
-	  border-bottom: solid 1px #f2f2f2;
-	  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 4px 0 rgba(0, 0, 0, 0.19);
+    border-top: solid 10px #f2f2f2;
+    border-left: solid 1px #f2f2f2;
+    border-right: solid 1px #f2f2f2;
+    border-bottom: solid 1px #f2f2f2;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 4px 0 rgba(0, 0, 0, 0.19);
 }
 
 .template-image:hover {
-	  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .blogpost-image {
     width: 50%;
     display: block;
     border-radius: 4px;
-	  border-top: solid 10px #f2f2f2;
-	  border-left: solid 1px #f2f2f2;
-	  border-right: solid 1px #f2f2f2;
-	  border-bottom: solid 1px #f2f2f2;
-	  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 4px 0 rgba(0, 0, 0, 0.19);
+    border-top: solid 10px #f2f2f2;
+    border-left: solid 1px #f2f2f2;
+    border-right: solid 1px #f2f2f2;
+    border-bottom: solid 1px #f2f2f2;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 4px 0 rgba(0, 0, 0, 0.19);
 }
 
 .blogpost-image:hover {
-	  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
