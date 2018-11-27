@@ -2,13 +2,30 @@
 <header class="header">
     <div class="top-row-container">
         <div class="top-row">
-            <div id="toggler--left" class="side__left-menu-toggler"><a href="#" class="side__toggle">≡ <span class="side__toggle-text">Docs</span></a></div>
+
+            <div id="toggler--left" class="side__left-menu-toggler">
+                <div class="side__toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <p class="side__toggle-text">Docs</p>
+            </div>
+
             <div class="side__logo-container">
                 <a class="side__logo-link" href="/">
                     <img class="side__logo " src = "/{{ repo_dir }}/jekyll-resources/assets/img/ai_logo_green.svg">
                 </a>
             </div>
-            <div id="toggler--right" class="side__right-menu-toggler"><a href="#" class="side__toggle"><span class="side__toggle-text">Pages</span> ≡</a></div>
+
+            <div id="toggler--right" class="side__right-menu-toggler">
+                <p class="side__toggle-text">Pages</p>
+                <div class="side__toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
 
             <nav class="side__nav-container side__nav-container--hidden">
 
@@ -72,13 +89,15 @@
                 </ul>
             </nav>
         </div>
+
         <div class="template-header__image-container template-header__image-container--jupyter">
             <div class="template-header__image" href ="/{{ repo_dir }}">
                 <img class="SiteSpecificImage" src="/{{ repo_dir }}/static/img/site_specific_image_v_2.svg">
             </div>
         </div>
+        
     </div>
-    <script>
+
     <script>
         document.getElementById('toggler--left').addEventListener('click', function () {
             document.querySelector('.side__right-menu-toggler .side__toggle').classList.remove('side__toggle--active');

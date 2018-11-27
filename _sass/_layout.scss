@@ -1000,7 +1000,9 @@ code {
 	Code Examples
 --------------------------------------------------- */
 
-// inline code examples
+// inline code variations
+.rendered_html li code,
+.rendered_html p code,
 .highlight.language-ipl,
 .highlighter-rouge {
     font-family: monospace;
