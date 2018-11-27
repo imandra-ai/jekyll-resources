@@ -79,13 +79,20 @@
         </div>
     </div>
     <script>
-     document.getElementById('toggler--left').addEventListener('click', function () {
-         document.getElementsByClassName('side__nav-container')[0].classList.toggle('side__nav-container--hidden');
-         document.getElementsByClassName('top-bar__nav-list')[0].classList.add('top-bar__nav-list--hidden');
-     });
-     document.getElementById('toggler--right').addEventListener('click', function () {
-         document.getElementsByClassName('side__nav-container')[0].classList.add('side__nav-container--hidden');
-         document.getElementsByClassName('top-bar__nav-list')[0].classList.toggle('top-bar__nav-list--hidden');
-     });
+    <script>
+        document.getElementById('toggler--left').addEventListener('click', function () {
+            document.querySelector('.side__right-menu-toggler .side__toggle').classList.remove('side__toggle--active');
+            document.querySelector('.side__left-menu-toggler .side__toggle').classList.toggle('side__toggle--active');
+            document.getElementsByClassName('side__nav-container')[0].classList.toggle('side__nav-container--hidden');
+            document.getElementsByClassName('top-bar__nav-list')[0].classList.add('top-bar__nav-list--hidden');
+        });
+
+        document.getElementById('toggler--right').addEventListener('click', function () {
+            document.querySelector('.side__left-menu-toggler .side__toggle').classList.remove('side__toggle--active');
+            document.querySelector('.side__right-menu-toggler .side__toggle').classList.toggle('side__toggle--active');
+            document.getElementsByClassName('side__nav-container')[0].classList.add('side__nav-container--hidden');
+            document.getElementsByClassName('top-bar__nav-list')[0].classList.toggle('top-bar__nav-list--hidden');
+        });
+
     </script>
 </header>
