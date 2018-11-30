@@ -90,9 +90,6 @@ time {
     color: #898989;
 }
 
-code {
-    color: $code;
-}
 
 
 /*  ---------------------------------------------------
@@ -1001,9 +998,13 @@ code {
 --------------------------------------------------- */
 
 // inline code variations
-.rendered_html li code,
-.rendered_html p code,
-.highlight.language-ipl,
+.highlight .k {
+    color: $code;
+}
+
+// .rendered_html li code,
+// .rendered_html p code,
+// .highlight.language-ipl,
 .highlighter-rouge {
     font-family: monospace;
     background: #fbf8f8;
