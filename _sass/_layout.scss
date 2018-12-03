@@ -998,20 +998,27 @@ time {
     color: $code;
 }
 
-.highlight pre {
-    color: $link-color;
-}
-
 .rendered_html li code,
 .rendered_html p code,
 .highlighter-rouge {
     font-family: monospace;
-    background: #efefef;
+    background: #f5f5f5;
     padding: 1px 3px;
     font-size: 1.1em;
     color: $code;
     border-radius: 4px;
     margin-right: 3px;
+}
+
+.terminal {
+    background: #e2f9f4;
+    & pre {
+        padding: 1.5em;
+        margin: 0;
+        overflow-x: auto;
+        margin-right: 0.55rem;
+        color: $link-color;
+    }
 }
 
 figure {
