@@ -507,10 +507,6 @@ time {
         @media #{$max-tablet} {
             padding: 0;
         }
-
-        & p {
-            color: $font-color;
-        }
     }
 
     h1,
@@ -1002,16 +998,18 @@ time {
     color: $code;
 }
 
-// .rendered_html li code,
-// .rendered_html p code,
-// .highlight.language-ipl,
+.highlight pre {
+    color: $link-color;
+}
+
+.rendered_html li code,
+.rendered_html p code,
 .highlighter-rouge {
     font-family: monospace;
     background: #fbf8f8;
     padding: 1px 3px;
     font-size: 1em;
     color: $code;
-    border: solid 1px #f3e7f5;
     border-radius: 4px;
     margin-right: 3px;
 }
