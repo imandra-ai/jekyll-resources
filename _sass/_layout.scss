@@ -1046,6 +1046,40 @@ a:hover+.box,
     z-index: 100;
 }
 
+//copy-text button
+.copy-code {
+    display: block;
+    position: absolute;
+    height: 24px;
+    right: 12px;
+    width: 24px;
+    bottom: 45px;
+    cursor: pointer;
+
+    z-index: 1;
+
+    &:hover {
+        background: rgba( 255,255,255,0.5);
+
+        & path {
+            fill: #00A7FF;
+        } 
+    }
+
+    &__icon {
+        pointer-events: none;
+
+    }
+
+    &__msg {
+        display: flex;
+        position: absolute;
+        text-align: right;
+        left: -55px;
+        top: 0;
+    }
+}
+
 
 /*  ---------------------------------------------------
 	Inline Images styling
