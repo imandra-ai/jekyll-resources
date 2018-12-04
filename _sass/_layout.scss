@@ -507,10 +507,6 @@ time {
         @media #{$max-tablet} {
             padding: 0;
         }
-
-        & p {
-            color: $font-color;
-        }
     }
 
     h1,
@@ -1002,18 +998,27 @@ time {
     color: $code;
 }
 
-// .rendered_html li code,
-// .rendered_html p code,
-// .highlight.language-ipl,
+.rendered_html li code,
+.rendered_html p code,
 .highlighter-rouge {
     font-family: monospace;
-    background: #fbf8f8;
+    background: #f5f5f5;
     padding: 1px 3px;
-    font-size: 1em;
+    font-size: 1.1em;
     color: $code;
-    border: solid 1px #f3e7f5;
     border-radius: 4px;
     margin-right: 3px;
+}
+
+.terminal {
+    background: #e2f9f4;
+    & pre {
+        padding: 1.5em;
+        margin: 0;
+        overflow-x: auto;
+        margin-right: 0.55rem;
+        color: $link-color;
+    }
 }
 
 figure {
@@ -1044,6 +1049,40 @@ a:hover+.box,
     display: block;
     position: relative;
     z-index: 100;
+}
+
+//copy-text button
+.copy-code {
+    display: block;
+    position: absolute;
+    height: 24px;
+    right: 12px;
+    width: 24px;
+    bottom: 45px;
+    cursor: pointer;
+
+    z-index: 1;
+
+    &:hover {
+        background: rgba( 255,255,255,0.5);
+
+        & path {
+            fill: #00A7FF;
+        } 
+    }
+
+    &__icon {
+        pointer-events: none;
+
+    }
+
+    &__msg {
+        display: flex;
+        position: absolute;
+        text-align: right;
+        left: -55px;
+        top: 0;
+    }
 }
 
 
