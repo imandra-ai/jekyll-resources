@@ -1011,14 +1011,117 @@ time {
 }
 
 .terminal {
-    background: #e2f9f4;
+    display: flex;
+    position: relative;
+    border-radius: 4px;
+
+    &--hide {
+        & .terminal__code {
+            opacity: 0;
+        }
+
+        & .terminal__copy-cover {
+            display: none;
+        }
+
+        & .terminal__copy-ready {
+            opacity: 1;
+        }
+        & .terminal__copy-ready--top {
+            transform: translateY(0);
+        }
+
+        & .terminal__copy-ready--bottom {
+            transform: translateY(0);
+        }
+    }
+
+    &__code {
+        width: 100%;
+        position: relative;
+        background: #e2f9f4;
+        transition: opacity 0.2s ease-in;
+        
+    }
+
     & pre {
         padding: 1.5em;
         margin: 0;
         overflow-x: auto;
         margin-right: 0.55rem;
-        color: $link-color;
+        border: none;
+        white-space: normal;
     }
+
+    & .highlight {
+        background: none;
+    }
+
+    &__copy-cover {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background: $imandra-mint;
+        font-size: 2em;
+        opacity: 0.01;
+        transition: opacity 0.2s ease-out;
+        font-family: monospace;
+        cursor: pointer;
+        transition: opacity 0.2s ease-in;
+
+        &:hover {
+            opacity: 1;
+            
+            & .terminal__copy-cover-text {
+                transform: translateY(0);
+
+            }
+        }
+    }
+    &__copy-cover-text {
+        transform: translateY(-10px);
+        transition: transform 0.2s ease-in;
+    }
+
+    &__copy-ready {
+        position: absolute;
+        left: calc(50% - 100px);
+        width: 200px;
+        height: 100px;
+        opacity: 0.01;
+        top: 15%;
+
+        &--top {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2em;
+            background: $imandra-mint;
+            font-family: monospace;
+            transform: translateY(-11px);
+            transition: transform 0.3s ease-out;
+        }
+
+        &--bottom { 
+            width: 100%;
+            height: 8px;
+            background: rgb(255, 186, 82);
+            transform: translateY(10px);
+            transition: transform 0.3s ease-out;
+        }
+    }
+
+    &__copy-msg {
+
+    }
+
 }
 
 figure {
@@ -1056,9 +1159,9 @@ a:hover+.box,
     display: block;
     position: absolute;
     height: 24px;
-    right: 12px;
+    left: 32px;
+    top: 12px;
     width: 24px;
-    bottom: 45px;
     cursor: pointer;
 
     z-index: 1;
