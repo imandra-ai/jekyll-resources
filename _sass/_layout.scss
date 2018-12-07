@@ -603,12 +603,9 @@ time {
 
     &__image-container {
         margin-left: $sidebar-left-width;
-        // padding-left: 20px;
         display: flex;
         flex-grow: 1;
         justify-content: flex-start;
-        // margin-top: 30px;
-        // margin-bottom: 30px;
 
         @media #{$max-tablet} {
             margin-left: 0;
