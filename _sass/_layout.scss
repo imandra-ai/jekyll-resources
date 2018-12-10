@@ -1014,7 +1014,7 @@ time {
     color: #337ab7;
 
     &--hide {
-        & .terminal__code {
+        & code {
             opacity: 0;
         }
 
@@ -1034,25 +1034,25 @@ time {
         }
     }
 
-    &__code {
+    code {
         width: 100%;
         position: relative;
         background: #e2f9f4;
         transition: opacity 0.2s ease-in;
-        
+        white-space: normal;
     }
 
-    & pre {
+    pre {
         padding: 1.5em;
         margin: 0;
         overflow-x: auto;
         margin-right: 0.55rem;
         border: none;
-        white-space: normal;
     }
 
-    & .highlight {
+    .highlight {
         background: none;
+        margin: 0;
     }
 
     &__copy-cover {
