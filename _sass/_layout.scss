@@ -1011,7 +1011,7 @@ time {
     display: flex;
     position: relative;
     border-radius: 4px;
-    color: #337ab7;
+    
 
     &--hide {
         & code {
@@ -1048,6 +1048,7 @@ time {
         overflow-x: auto;
         margin-right: 0.55rem;
         border: none;
+        color: #0064b9;
     }
 
     .highlight {
