@@ -580,7 +580,7 @@ time {
     }
 }
 
-.WelcomeHeader {
+.welcome-header {
     display: flex;
     min-height: 400px;
     padding-top: 10px;
@@ -666,7 +666,7 @@ time {
 
 /* Page Template Classes */
 
-.SiteSpecificImage {
+.site-specific-image {
     min-width: 180px;
     margin-top: 2em;
 
@@ -753,7 +753,7 @@ time {
   Footer
 --------------------------------------------------- */
 
-.Footer {
+.footer {
     bottom: 0;
     width: 100%;
     left: 0;
@@ -764,19 +764,19 @@ time {
     align-items: center;
     text-align: center;
     font-size: 11px;
-    color: #fff;
     padding-bottom: 1em;
     background: url('#{$baseurl}/jekyll-resources/assets/img/transition_footer.svg') center 101% / 1400px 220px repeat-x;
     z-index: 0;
 }
 
-.Copyrights {
+.copyrights {
     text-decoration: none;
     font-size: 1.1em;
-    color: #22e0b6;
+    color: $link-color;
 
     &:hover {
         text-decoration: none !important;
+        color: darken($link-color, 30%);
     }
 }
 
@@ -788,7 +788,7 @@ time {
 --------------------------------------------------- */
 .intro {
     &__title {
-        color: #576483;
+        color: darken(dodgerblue, 5%);
     }
 
     &__content {
@@ -838,7 +838,7 @@ time {
     }
 
     &__repository-title {
-        color: #14CCCC;
+        color: dodgerblue;
         width: 50%;
         font-weight: 300;
         margin: 0;
