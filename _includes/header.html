@@ -13,7 +13,7 @@
 
             <div class="side__logo-container">
                 <a class="side__logo-link" href="{{ site.url }}">
-                    <img class="side__logo " src="{{ site.baseurl }}{% link jekyll-resources/assets/img/ai_logo_green.svg %}">
+                    <img class="side__logo " src="{{ site.baseurl }}{% link jekyll-resources/assets/img/imandra-gradient-logo-docs.svg %}">
                 </a>
             </div>
 
@@ -41,8 +41,7 @@
                             {% assign col = site[colName] | sort: 'sequence' | shift %}
                             {% assign topPage = site[colName] | sort: 'sequence' | first %}
                             {% if page.collection == topPage.collection %}
-                            <li class="side__nav-list-item--sub-level-1"><a class="side__nav-link side__nav-link--active"
-                                    href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a>
+                            <li class="side__nav-list-item--sub-level-1"><a class="side__nav-link side__nav-link--active" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a>
                                 {% else %}
                             <li class="side__nav-list-item--sub-level-1"><a class="side__nav-link" href="{{ topPage.url | prepend: site.baseurl }}">{{
                                     topPage.title }}</a>
@@ -57,8 +56,7 @@
                                         {% endif %}
                                         {% else %}
                                         {% if page == lin %}
-                                    <li class="side__nav-list-item--sub-level-2"><a class="side__nav-link side__nav-link--active"
-                                            href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
+                                    <li class="side__nav-list-item--sub-level-2"><a class="side__nav-link side__nav-link--active" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
                                         {% else %}
                                     <li class="side__nav-list-item--sub-level-2"><a class="side__nav-link" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
                                         {% endif %}
@@ -66,8 +64,7 @@
                                     </li>
                                     {% endfor %}
                                     {% if colName == "docTopic" and site.baseurl == "/fix-engine" %}
-                                    <li class="side__nav-list-item--sub-level-2"><a class="side__nav-link" href="{{ site.baseurl }}{% link _pages/doc/index.html %}"
-                                            target="_blank">Technical Documentation</a></li>
+                                    <li class="side__nav-list-item--sub-level-2"><a class="side__nav-link" href="{{ site.baseurl }}{% link _pages/doc/index.html %}" target="_blank">Technical Documentation</a></li>
                                     {% else %}
                                     {% endif %}
                                 </ul>
@@ -106,7 +103,7 @@
 
         <div class="template-header__image-container">
             <a class="template-header__image" href="{{site.baseurl}}">
-                <img class="SiteSpecificImage" src="{{ site.baseurl }}{% link assets/img/site_specific_image_v_2.svg %}">
+                <img class="site-specific-image" src="{{ site.baseurl }}{% link assets/img/site_specific_image_v_2.svg %}">
             </a>
         </div>
     </div>
@@ -133,6 +130,5 @@
             document.getElementsByClassName('top-bar__nav-list')[0].classList.toggle(
                 'top-bar__nav-list--hidden');
         });
-
     </script>
 </header>

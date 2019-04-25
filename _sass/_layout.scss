@@ -136,12 +136,10 @@ time {
 .side {
     &__logo-container {
         display: flex;
-        width: 30%;
-        padding: 10px;
+        width: auto;
+        padding: 16px 0 0 0;
 
-        &:hover {
-            background: $header;
-        }
+        &:hover {}
 
         @media #{$max-tablet} {
             justify-content: center;
@@ -150,8 +148,9 @@ time {
     }
 
     &__logo {
-        width: 29px;
-        height: 30px;
+        width: auto;
+        height: 16px;
+
     }
 
     &__logo-link {
@@ -581,7 +580,7 @@ time {
     }
 }
 
-.WelcomeHeader {
+.welcome-header {
     display: flex;
     min-height: 400px;
     padding-top: 10px;
@@ -667,9 +666,13 @@ time {
 
 /* Page Template Classes */
 
-.SiteSpecificImage {
+.site-specific-image {
     min-width: 180px;
     margin-top: 2em;
+
+    &--docs {
+        max-width: 300px;
+    }
 
     @media #{$max-tablet} {
         width: 90%;
@@ -750,7 +753,7 @@ time {
   Footer
 --------------------------------------------------- */
 
-.Footer {
+.footer {
     bottom: 0;
     width: 100%;
     left: 0;
@@ -761,19 +764,19 @@ time {
     align-items: center;
     text-align: center;
     font-size: 11px;
-    color: #fff;
     padding-bottom: 1em;
     background: url('#{$baseurl}/jekyll-resources/assets/img/transition_footer.svg') center 101% / 1400px 220px repeat-x;
     z-index: 0;
 }
 
-.Copyrights {
+.copyrights {
     text-decoration: none;
     font-size: 1.1em;
-    color: #22e0b6;
+    color: $link-color;
 
     &:hover {
         text-decoration: none !important;
+        color: darken($link-color, 30%);
     }
 }
 
@@ -785,7 +788,7 @@ time {
 --------------------------------------------------- */
 .intro {
     &__title {
-        color: #576483;
+        color: darken(dodgerblue, 5%);
     }
 
     &__content {
@@ -835,7 +838,7 @@ time {
     }
 
     &__repository-title {
-        color: #14CCCC;
+        color: dodgerblue;
         width: 50%;
         font-weight: 300;
         margin: 0;
@@ -1011,7 +1014,7 @@ time {
     display: flex;
     position: relative;
     border-radius: 4px;
-    
+
 
     &--hide {
         & code {
@@ -1025,6 +1028,7 @@ time {
         & .terminal__copy-ready {
             opacity: 1;
         }
+
         & .terminal__copy-ready--top {
             transform: translateY(0);
         }
@@ -1099,18 +1103,16 @@ time {
             transition: transform 0.3s ease-out;
         }
 
-        &--bottom { 
+        &--bottom {
             width: 100%;
             height: 8px;
             transform: translateY(10px);
             transition: transform 0.3s ease-out;
-            background: linear-gradient(to bottom, #4FE6C5, #4FE6C5 25%, #F3E098 25%,#F3E098 50%,#EF9E5F 50%, #EF9E5F 75%,#E9774F 75% );
+            background: linear-gradient(to bottom, #4FE6C5, #4FE6C5 25%, #F3E098 25%, #F3E098 50%, #EF9E5F 50%, #EF9E5F 75%, #E9774F 75%);
         }
     }
 
-    &__copy-msg {
-
-    }
+    &__copy-msg {}
 
 }
 
@@ -1157,11 +1159,11 @@ a:hover+.box,
     z-index: 1;
 
     &:hover {
-        background: rgba( 255,255,255,0.5);
+        background: rgba(255, 255, 255, 0.5);
 
         & path {
             fill: #00A7FF;
-        } 
+        }
     }
 
     &__icon {

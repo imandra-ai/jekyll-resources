@@ -14,7 +14,7 @@
 
             <div class="side__logo-container">
                 <a class="side__logo-link" href="/">
-                    <img class="side__logo " src = "/{{ repo_dir }}/jekyll-resources/assets/img/ai_logo_green.svg">
+                    <img class="side__logo " src = "/{{ repo_dir }}/jekyll-resources/assets/img/imandra-gradient-logo-docs.svg">
                 </a>
             </div>
 
@@ -92,7 +92,7 @@
 
         <div class="template-header__image-container template-header__image-container--jupyter">
             <div class="template-header__image" href ="/{{ repo_dir }}">
-                <img class="SiteSpecificImage" src="/{{ repo_dir }}/static/img/site_specific_image_v_2.svg">
+                <img class="site-specific-image" src="/{{ repo_dir }}/static/img/site_specific_image_v_2.svg">
             </div>
         </div>
         
