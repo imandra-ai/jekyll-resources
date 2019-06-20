@@ -40,7 +40,7 @@
                                 {% if section.notebookSlug %}
                                 <a class="side__nav-link{% if section.notebookSlug == slug %} side__nav-link--active{% endif %}" href="/{{ repo_dir }}/notebooks/{{ section.notebookSlug }}">{{ section.name }}</a>
                                 {% elif section.slug %}
-                                <a class="side__nav-link{% if section.slug == slug %} side__nav-link--active{% endif %}" href="/{{ repo_dir }}/{{ section.slug }}">{{ section.name }}</a>
+                                <a class="side__nav-link{% if section.slug == slug %} side__nav-link--active{% endif %}" target="_blank" rel="noopener noreferrer" href="/{{ repo_dir }}/{{ section.slug }}">{{ section.name }}</a>
                                 {% else %}
                                 {{ section.name }}
                                 {% endif %}
