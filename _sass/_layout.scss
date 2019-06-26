@@ -754,6 +754,291 @@ time {
 }
 
 /*  ---------------------------------------------------
+  Top page menu
+--------------------------------------------------- */
+
+.top-nav-bar {
+    &__group {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1440px;
+    }
+
+    &__nav {
+        &--hidden {
+            @media #{$max-tablet} {
+                display: none;
+            }
+        }
+    }
+
+    &__links {
+        display: flex;
+        position: static;
+        width: unset;
+        height: auto;
+        margin: 0;
+        padding: 32px 32px 0;
+        background-color: rgba(0, 0, 0, 0);
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        list-style: none;
+        opacity: 1;
+
+        @media #{$max-tablet} {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            justify-content: flex-start;
+            padding: 0;
+            list-style-type: none;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            right: 0;
+            background: white;
+        }
+
+    }
+
+    &__item {
+        font-size: 1rem;
+        border: 0;
+        padding: 0;
+        background-color: transparent;
+        text-align: center;
+
+        @media #{$max-tablet} {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: whitesmoke;
+        }
+
+        &:last-of-type {
+            border: 0;
+        }
+
+        &--last {
+            margin-left: 6em;
+        }
+    }
+
+    &__link {
+        display: block;
+        padding: 0.5em;
+        font-weight: 400;
+        font-size: 0.9em;
+        text-decoration: none;
+        text-transform: uppercase;
+        white-space: nowrap;
+        padding: 0.5em 0.95em;
+        color: DODGERBLUE;
+
+        @media #{$max-tablet} {
+            border-bottom: 1px solid rgba(206, 206, 206, 0.3);
+        }
+
+        &:hover {
+            color: #22e0b6;
+
+            @media #{$max-tablet} {
+                background: dodgerblue;
+            }
+        }
+
+        &--selected {
+            color: #27D798;
+        }
+
+        &--group {
+            display: block;
+            padding: 0;
+            padding: 0.5em 0.95em;
+            color: DODGERBLUE;
+
+            &:hover {
+                color: #22e0b6;
+            }
+
+            @media #{$max-tablet} {
+                display: none;
+            }
+        }
+
+    }
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(236, 241, 246, 0.88);
+
+    @media #{$max-tablet} {
+        display: contents;
+        width: 100%;
+        margin: 0em 1em;
+    }
+
+    &--media {
+        @media #{$max-tablet} {
+            width: 100%;
+            margin: 0;
+        }
+
+        margin: 0 0 0 -60px;
+        padding: 1.6em 0;
+        width: 120px;
+    }
+
+    &--engine {
+        @media #{$max-tablet} {
+            width: 100%;
+            margin: 0;
+        }
+
+        margin: 0 0 0 -80px;
+        padding: 1.6em 0;
+        width: 160px;
+    }
+
+    &--industries {
+        @media #{$max-tablet} {
+            width: 100%;
+            margin: 0;
+        }
+
+        margin: 0 0 0 -130px;
+        padding: 1.6em 0;
+        width: 260px;
+    }
+
+    &--company {
+        @media #{$max-tablet} {
+            width: 100%;
+            margin: 0;
+        }
+
+        margin: 0 0 0 -60px;
+        padding: 1.6em 0;
+        width: 120px;
+    }
+
+    border-radius: 10px;
+}
+
+.dropdown {
+    &__item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+
+        &--with-icon {
+            text-align: left;
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+        width: 20px;
+        margin: 0 1em 0 1.5em;
+
+        @media #{$max-tablet} {
+            display: none;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        line-height: 3;
+        list-style: none;
+        text-transform: uppercase;
+        flex-grow: 1;
+        font-size: 1em;
+        text-decoration: none;
+        line-height: 2.6;
+        border-bottom: 1px solid rgba(206, 206, 206, 0.3);
+        color: dodgerblue;
+
+        &--last {
+            border-bottom: none;
+        }
+
+        @media #{$max-tablet} {
+            border-bottom: 1px solid rgba(206, 206, 206, 0.3);
+            font-size: 0.9em;
+            font-weight: 400;
+
+            &:hover {
+                background: dodgerblue;
+            }
+        }
+
+        &:hover {
+            color: #22e0b6;
+        }
+    }
+
+    &--bottom {
+        margin-bottom: 0;
+
+        @media #{$max-tablet} {
+            margin-bottom: 40vh;
+        }
+
+    }
+
+    &__coming-soon:after {
+        @media #{$max-tablet} {
+            line-height: 1;
+            position: relative;
+            font-size: 8px;
+        }
+
+        content: "(Coming Soon)";
+        position: absolute;
+        display: block;
+        font-size: 12px;
+        color: #6ca0bb;
+        width: 100%;
+        text-align: center;
+        bottom: 6px;
+        left: 0;
+
+    }
+}
+
+//against the desktop first rule:
+@media screen and (min-width: 1024px) {
+
+    .dropdown--engine:hover,
+    .dropdown--industries:hover,
+    .dropdown--media:hover,
+    .dropdown--company:hover {
+        & .dropdown-content {
+            display: inline-block;
+        }
+    }
+}
+
+
+.dropdown--industries .dropdown__link {
+    text-align: left;
+
+    @media #{$max-tablet} {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+/*  ---------------------------------------------------
   Footer
 --------------------------------------------------- */
 
