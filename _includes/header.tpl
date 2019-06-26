@@ -74,7 +74,7 @@
     <div class="background">
     </div>
 
-    <div class="template-header">
+     <div class="template-header">
         <div class="top-bar">
             <nav class="top-bar__nav-container">
                 <a href="#" class="top-bar__toggle">≡</a>
@@ -90,8 +90,8 @@
                             <li class="top-nav-bar__item top-nav-bar__item--group dropdown--engine">
                                 <a class="top-nav-bar__link top-nav-bar__link--group">Engine</a>
                                 <ul class="dropdown-content dropdown-content--engine">
-                                    <li class="dropdown__item"><a class="dropdown__link" href="http://docs.imandra.ai/">Docs</a></li>
-                                    <li class="dropdown__item"><a class="dropdown__link" href="/research">Research</a></li>
+                                    <li class="dropdown__item"><a class="dropdown__link" href="https://docs.imandra.ai/">Docs</a></li>
+                                    <li class="dropdown__item"><a class="dropdown__link" href="https://www.imandra.ai//research">Research</a></li>
                                     <li class="dropdown__item"><a class="dropdown__link dropdown__coming-soon dropdown__link--last">Imandra Core</a></li>
                                 </ul>
                             </li>
@@ -100,11 +100,11 @@
                                 <ul class="dropdown-content dropdown-content--industries">
                                     <li class="dropdown__item dropdown__item--with-icon">
                                         <img class="dropdown__icon" src="{{ site.baseurl }}{% link jekyll-resources/assets/img/icon--financial--menu.svg %}" alt="Button Icon" title="">
-                                        <a class="dropdown__link " href="/imarkets">Financial Markets</a>
+                                        <a class="dropdown__link " href="https://www.imandra.ai/imarkets">Financial Markets</a>
                                     </li>
                                     <li class="dropdown__item dropdown__item--with-icon">
                                         <img class="dropdown__icon" src="{{ site.baseurl }}{% link jekyll-resources/assets/img/icon--autonomy--menu.svg %}" alt="Button Icon" title="">
-                                        <a class="dropdown__link" href="/autonomy">Autonomous Systems</a>
+                                        <a class="dropdown__link" href="https://www.imandra.ai/autonomy">Autonomous Systems</a>
                                     </li>
                                     <li class="dropdown__item dropdown__item--with-icon">
                                         <img class="dropdown__icon" src="{{ site.baseurl }}{% link jekyll-resources/assets/img/icon--ml--menu.svg %}" alt="Button Icon" title="">
@@ -115,15 +115,15 @@
                             <li class="top-nav-bar__item top-nav-bar__item--group dropdown--media">
                                 <a class="top-nav-bar__link top-nav-bar__link--group">Media</a>
                                 <ul class="dropdown-content dropdown-content--media">
-                                    <li class="dropdown__item"><a class="dropdown__link " href="/media">Media</a></li>
+                                    <li class="dropdown__item"><a class="dropdown__link " href="https://www.imandra.ai/media">Media</a></li>
                                     <li class="dropdown__item"><a class="dropdown__link dropdown__link--last " href="https://medium.com/imandra">Blog</a></li>
                                 </ul>
                             </li>
                             <li class="top-nav-bar__item top-nav-bar__item--group dropdown--company">
                                 <a class="top-nav-bar__link top-nav-bar__link--group">Company</a>
                                 <ul class="dropdown-content dropdown-content--company">
-                                    <li class="dropdown__item"><a class="dropdown__link" href="/about">About</a></li>
-                                    <li class="dropdown__item"><a class="dropdown__link dropdown__link--last dropdown__link--bottom" href="/careers">Careers</a></li>
+                                    <li class="dropdown__item"><a class="dropdown__link" href="https://www.imandra.ai/about">About</a></li>
+                                    <li class="dropdown__item"><a class="dropdown__link dropdown__link--last dropdown__link--bottom" href="https://www.imandra.ai/careers">Careers</a></li>
                                 </ul>
                             </li>
                         </ul>
