@@ -418,8 +418,6 @@ time {
         }
     }
 
-    &__toggle {}
-
     &__nav-list-item {
         @media #{$max-tablet} {
             padding: 0;
@@ -754,7 +752,7 @@ time {
 }
 
 /*  ---------------------------------------------------
-  Top page menu
+  Top menu
 --------------------------------------------------- */
 
 .top-nav-bar {
@@ -888,9 +886,9 @@ time {
             margin: 0;
         }
 
-        margin: 0 0 0 -60px;
+        margin: 0 0 0 -70px;
         padding: 1.6em 0;
-        width: 120px;
+        width: 140px;
     }
 
     &--engine {
@@ -899,9 +897,9 @@ time {
             margin: 0;
         }
 
-        margin: 0 0 0 -80px;
+        margin: 0 0 0 -90px;
         padding: 1.6em 0;
-        width: 160px;
+        width: 180px;
     }
 
     &--industries {
@@ -921,9 +919,9 @@ time {
             margin: 0;
         }
 
-        margin: 0 0 0 -60px;
+        margin: 0 0 0 -70px;
         padding: 1.6em 0;
-        width: 120px;
+        width: 140px;
     }
 
     border-radius: 10px;
@@ -962,6 +960,7 @@ time {
         line-height: 2.6;
         border-bottom: 1px solid rgba(206, 206, 206, 0.3);
         color: dodgerblue;
+        text-align: left;
 
         &--last {
             border-bottom: none;
@@ -971,6 +970,7 @@ time {
             border-bottom: 1px solid rgba(206, 206, 206, 0.3);
             font-size: 0.9em;
             font-weight: 400;
+            text-align: center;
 
             &:hover {
                 background: dodgerblue;
@@ -992,12 +992,6 @@ time {
     }
 
     &__coming-soon:after {
-        @media #{$max-tablet} {
-            line-height: 1;
-            position: relative;
-            font-size: 8px;
-        }
-
         content: "(Coming Soon)";
         position: absolute;
         display: block;
@@ -1006,8 +1000,14 @@ time {
         width: 100%;
         text-align: center;
         bottom: 6px;
-        left: 0;
+        left: 11px;
 
+        @media #{$max-tablet} {
+            line-height: 1;
+            position: relative;
+            font-size: 8px;
+            left: 0;
+        }
     }
 }
 
@@ -1021,15 +1021,6 @@ time {
         & .dropdown-content {
             display: inline-block;
         }
-    }
-}
-
-
-.dropdown--industries .dropdown__link {
-    text-align: left;
-
-    @media #{$max-tablet} {
-        text-align: center;
     }
 }
 
