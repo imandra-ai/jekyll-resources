@@ -595,8 +595,9 @@ time {
     position: relative;
     display: flex;
     flex-direction: column;
-    margin: 0;
     justify-content: center;
+    max-width: 1440px;
+    margin: 0;
 
     @media #{$max-tablet} {
         min-height: 140px;
