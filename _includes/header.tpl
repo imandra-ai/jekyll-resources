@@ -15,6 +15,8 @@
             <div class="side__logo-container">
                 <a class="side__logo-link" href="/">
                     <img class="side__logo " src = "/{{ repo_dir }}/jekyll-resources/assets/img/imandra-gradient-logo-docs.svg">
+                    <img class="side__logo--min " src="{{ site.baseurl }}{% link jekyll-resources/assets/img/imandra-gradient-logo-min.svg %}">
+
                 </a>
             </div>
 

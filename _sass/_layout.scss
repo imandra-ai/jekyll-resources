@@ -139,8 +139,6 @@ time {
         width: auto;
         padding: 16px 0 0 0;
 
-        &:hover {}
-
         @media #{$max-tablet} {
             justify-content: center;
         }
@@ -150,6 +148,20 @@ time {
     &__logo {
         width: auto;
         height: 16px;
+
+        @media #{$max-small-mobile} {
+            display: none
+        }
+    }
+
+    &__logo--min {
+        width: auto;
+        height: 16px;
+        display: none;
+
+        @media #{$max-small-mobile} {
+            display: flex
+        }
 
     }
 
