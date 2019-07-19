@@ -149,7 +149,7 @@ time {
         width: auto;
         height: 16px;
 
-        @media #{$max-small-mobile} {
+        @media screen and (max-device-width : 420px) {
             display: none
         }
     }
@@ -159,7 +159,7 @@ time {
         height: 16px;
         display: none;
 
-        @media #{$max-small-mobile} {
+        @media screen and (max-device-width : 420px) {
             display: flex
         }
 
