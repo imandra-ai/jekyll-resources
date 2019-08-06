@@ -3,36 +3,63 @@ layout: welcomedefault
 ---
 {% assign jd = site.url | append: "/jekyll-resources/assets/img/" %}
 <div class="intro__content">
+
     <h2 class="intro__title">Welcome{{ page.title }}</h2>
     <div class="intro__excerpt-container">
         {{ content }}
     </div>
-    <div class="intro__repositories">
-    {% assign sortedCollections = site.collections | sort: 'sequence' %}
-    {% for collection in sortedCollections %}
-    {% if collection.label != 'posts' %}
 
-        {% assign colPages = collection.docs %}
-        {% assign colPageName = colPages | first %}
-        {% if colPages.empty %}
-        {% else %}     
- 
-        {% for colPage in colPages %}
+    <h2 class="intro__title">Imandra Core Documentation</h2>
+    <div class="intro__repositories">
         <div class="intro__repository">
-            <div class="intro__repository-brand-container">    
-                <img class="intro__repository-icon" src=" {{colPage.img | prepend: jd}} ">
-                <h3 class="intro__repository-title">{{ colPage.title }}</h3>
+            <div class="intro__repository-brand-container">
+                <img class="intro__repository-icon" src=" {{'icon-docs-imandra.svg' | prepend: jd}} ">
+                <h3 class="intro__repository-title">Imandra Documentation</h3>
             </div>
-            <div class="intro__repository-info-container">    
-                <p class="intro__repository-excerpt">{{colPage.Excerpt}}</p>
-                <a class="intro__repository-link" href="{% if colPage.docAbs%}{{colPage.doclink}}{% else %}{{colPage.doclink | prepend: site.baseurl}}{% endif %}">Learn more -></a>
+            <div class="intro__repository-info-container">
+                <p class="intro__repository-excerpt">Imandra is both a programming language and a reasoning engine with which you can analyse and verify properties of your programs.</p>
+                <a class="intro__repository-link" href="{{'imandra-docs' | prepend: site.baseurl}}">Learn more -></a>
             </div>
         </div>
-        {% endfor %}
-
-        {% endif %}
- 
-    {% endif %}
-    {% endfor %}
     </div>
+
+    <h2 class="intro__title">Languages and interfaces</h2>
+    <div class="intro__repositories">
+        <div class="intro__repository">
+            <div class="intro__repository-brand-container">
+                <img class="intro__repository-icon" src=" {{'icon-docs-ipl.svg' | prepend: jd}} ">
+                <h3 class="intro__repository-title">Imandra Protocol Language</h3>
+            </div>
+            <div class="intro__repository-info-container">
+                <p class="intro__repository-excerpt">The Imandra Protocol Language formalises banking languages such as FIX, SWIFT and IBan.</p>
+                <a class="intro__repository-link" href="{{'ipl' | prepend: site.baseurl}}">Learn more -></a>
+            </div>
+        </div>
+        <div class="intro__repository">
+            <div class="intro__repository-brand-container">
+                <img class="intro__repository-icon" src=" {{'icon-docs-pyidf.svg' | prepend: jd}} ">
+                <h3 class="intro__repository-title">Python IDF Interface</h3>
+            </div>
+            <div class="intro__repository-info-container">
+                <p class="intro__repository-excerpt">Documentation and examples of our newly released Python interface to Iterative Decomposition Framework.</p>
+                <a class="intro__repository-link" href="{{'idf-py' | prepend: site.baseurl}}">Learn more -></a>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="intro__title">Models</h2>
+    <div class="intro__repositories">
+        <div class="intro__repository">
+            <div class="intro__repository-brand-container">
+                <img class="intro__repository-icon" src=" {{'icon-docs-fix-engine.svg' | prepend: jd}} ">
+                <h3 class="intro__repository-title">FIX Engine</h3>
+            </div>
+            <div class="intro__repository-info-container">
+                <p class="intro__repository-excerpt">Aesthetic Integration has provided a FIX Engine model constructed in ocaml, and verified by Imandra.</p>
+                <a class="intro__repository-link" href="{{'fix-engine' | prepend: site.baseurl}}">Learn more -></a>
+            </div>
+        </div>
+    </div>
+
+
 </div>
