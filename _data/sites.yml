@@ -5,7 +5,7 @@
   baseurl: /imandra-docs
 
 - name: Py IDF
-  baseurl: /py-idf
+  baseurl: /idf-py
 
 - name: Imandra Protocol Language
   baseurl: /ipl
