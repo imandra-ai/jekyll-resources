@@ -1109,9 +1109,28 @@ time {
     }
 
     &__repository {
+        display: block;
+        cursor: pointer;
         width: 50%;
         padding-right: 4em;
         margin-bottom: 1em;
+
+        &:hover {
+            .intro__repository-title {
+                color: #22e0b6;
+            }
+
+            .intro__repository-excerpt {
+                color: #576483;
+            }
+
+            .intro__repository-link {
+                color: #22e0b6;
+                font-weight: 700;
+                transform: translate(52px);
+                transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+        }
 
         @media #{$max-tablet} {
             width: 100%;
