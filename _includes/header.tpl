@@ -33,7 +33,7 @@
 
                 <ul class="side__nav-list">
                     {% for site in data.jekyllResources.sites %}
-                    <li class="side__nav-list-item TopNavListItem">
+                    <li class="side__nav-list-item">
                         <a class="side__nav-link{% if site.name == 'Imandra' %} side__nav-link--active{% endif %}" href="{{ site.baseurl }}">{{ site.name }}</a>
                         {% if site.name == 'Imandra' %}
                         <ul class="side__nav-list--sub-level-1">
@@ -46,7 +46,7 @@
                                 {% else %}
                                 {{ section.name }}
                                 {% endif %}
-                                <ul class="side__nav-list--sub-level-2">
+                                <ul class="side__nav-list--sub-level-2 {% if section.slug == slug %} side__nav-list--sub-level-2--active{% endif %}">
                                     {% for child in section.children %}
                                     <li class="side__nav-list-item--sub-level-2">
                                         <a class="side__nav-link{% if child.notebookSlug == slug %} side__nav-link--active{% endif %}" href="/{{ repo_dir }}/notebooks/{{ child.notebookSlug }}">{{ child.name }}</a>

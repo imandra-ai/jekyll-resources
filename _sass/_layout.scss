@@ -108,7 +108,7 @@ time {
     border-bottom: 1px solid lighten($light, 30%);
     box-shadow: 0px 1px 1px RGBA(4, 25, 54, .1);
     overflow-y: auto;
-    padding: 20px 0 0 20px;
+    background: aliceblue;
 
     @media #{$max-tablet} {
         position: relative;
@@ -148,6 +148,11 @@ time {
     &__logo {
         width: auto;
         height: 16px;
+        margin: 20px 0 0 20px;
+
+        @media screen and (max-device-width : 1024px) {
+            margin: 0;
+        }
 
         @media screen and (max-device-width : 420px) {
             display: none
@@ -158,6 +163,7 @@ time {
         width: auto;
         height: 16px;
         display: none;
+        margin: 0;
 
         @media screen and (max-device-width : 420px) {
             display: flex
@@ -178,10 +184,11 @@ time {
     &__nav-container {
         justify-content: flex-start;
         margin-top: 2em;
+        width: 100%;
 
         @media #{$max-tablet} {
             position: absolute;
-            background: #ffffff;
+            background: aliceblue;
             width: 100%;
             top: 20px;
             min-height: 100vh;
@@ -208,44 +215,65 @@ time {
         }
 
         &--sub-level-1 {
-            font-size: 0.9rem;
             list-style: none;
-            padding: 0 0 1em 1em;
+            padding: 0;
+
+            & .side__nav-link {
+                padding-left: 30px;
+            }
+        }
+
+        &--sub-level-2--active {
+            transition: all 0.3s ease-out;
+
+            & .side__nav-list-item--sub-level-2 {
+                display: block;
+            }
         }
 
         &--sub-level-2 {
-            font-size: 0.85rem;
             list-style: none;
-            padding: 0 0 1em 1em;
+            padding: 0;
+
+            & .side__nav-link {
+                padding-left: 50px;
+            }
+
         }
 
         &--sub-level-3 {
-            font-size: 0.80rem;
             list-style: none;
-            padding: 0 0 1em 1em;
+            padding: 0;
         }
     }
 
     &__nav-list-item {
+        border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+
         &--sub-level-1 a {
-            &:hover {
-                color: #ffffff;
+            &:hover {}
+        }
+
+        &--sub-level-2 {
+            display: none;
+
+            @media #{$max-tablet} {
+                display: block;
             }
+
         }
     }
 
     &__nav-link {
         display: block;
-        font-size: 13px;
         text-decoration: none;
-        line-height: 1.5;
-        padding: 0;
+        padding-left: 20px;
+        line-height: 1.8;
 
         &:hover {
-            background: $menu-hover-background;
             text-decoration: none;
-            color: #ffffff;
-            padding-left: 0.2em;
+            color: #253c72;
+            background: mediumturquoise;
         }
 
         @media #{$max-tablet} {
@@ -253,8 +281,7 @@ time {
         }
 
         &--active {
-            color: $imandra-mint;
-            font-weight: 400;
+            color: navy;
         }
 
 
@@ -447,7 +474,6 @@ time {
         text-align: right;
         white-space: nowrap;
 
-
         @media #{$max-tablet} {
             text-transform: uppercase;
             font-size: 1.2rem;
@@ -491,6 +517,8 @@ time {
     padding: 0 2em;
     margin-left: 106px;
     margin-right: 106px;
+    line-height: 1.8;
+    font-size: 1.2rem;
 
     @media #{$max-wide} {
         margin-left: 0;
@@ -573,26 +601,6 @@ time {
     justify-content: space-between;
 }
 
-.background {
-    background-image: url('#{$baseurl}/jekyll-resources/assets/img/bg_image_cover.svg'),
-    url('#{$baseurl}/jekyll-resources/assets/img/bg_regions.svg');
-
-    background-position: top center, top center;
-    background-size: 100% auto, 150% auto;
-    background-repeat: no-repeat;
-
-    background-color: #ffffff;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    @media #{$max-tablet} {
-        background: url('#{$baseurl}/jekyll-resources/assets/img/bg_image_cover.svg') top center / 100% auto no-repeat,
-        url('#{$baseurl}/jekyll-resources/assets/img/bg_regions.svg') top center / 100% auto no-repeat;
-    }
-}
 
 .welcome-header {
     display: flex;
@@ -725,15 +733,13 @@ time {
 
     &__menu-item {
         display: block;
-        font-size: 13px;
         text-decoration: none;
-        line-height: 1.4;
+        line-height: 1.8;
 
         &:hover {
-            background: $menu-hover-background;
             text-decoration: none;
-            color: #ffffff;
-            padding-left: 0.2em;
+            color: navy;
+            background: mediumturquoise;
         }
 
         &:active {
@@ -742,19 +748,19 @@ time {
         }
 
         &--h1 {
-            margin-left: 0.3em;
+            padding-left: 0.3em;
         }
 
         &--h2 {
-            margin-left: 1.5em;
+            padding-left: 1.5em;
         }
 
         &--h3 {
-            margin-left: 2em;
+            padding-left: 2em;
         }
 
         &--h4 {
-            margin-left: 2.5em;
+            padding-left: 2.5em;
         }
 
         &--active {
@@ -1058,7 +1064,6 @@ time {
     text-align: center;
     font-size: 11px;
     padding-bottom: 1em;
-    background: url('#{$baseurl}/jekyll-resources/assets/img/transition_footer.svg') center 101% / 1400px 220px repeat-x;
     z-index: 0;
 }
 
