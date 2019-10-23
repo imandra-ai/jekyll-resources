@@ -31,7 +31,7 @@
             <nav class="side__nav-container side__nav-container--hidden">
                 <ul class="side__nav-list">
                     {% for mainsite in site.data.sites %}
-                    <li class="side__nav-list-item TopNavListItem"></li>
+                    <li class="side__nav-list-item"></li>
                     {% if mainsite.baseurl == "/" %}
                     <a class="side__nav-link side__nav-link--active" href="{{ mainsite.baseurl }}">{{ mainsite.name }}</a>
                     {% else %}

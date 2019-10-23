@@ -31,7 +31,7 @@
                 <ul class="side__nav-list">
                     {% assign collections = (site.collections | sort: 'sequence') %}
                     {% for mainsite in site.data.sites %}
-                    <li class="side__nav-list-item TopNavListItem">
+                    <li class="side__nav-list-item">
                         {% if site.baseurl == mainsite.baseurl %}
                         <a class="side__nav-link side__nav-link--active" href="{{ mainsite.baseurl }}">{{ mainsite.name
                             }}</a>
@@ -43,39 +43,41 @@
                             {% assign topPage = site[colName] | sort: 'sequence' | first %}
                             {% if page.collection == topPage.collection %}
                             <li class="side__nav-list-item--sub-level-1"><a class="side__nav-link side__nav-link--active" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a>
-                                {% else %}
-                            <li class="side__nav-list-item--sub-level-1"><a class="side__nav-link" href="{{ topPage.url | prepend: site.baseurl }}">{{
+                                <ul class="side__nav-list--sub-level-2 side__nav-list--sub-level-2--active">
+                                    {% else %}
+                                    <li class="side__nav-list-item--sub-level-1"><a class="side__nav-link" href="{{ topPage.url | prepend: site.baseurl }}">{{
                                     topPage.title }}</a>
-                                {% endif %}
-                                <ul class="side__nav-list--sub-level-2">
-                                    {% for lin in col %}
-                                    {% if topPage.layout == "pageSbar" %}
-                                    {% if forloop.index == 1 %}
-                                    {% else %}
-                                    {% assign newLin = lin.tag | prepend: "#" | prepend: topPage.permalink %}
-                                    <li class="side__nav-list-item--sub-level-2"><a class="side__nav-link" href="{{ newLin | prepend: site.baseurl }}">{{lin.title}}</a>
-                                        {% endif %}
-                                        {% else %}
-                                        {% if page == lin %}
-                                    <li class="side__nav-list-item--sub-level-2"><a class="side__nav-link side__nav-link--active" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
-                                        {% else %}
-                                    <li class="side__nav-list-item--sub-level-2"><a class="side__nav-link" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
-                                        {% endif %}
-                                        {% endif %}
+                                        <ul class="side__nav-list--sub-level-2">
+                                            {% endif %}
+
+                                            {% for lin in col %}
+                                            {% if topPage.layout == "pageSbar" %}
+                                            {% if forloop.index == 1 %}
+                                            {% else %}
+                                            {% assign newLin = lin.tag | prepend: "#" | prepend: topPage.permalink %}
+                                            <li class="side__nav-list-item--sub-level-2"><a class="side__nav-link" href="{{ newLin | prepend: site.baseurl }}">{{lin.title}}</a>
+                                                {% endif %}
+                                                {% else %}
+                                                {% if page == lin %}
+                                            <li class="side__nav-list-item--sub-level-2"><a class="side__nav-link side__nav-link--active" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
+                                                {% else %}
+                                            <li class="side__nav-list-item--sub-level-2"><a class="side__nav-link" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
+                                                {% endif %}
+                                                {% endif %}
+                                            </li>
+                                            {% endfor %}
+                                            {% if colName == "docTopic" and site.baseurl == "/fix-engine" %}
+                                            <li class="side__nav-list-item--sub-level-2"><a class="side__nav-link" href="{{ site.baseurl }}/_pages/doc/index.html" target="_blank">Technical Documentation</a></li>
+                                            {% else %}
+                                            {% endif %}
+                                        </ul>
                                     </li>
-                                    {% endfor %}
-                                    {% if colName == "docTopic" and site.baseurl == "/fix-engine" %}
-                                    <li class="side__nav-list-item--sub-level-2"><a class="side__nav-link" href="{{ site.baseurl }}/_pages/doc/index.html" target="_blank">Technical Documentation</a></li>
-                                    {% else %}
                                     {% endif %}
+                                    {% endfor %}
                                 </ul>
                             </li>
-                            {% endif %}
-                            {% endfor %}
-                        </ul>
-                    </li>
-                    {% else %}
-                    <a class="side__nav-link" href="{{ mainsite.baseurl }}">{{ mainsite.name }}</a>
+                            {% else %}
+                            <a class="side__nav-link" href="{{ mainsite.baseurl }}">{{ mainsite.name }}</a>
                     </li>
                     {% endif %}
                     {% endfor %}

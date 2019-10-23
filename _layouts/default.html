@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html>
-    {% include head.html %}
+{% include head.html %}
 
-    <body>
-        <div class="background">
-        </div>
-
-        <div class="page-container">
-	          <main class="main-content-column">
-				    {% include header.html %}
-		            <article class="article__container">
-			              {{ content }}
-		            </article>
-	          </main>
-	          {% include footer.html %}
-        </div>
-        {% if jekyll.environment == 'production' %}
-        {% include analytics.html %}
-        {% endif %}
-    </body>
+<body>
+    <!-- <div class="background">
+        </div> -->
+    <div class="page-container">
+        <main class="main-content-column">
+            {% include header.html %}
+            <article class="article__container">
+                {{ content }}
+            </article>
+        </main>
+        {% include footer.html %}
+    </div>
+    {% if jekyll.environment == 'production' %}
+    {% include analytics.html %}
+    {% endif %}
+</body>
 
 </html>
