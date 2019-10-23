@@ -95,13 +95,13 @@
                                 <a class="top-nav-bar__link top-nav-bar__link--group">Engine</a>
                                 <ul class="dropdown-content dropdown-content--engine">
                                     <li class="dropdown__item dropdown__item--with-icon">
-                                        <img class="dropdown__icon" src="{{ site.baseurl }}/jekyll-resources/assets/img/icon--core--menu.svg" alt="Imandra Core" title="Imandra Core Icon">
+                                        <img class="dropdown__icon" src="/{{ repo_dir }}/jekyll-resources/assets/img/icon--core--menu.svg" alt="Imandra Core" title="Imandra Core Icon">
                                         <a class="dropdown__link" href="https://www.imandra.ai/core">Imandra Core</a></li>
                                     <li class="dropdown__item dropdown__item--with-icon">
-                                        <img class="dropdown__icon" src="{{ site.baseurl }}/jekyll-resources/assets/img/icon--docs--menu.svg" alt="Docs" title="Docs Icon">
+                                        <img class="dropdown__icon" src="/{{ repo_dir }}/jekyll-resources/assets/img/icon--docs--menu.svg" alt="Docs" title="Docs Icon">
                                         <a class="dropdown__link" href="https://docs.imandra.ai/">Docs</a></li>
                                     <li class="dropdown__item dropdown__item--with-icon">
-                                        <img class="dropdown__icon" src="{{ site.baseurl }}/jekyll-resources/assets/img/icon--research--menu.svg" alt="Research" title="Research Icon">
+                                        <img class="dropdown__icon" src="/{{ repo_dir }}/jekyll-resources/assets/img/icon--research--menu.svg" alt="Research" title="Research Icon">
                                         <a class="dropdown__link dropdown__link--last" href="https://www.imandra.ai/research">Research</a></li>
                                 </ul>
                             </li>
@@ -109,15 +109,15 @@
                                 <a class="top-nav-bar__link top-nav-bar__link--group">Industries</a>
                                 <ul class="dropdown-content dropdown-content--industries">
                                     <li class="dropdown__item dropdown__item--with-icon">
-                                        <img class="dropdown__icon" src="{{ site.baseurl }}/jekyll-resources/assets/img/icon--financial--menu.svg" alt="Financial Markets" title="Financial Markets Icon">
+                                        <img class="dropdown__icon" src="/{{ repo_dir }}/jekyll-resources/assets/img/icon--financial--menu.svg" alt="Financial Markets" title="Financial Markets Icon">
                                         <a class="dropdown__link " href="https://www.imandra.ai/imarkets">Financial Markets</a>
                                     </li>
                                     <li class="dropdown__item dropdown__item--with-icon">
-                                        <img class="dropdown__icon" src="{{ site.baseurl }}/jekyll-resources/assets/img/icon--autonomy--menu.svg" alt="Autonomous Systems" title="Autonomous Systems Icon">
+                                        <img class="dropdown__icon" src="/{{ repo_dir }}/jekyll-resources/assets/img/icon--autonomy--menu.svg" alt="Autonomous Systems" title="Autonomous Systems Icon">
                                         <a class="dropdown__link" href="https://www.imandra.ai/autonomy">Autonomous Systems</a>
                                     </li>
                                     <li class="dropdown__item dropdown__item--with-icon">
-                                        <img class="dropdown__icon" src="{{ site.baseurl }}/jekyll-resources/assets/img/icon--ml--menu.svg" alt="Machine Learning" title="Machine Learning Icon">
+                                        <img class="dropdown__icon" src="/{{ repo_dir }}/jekyll-resources/assets/img/icon--ml--menu.svg" alt="Machine Learning" title="Machine Learning Icon">
                                         <a class="dropdown__link dropdown__coming-soon dropdown__link--last ">Machine Learning</a>
                                     </li>
                                 </ul>
@@ -126,10 +126,10 @@
                                 <a class="top-nav-bar__link top-nav-bar__link--group">Media</a>
                                 <ul class="dropdown-content dropdown-content--media">
                                     <li class="dropdown__item dropdown__item--with-icon">
-                                        <img class="dropdown__icon" src="{{ site.baseurl }}/jekyll-resources/assets/img/icon--media--menu.svg" alt="Media" title="Media Icon">
+                                        <img class="dropdown__icon" src="/{{ repo_dir }}/jekyll-resources/assets/img/icon--media--menu.svg" alt="Media" title="Media Icon">
                                         <a class="dropdown__link " href="https://www.imandra.ai/media">Media</a></li>
                                     <li class="dropdown__item dropdown__item--with-icon">
-                                        <img class="dropdown__icon" src="{{ site.baseurl }}/jekyll-resources/assets/img/icon--blog--menu.svg" alt="Blog" title="Blog Icon">
+                                        <img class="dropdown__icon" src="/{{ repo_dir }}/jekyll-resources/assets/img/icon--blog--menu.svg" alt="Blog" title="Blog Icon">
                                         <a class="dropdown__link dropdown__link--last " href="https://medium.com/imandra">Blog</a>
                                     </li>
                                 </ul>
@@ -138,10 +138,10 @@
                                 <a class="top-nav-bar__link top-nav-bar__link--group">Company</a>
                                 <ul class="dropdown-content dropdown-content--company">
                                     <li class="dropdown__item dropdown__item--with-icon">
-                                        <img class="dropdown__icon" src="{{ site.baseurl }}/jekyll-resources/assets/img/icon--about--menu.svg" alt="About" title="About Icon">
+                                        <img class="dropdown__icon" src="/{{ repo_dir }}/jekyll-resources/assets/img/icon--about--menu.svg" alt="About" title="About Icon">
                                         <a class="dropdown__link" href="https://www.imandra.ai/about">About</a></li>
                                     <li class="dropdown__item dropdown__item--with-icon">
-                                        <img class="dropdown__icon" src="{{ site.baseurl }}/jekyll-resources/assets/img/icon--careers--menu.svg" alt=" Careers" title="Careers Icon">
+                                        <img class="dropdown__icon" src="/{{ repo_dir }}/jekyll-resources/assets/img/icon--careers--menu.svg" alt=" Careers" title="Careers Icon">
                                         <a class="dropdown__link dropdown__link--last dropdown__link--bottom" href="https://www.imandra.ai/careers">Careers</a></li>
                                 </ul>
                             </li>
