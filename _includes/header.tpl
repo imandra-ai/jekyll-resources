@@ -34,8 +34,8 @@
                 <ul class="side__nav-list">
                     {% for site in data.jekyllResources.sites %}
                     <li class="side__nav-list-item">
-                        <a class="side__nav-link{% if site.name == 'Imandra' %} side__nav-link--active{% endif %}" href="{{ site.baseurl }}">{{ site.name }}</a>
-                        {% if site.name == 'Imandra' %}
+                        <a class="side__nav-link{% if site.name == 'Imandra Core' %} side__nav-link--active{% endif %}" href="{{ site.baseurl }}">{{ site.name }}</a>
+                        {% if site.name == 'Imandra Core' %}
                         <ul class="side__nav-list--sub-level-1">
                             {% for section in data.nav.sections %}
                             <li class="side__nav-list-item--sub-level-1">
