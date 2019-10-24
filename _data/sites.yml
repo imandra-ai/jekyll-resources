@@ -1,7 +1,7 @@
 - name: Documentation Home
   baseurl: /
 
-- name: Imandra
+- name: Imandra Core
   baseurl: /imandra-docs
 
 - name: Py IDF
