@@ -1,6 +1,6 @@
 /* Layout variables */
 $content-width: 1008px;
-$sidebar-left-width: 250px;
+$sidebar-left-width: 300px;
 $sidebar-right-width: 240px;
 
 /* Media Queries breakpoints - please notice that we are using "desktop first" attitude. Variables as full query */
@@ -11,9 +11,12 @@ $max-jupyter-mobile: "screen and (max-width : 540px)";
 $max-small-mobile: "screen and (max-width : 420px)";
 
 /* Font families */
-$font-family-upper: 'Merriweather', serif;
-$font-family-upper-sans: 'Merriweather Sans', sans-serif;
-$font-family-main: 'Roboto Slab', serif;
+$font-family-upper: 'Merriweather',
+serif;
+$font-family-upper-sans: 'Merriweather Sans',
+sans-serif;
+$font-family-main: 'Roboto Slab',
+serif;
 $heading-font: $font-family-upper-sans;
 
 /* Color variables */

@@ -16,7 +16,7 @@ pre {
     margin: 0;
     overflow-x: auto;
     margin-right: 0.55rem;
-    border-left: solid #e8e8e8;
+    border-left: solid #cfe2f3;
 }
 
 html {
@@ -55,7 +55,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 
 h3 {
@@ -185,6 +185,7 @@ time {
         justify-content: flex-start;
         margin-top: 2em;
         width: 100%;
+        font-size: 13px;
 
         @media #{$max-tablet} {
             position: absolute;
@@ -219,8 +220,41 @@ time {
             padding: 0;
 
             & .side__nav-link {
-                padding-left: 30px;
+                padding-left: 36px;
+
+                &:before {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    border-bottom: 5px solid #9dc3f5;
+                    transform: rotate(90deg);
+                    left: 0;
+                    margin-left: 20px;
+                    margin-top: 10px;
+                    transition: all 0.4s ease-out;
+                }
+
+                &:hover {
+                    &:before {
+                        border-bottom: 5px solid navy;
+                    }
+                }
+
+                &--active {
+                    &:before {
+                        border-bottom: 5px solid navy;
+                        transform: rotate(180deg);
+                        // @media (min-width: @bp-larger-than-tablet) {
+                        //     display: block;
+                        // }
+                    }
+                }
             }
+
         }
 
         &--sub-level-2--active {
@@ -237,6 +271,10 @@ time {
 
             & .side__nav-link {
                 padding-left: 50px;
+
+                &:before {
+                    display: none;
+                }
             }
 
         }
@@ -268,7 +306,7 @@ time {
         display: block;
         text-decoration: none;
         padding-left: 20px;
-        line-height: 1.8;
+        line-height: 2;
 
         &:hover {
             text-decoration: none;
@@ -279,6 +317,8 @@ time {
         @media #{$max-tablet} {
             padding: 0.5em;
         }
+
+
 
         &--active {
             color: navy;
@@ -518,7 +558,7 @@ time {
     margin-left: 106px;
     margin-right: 106px;
     line-height: 1.8;
-    font-size: 1.2rem;
+    font-size: 13px;
 
     @media #{$max-wide} {
         margin-left: 0;
@@ -692,6 +732,7 @@ time {
 .site-specific-image {
     min-width: 180px;
     margin-top: 2em;
+    height: 66px;
 
     &--docs {
         max-width: 300px;
