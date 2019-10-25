@@ -38,7 +38,7 @@
                         {% if site.name == 'Imandra Core' %}
                         <ul class="side__nav-list--sub-level-1">
                             {% for section in data.nav.sections %}
-                            <li class="side__nav-list-item--sub-level-1">
+                            <li class="side__nav-list-item--sub-level-1 {% if section.children | length == 0 %}side__nav-list--sub-level-1--empty{% endif %}">
                                 {% if section.notebookSlug %}
                                 <a class="side__nav-link{% if section.notebookSlug == slug %} side__nav-link--active{% endif %}" href="/{{ repo_dir }}/notebooks/{{ section.notebookSlug }}">{{ section.name }}</a>
                                 {% elif section.slug %}

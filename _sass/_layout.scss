@@ -257,6 +257,16 @@ time {
 
         }
 
+        &--sub-level-1--empty {
+            .side__nav-link {
+                &:before {
+                    border-left: 0;
+                    border-right: 0;
+                    border-bottom: 0;
+                }
+            }
+        }
+
         &--sub-level-2--active {
             transition: all 0.3s ease-out;
 
