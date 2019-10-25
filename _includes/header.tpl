@@ -126,7 +126,7 @@
                                     </li>
                                     <li class="dropdown__item dropdown__item--with-icon">
                                         <img class="dropdown__icon" src="/{{ repo_dir }}/jekyll-resources/assets/img/icon--ml--menu.svg" alt="Machine Learning" title="Machine Learning Icon">
-                                        <a class="dropdown__link dropdown__coming-soon dropdown__link--last ">Machine Learning</a>
+                                        <a class="dropdown__link dropdown__link--last" href="https://www.imandra.ai/ml">Machine Learning</a>
                                     </li>
                                 </ul>
                             </li>
