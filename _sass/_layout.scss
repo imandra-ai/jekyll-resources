@@ -782,6 +782,12 @@ time {
         }
     }
 
+    &__menu-heading {
+        display: block;
+        padding-left: 0.3e;
+        font-weight: bold;
+    }
+
     &__menu-item {
         display: block;
         text-decoration: none;
