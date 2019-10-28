@@ -287,11 +287,26 @@ time {
                 }
             }
 
+            & .side__nav-link--active {
+                &:before {
+                    display: block;
+                    margin-left: 35px;
+                }
+            }
+
         }
 
         &--sub-level-3 {
             list-style: none;
             padding: 0;
+
+            & .side__nav-link {
+                padding-left: 70px;
+
+                &:before {
+                    display: none;
+                }
+            }
         }
     }
 
@@ -784,8 +799,8 @@ time {
 
     &__menu-heading {
         display: block;
-        padding-left: 0.3e;
-        font-weight: bold;
+        padding-left: 10px;
+        border-bottom: 1px solid rgba(206, 206, 206, 0.3);
     }
 
     &__menu-item {
@@ -805,19 +820,19 @@ time {
         }
 
         &--h1 {
-            padding-left: 0.3em;
+            padding-left: 10px;
         }
 
         &--h2 {
-            padding-left: 1.5em;
+            padding-left: 10px;
         }
 
         &--h3 {
-            padding-left: 2em;
+            padding-left: 20px;
         }
 
         &--h4 {
-            padding-left: 2.5em;
+            padding-left: 30px;
         }
 
         &--active {
