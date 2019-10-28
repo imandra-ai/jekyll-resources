@@ -287,8 +287,13 @@ time {
             & .side__nav-link--active {
                 &:before {
                     display: block;
-                    margin-left: 35px;
-                    transform: rotate(90deg);
+                    margin-left: 36px;
+                    margin-top: 9px;
+                    height: 6px;
+                    width: 6px;
+                    border: none;
+                    border-radius: 50%;
+                    background: navy;
                 }
             }
 
