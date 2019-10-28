@@ -248,9 +248,6 @@ time {
                     &:before {
                         border-bottom: 5px solid navy;
                         transform: rotate(180deg);
-                        // @media (min-width: @bp-larger-than-tablet) {
-                        //     display: block;
-                        // }
                     }
                 }
             }
@@ -291,6 +288,7 @@ time {
                 &:before {
                     display: block;
                     margin-left: 35px;
+                    transform: rotate(90deg);
                 }
             }
 
