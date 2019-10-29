@@ -353,6 +353,39 @@ time {
         }
 
 
+        &--within-page {
+
+            &--h2 {
+                margin-left: 10px
+            }
+
+            &--h3 {
+                margin-left: 20px
+            }
+
+            &--h4 {
+                margin-left: 30px
+            }
+
+            &--h5 {
+                margin-left: 40px
+            }
+
+
+            &--active {
+                &:before {
+                    display: block;
+                    margin-left: 36px;
+                    margin-top: 9px;
+                    height: 6px;
+                    width: 6px;
+                    border: none;
+                    border-radius: 50%;
+                    background: navy;
+                }
+            }
+        }
+
     }
 
     &__toggle {
@@ -773,77 +806,6 @@ time {
 
 
 
-
-/*  ---------------------------------------------------
-  Side Menus
---------------------------------------------------- */
-
-.sidebar-right {
-    display: block;
-    min-width: $sidebar-right-width;
-    width: $sidebar-right-width;
-    max-width: $sidebar-right-width;
-
-    font-weight: 300;
-
-    @media #{$max-desktop} {
-        display: none;
-    }
-
-    &__menu {
-        position: sticky;
-        top: 20px;
-        border-left: solid 1px #f5faf9;
-
-        @media #{$max-tablet} {
-            display: none;
-        }
-    }
-
-    &__menu-heading {
-        display: block;
-        padding-left: 10px;
-        border-bottom: 1px solid rgba(206, 206, 206, 0.3);
-    }
-
-    &__menu-item {
-        display: block;
-        text-decoration: none;
-        line-height: 1.8;
-
-        &:hover {
-            text-decoration: none;
-            color: navy;
-            background: mediumturquoise;
-        }
-
-        &:active {
-            color: $imandra-mint;
-            font-weight: 400;
-        }
-
-        &--h1 {
-            padding-left: 10px;
-        }
-
-        &--h2 {
-            padding-left: 10px;
-        }
-
-        &--h3 {
-            padding-left: 20px;
-        }
-
-        &--h4 {
-            padding-left: 30px;
-        }
-
-        &--active {
-            font-weight: 400;
-            color: $imandra-mint;
-        }
-    }
-}
 
 /*  ---------------------------------------------------
   Top menu
