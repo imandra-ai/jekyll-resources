@@ -83,23 +83,23 @@
                                                 {% if forloop.index == 1 %}
                                                 {% else %}
                                                 {% assign newLin = lin.tag | prepend: "#" | prepend: topPage.permalink %}
-                                                <li class="side__nav-list-item--sub-level-2"><a class="side__nav-link--within-page"
+                                                <li class="side__nav-list-item--sub-level-2 side__nav-list--sub-level-2--empty"><a class="side__nav-link--within-page"
                                                         href="{{ newLin | prepend: site.baseurl }}">{{lin.title}}</a>
                                                     {% endif %}
                                                     {% else %}
                                                     {% if page == lin %}
-                                                <li class="side__nav-list-item--sub-level-2"><a
+                                                <li class="side__nav-list-item--sub-level-2 side__nav-list--sub-level-2--empty"><a
                                                         class="side__nav-link side__nav-link--active side__nav-link--empty"
                                                         href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
                                                     {% else %}
-                                                <li class="side__nav-list-item--sub-level-2"><a 
+                                                <li class="side__nav-list-item--sub-level-2 side__nav-list--sub-level-2--empty"><a 
                                                     class="side__nav-link side__nav-link--empty" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
                                                     {% endif %}
                                                     {% endif %}
                                                 </li>
                                                 {% endfor %}
                                                 {% if colName == "docTopic" and site.baseurl == "/fix-engine" %}
-                                                <li class="side__nav-list-item--sub-level-2"><a 
+                                                <li class="side__nav-list-item--sub-level-2 side__nav-list--sub-level-2--empty"><a 
                                                     class="side__nav-link--within-page"
                                                         href="{{ site.baseurl }}/_pages/doc/index.html"
                                                         target="_blank">Technical Documentation</a></li>
