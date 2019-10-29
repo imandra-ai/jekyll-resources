@@ -64,7 +64,7 @@
                                               <a class="side__nav-link" href="/{{ repo_dir }}/{{ child.slug }}">{{ child.name }}</a>
                                               {% endif %}
                                               {% if child.notebookSlug == slug %}
-                                              <div class="side__in-page-nav">
+                                              <div class="side__within-page-nav--sub-level-3">
                                               {% include "_includes/page_nav.tpl" %}
                                               </div>
                                               {% endif %}
@@ -73,7 +73,7 @@
                                         </ul>
                                         {% endif %}
                                         {% if child.notebookSlug == slug %}
-                                        <div class="side__in-page-nav">
+                                        <div class="side__within-page-nav--sub-level-2">
                                         {% include "_includes/page_nav.tpl" %}
                                         </div>
                                         {% endif %}
@@ -81,7 +81,7 @@
                                     {% endfor %}
                                 </ul>
                                 {% if section.notebookSlug == slug %}
-                                <div class="side__in-page-nav">
+                                <div class="side__within-page-nav--sub-level-1">
                                 {% include "_includes/page_nav.tpl" %}
                                 </div>
                                 {% endif %}
