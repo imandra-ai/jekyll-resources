@@ -44,7 +44,7 @@
                             {% assign col = site[colName] | sort: 'sequence' | shift %}
                             {% assign topPage = site[colName] | sort: 'sequence' | first %}
                             {% if page.collection == topPage.collection %}
-                            {% if col %}
+                            {% if col.size == 0 %}
                             <li class="side__nav-list-item--sub-level-1"><a
                                     class="side__nav-link side__nav-link--active side__nav-link--empty"
                                     href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a>
