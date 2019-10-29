@@ -29,7 +29,7 @@
                 </div>
             </div>
 
-            <nav class="side__nav-container side__nav-container--hidden">
+            <nav id="side-nav-menu" class="side__nav-container side__nav-container--hidden">
 
                 <ul class="side__nav-list">
                     {% for site in data.jekyllResources.sites %}
@@ -63,10 +63,16 @@
                                               {% else %}
                                               <a class="side__nav-link" href="/{{ repo_dir }}/{{ child.slug }}">{{ child.name }}</a>
                                               {% endif %}
+                                            {% if child.notebookSlug == slug %}
+                                            {% include "_includes/page_nav.tpl" %}
+                                            {% endif %}
                                             </li>
                                             {% endfor %}
                                         </ul>
                                         {% endif %}
+                                    {% if child.notebookSlug == slug %}
+                                    {% include "_includes/page_nav.tpl" %}
+                                    {% endif %}
                                     </li>
                                     {% endfor %}
                                 </ul>
