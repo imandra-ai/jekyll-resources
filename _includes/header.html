@@ -42,29 +42,36 @@
                             {% if collection.label != 'posts' %}
                             {% assign colName = collection.label %}
                             {% assign col = site[colName] | sort: 'sequence' | shift %}
-                            {% assign topPage = site[colName] | sort: 'sequence' | first %}
+                            {% assign topPage = site[colName] | sort: 'sequence' | first %}             
                             {% if page.collection == topPage.collection %}
-                            {% assign test1 = col.size ==0 and topPage.layout=="pageSbarSep" %}
-                            {% assign test2 = col.size==1 and topPage.layout=="pageSbar" %}
-                            {% if test1 or test2 %}
+                            {% if topPage.layout=="pageSbar" and col.size ==1 %}
                             <li class="side__nav-list-item--sub-level-1 side__nav-list--sub-level-1--empty"><a
                                     class="side__nav-link side__nav-link--active"
                                     href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a>
                                {% else %} 
+                               {% if topPage.layout=="pageSbarSep" and col.size ==0 %}
+                               <li class="side__nav-list-item--sub-level-1 side__nav-list--sub-level-1--empty"><a
+                                class="side__nav-link side__nav-link--active"
+                                href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a>
+                               {% else %}
                                <li class="side__nav-list-item--sub-level-1"><a
                                 class="side__nav-link side__nav-link--active"
                                 href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a>
                                 {% endif %}
+                                {% endif %}
                                     <ul class="side__nav-list--sub-level-2 side__nav-list--sub-level-2--active">
                                         {% else %}
-                                        {% if test1 or test2 %}
+                                        {% if topPage.layout=="pageSbar" and col.size ==1 %}
                                         <li class="side__nav-list-item--sub-level-1 side__nav-list--sub-level-1--empty"><a class="side__nav-link"
                                                 href="{{ topPage.url | prepend: site.baseurl }}" >{{
                                     topPage.title }}</a>
                                     {% else %}
+                                    {% if topPage.layout=="pageSbarSep" and col.size ==0 %}
+                                    {% else %}
                                     <li class="side__nav-list-item--sub-level-1"><a class="side__nav-link"
                                         href="{{ topPage.url | prepend: site.baseurl }}">{{
                             topPage.title }}</a>
+                                    {% endif %}
                                     {% endif %}
                                             <ul class="side__nav-list--sub-level-2">
                                                 {% endif %}
