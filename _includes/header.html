@@ -44,15 +44,16 @@
                             {% assign col = site[colName] | sort: 'sequence' | shift %}
                             {% assign topPage = site[colName] | sort: 'sequence' | first %}
                             {% if page.collection == topPage.collection %}
+                            {% if col %}
                             <li class="side__nav-list-item--sub-level-1"><a
-                                    class="side__nav-link side__nav-link--active"
+                                    class="side__nav-link side__nav-link--active side__nav-link--empty"
                                     href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a>
-                                {% if col.length == 0 %}
-                                <ul
-                                    class="side__nav-list--sub-level-2 side__nav-list--sub-level-2--active side__nav-link--empty">
-                                    {% else %}
+                               {% else %} 
+                               <li class="side__nav-list-item--sub-level-1"><a
+                                class="side__nav-link side__nav-link--active"
+                                href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a>
+                                {% endif %}
                                     <ul class="side__nav-list--sub-level-2 side__nav-list--sub-level-2--active">
-                                        {% endif %}
                                         {% else %}
                                         <li class="side__nav-list-item--sub-level-1"><a class="side__nav-link"
                                                 href="{{ topPage.url | prepend: site.baseurl }}">{{
