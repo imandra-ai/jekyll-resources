@@ -93,13 +93,13 @@
                                                         href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
                                                     {% else %}
                                                 <li class="side__nav-list-item--sub-level-2"><a 
-                                                        href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
+                                                    class="side__nav-link" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
                                                     {% endif %}
                                                     {% endif %}
                                                 </li>
                                                 {% endfor %}
                                                 {% if colName == "docTopic" and site.baseurl == "/fix-engine" %}
-                                                <li class="side__nav-list-item--sub-level-2"><a class="side__nav-link--within-page"
+                                                <li class="side__nav-list-item--sub-level-2"><a 
                                                         href="{{ site.baseurl }}/_pages/doc/index.html"
                                                         target="_blank">Technical Documentation</a></li>
                                                 {% else %}
