@@ -45,8 +45,8 @@
                             {% assign topPage = site[colName] | sort: 'sequence' | first %}
                             {% if page.collection == topPage.collection %}
                             {% if col.size == 0 %}
-                            <li class="side__nav-list-item--sub-level-1"><a
-                                    class="side__nav-link side__nav-link--active side__nav-link--empty"
+                            <li class="side__nav-list-item--sub-level-1 side__nav-link--empty"><a
+                                    class="side__nav-link side__nav-link--active"
                                     href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a>
                                {% else %} 
                                <li class="side__nav-list-item--sub-level-1"><a
@@ -55,9 +55,15 @@
                                 {% endif %}
                                     <ul class="side__nav-list--sub-level-2 side__nav-list--sub-level-2--active">
                                         {% else %}
-                                        <li class="side__nav-list-item--sub-level-1"><a class="side__nav-link"
-                                                href="{{ topPage.url | prepend: site.baseurl }}">{{
+                                        {% if col.size ==0 %}
+                                        <li class="side__nav-list-item--sub-level-1 side__nav-link--empty"><a class="side__nav-link"
+                                                href="{{ topPage.url | prepend: site.baseurl }}" >{{
                                     topPage.title }}</a>
+                                    {% else %}
+                                    <li class="side__nav-list-item--sub-level-1"><a class="side__nav-link"
+                                        href="{{ topPage.url | prepend: site.baseurl }}">{{
+                            topPage.title }}</a>
+                                    {% endif %}
                                             <ul class="side__nav-list--sub-level-2">
                                                 {% endif %}
 
