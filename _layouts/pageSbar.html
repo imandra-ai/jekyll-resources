@@ -4,6 +4,7 @@ layout: default
 {% assign pname = page.collection %}
 {% assign col = site[pname] | sort: 'sequence' | shift %}
 <!--main-content-->
+
 <div class="main-content">
     {% if col.size == 0 %}
     {{content}}

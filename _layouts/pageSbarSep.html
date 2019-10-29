@@ -5,6 +5,7 @@ layout: default
 {% assign col = site[pname] | sort: 'sequence' | shift %}
 {% assign topPage = site[pname] | sort: 'sequence' | first %}
 <!--main-content-->
+
 <div class="main-content">
     <h2>{{ page.title }}</h2>
     {{ content }}
