@@ -89,11 +89,11 @@
                                                     {% else %}
                                                     {% if page == lin %}
                                                 <li class="side__nav-list-item--sub-level-2"><a
-                                                        class="side__nav-link side__nav-link--active"
+                                                        class="side__nav-link side__nav-link--active side__nav-link--empty"
                                                         href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
                                                     {% else %}
                                                 <li class="side__nav-list-item--sub-level-2"><a 
-                                                    class="side__nav-link" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
+                                                    class="side__nav-link side__nav-link--empty" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
                                                     {% endif %}
                                                     {% endif %}
                                                 </li>
