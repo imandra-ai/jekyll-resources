@@ -225,7 +225,8 @@ time {
         content: normal;
     }
 
-    &__nav-link, &__nav-link--within-page {
+    &__nav-link,
+    &__nav-link--within-page {
         padding-left: 36px;
 
         &:before {
@@ -287,7 +288,8 @@ time {
                 }
             }
 
-            & .side__nav-link, & .side__nav-link--within-page {
+            & .side__nav-link,
+            & .side__nav-link--within-page {
                 margin-left: 20px;
             }
 
@@ -340,7 +342,8 @@ time {
                 }
             }
 
-            & .side__nav-link, & .side__nav-link--within-page {
+            & .side__nav-link,
+            & .side__nav-link--within-page {
                 margin-left: 40px;
             }
 
@@ -423,7 +426,8 @@ time {
         }
     }
 
-    &__nav-link, &__nav-link--within-page {
+    &__nav-link,
+    &__nav-link--within-page {
         display: block;
         text-decoration: none;
         padding-left: 20px;
@@ -812,10 +816,6 @@ time {
     max-width: 1440px;
     margin: 0;
 
-    @media #{$max-tablet} {
-        min-height: 140px;
-    }
-
     &__image-container {
         margin-left: $sidebar-left-width;
         display: flex;
@@ -944,6 +944,7 @@ time {
             display: flex;
             flex-direction: column;
             right: 0;
+            top: 0;
             background: white;
         }
 
