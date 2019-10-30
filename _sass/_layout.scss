@@ -802,14 +802,14 @@ time {
         display: flex;
         flex-grow: 1;
         justify-content: flex-start;
-        padding-left: 150px;
+        padding-left: 130px;
 
         @media #{$max-wide} {
             padding-left: 30px;
         }
 
         @media #{$max-tablet} {
-            padding-left: 10px;
+            padding-left: 36px;
             margin-left: 0;
         }
 
