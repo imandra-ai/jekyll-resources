@@ -464,14 +464,8 @@ time {
 
         &--active {
             &:before {
-                display: block;
-                margin-left: 36px;
-                margin-top: 9px;
-                height: 6px;
-                width: 6px;
-                border: red;
-                border-radius: 50%;
-                background: navy;
+                @include side__nav-link--circle;
+                margin-left: 44px;
             }
         }
     }
@@ -815,11 +809,6 @@ time {
         display: flex;
         flex-grow: 1;
         justify-content: flex-start;
-
-        @media #{$max-tablet} {
-            margin-left: 0;
-        }
-
         padding-left: 150px;
 
         @media #{$max-wide} {
@@ -827,7 +816,8 @@ time {
         }
 
         @media #{$max-tablet} {
-            padding-left: 50px;
+            padding-left: 10px;
+            margin-left: 0;
         }
 
         &--jupyter {
