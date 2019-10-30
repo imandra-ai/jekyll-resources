@@ -278,19 +278,12 @@ time {
             list-style: none;
             padding: 0;
 
-            .side__within-page-nav--sub-level-1 {
-                margin-left: 10px;
-
-                .side__nav-link--within-page {
-                    &:before {
-                        margin-left: 30px;
-                    }
-                }
+            & .side__nav-link {
+                margin-left: 20px;
             }
 
-            & .side__nav-link,
             & .side__nav-link--within-page {
-                margin-left: 20px;
+                margin-left: 40px;
             }
 
             .side__nav-link {
@@ -337,7 +330,7 @@ time {
 
                 .side__nav-link--within-page {
                     &:before {
-                        margin-left: 60px;
+                        margin-left: 64px;
                     }
                 }
             }
@@ -350,7 +343,7 @@ time {
             & .side__nav-link {
                 &:before {
                     @include side__nav-link--arrow;
-                    margin-left: 40px;
+                    margin-left: 44px;
                 }
 
                 &--active {
@@ -727,7 +720,7 @@ time {
 
         @media #{$max-desktop} {
             width: 100%;
-            padding: 0 2em 0 0;
+            padding: 0 2em 0 5em;
         }
 
         @media #{$max-tablet} {
@@ -824,7 +817,7 @@ time {
             padding-left: 9em;
 
             @media #{$max-desktop} {
-                padding-left: 6em;
+                padding-left: 5em;
             }
 
             @media #{$max-tablet} {
