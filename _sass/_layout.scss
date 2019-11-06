@@ -105,8 +105,8 @@ time {
     z-index: 3;
     border-bottom: 1px solid lighten($light, 30%);
     box-shadow: 0px 1px 1px RGBA(4, 25, 54, .1);
-    overflow-y: auto;
     background: aliceblue;
+    overflow-y: auto;
 
     @media #{$max-tablet} {
         position: relative;
@@ -192,6 +192,39 @@ time {
             top: 20px;
             min-height: 100vh;
         }
+    }
+
+    &__nav-search {
+        display: flex;
+        width: 200px;
+        align-items: flex-end;
+        font-size: 12px;
+        margin-bottom: 3px;
+
+        .algolia-autocomplete {
+            flex: 1;
+            overflow: visible;
+        }
+
+        input {
+            border-radius: 5px;
+            width: 100%;
+            padding: 2px 5px;
+            border-color: #dedede;
+            color: inherit;
+            font: inherit;
+        }
+
+        @media #{$max-tablet} {
+            display: none;
+        }
+
+    }
+
+    &__nav-search-icon {
+        position: relative;
+        right: 25px;
+        top: -4px;
     }
 
     &__nav-container--hidden {
