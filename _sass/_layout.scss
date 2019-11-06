@@ -206,7 +206,11 @@ time {
             border-radius: 5px;
             width: 100%;
             padding: 2px 5px;
+            border-color: #8a8a8a;
+            color: inherit;
+            font: inherit;
         }
+
     }
 
     &__nav-search-icon {
