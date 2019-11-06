@@ -31,6 +31,12 @@
 
             <nav class="side__nav-container side__nav-container--hidden">
                 <ul class="side__nav-list" id="side-nav-menu">
+                    <div class="side__nav-search">
+                        <input id="search" type="search" placeholder="Search">
+                        <div class="side__nav-search-icon">
+                            <i class="fa fa-search"></i>
+                        </div>
+                    </div>
                     {% assign collections = (site.collections | sort: 'sequence') %}
                     {% for mainsite in site.data.sites %}
                     <li class="side__nav-list-item">
@@ -42,13 +48,13 @@
                             {% if collection.label != 'posts' %}
                             {% assign colName = collection.label %}
                             {% assign col = site[colName] | sort: 'sequence' | shift %}
-                            {% assign topPage = site[colName] | sort: 'sequence' | first %}             
+                            {% assign topPage = site[colName] | sort: 'sequence' | first %}
                             {% if page.collection == topPage.collection %}
                             {% if topPage.layout=="pageSbar" and col.size ==1 %}
                             <li class="side__nav-list-item--sub-level-1 side__nav-list--sub-level-1--empty"><a
                                     class="side__nav-link side__nav-link--active"
                                     href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a>
-                               {% else %} 
+                               {% else %}
                                {% if col.size ==0 %}
                                <li class="side__nav-list-item--sub-level-1 side__nav-list--sub-level-1--empty"><a
                                 class="side__nav-link side__nav-link--active"
@@ -92,14 +98,14 @@
                                                         class="side__nav-link side__nav-link--active side__nav-link--empty"
                                                         href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
                                                     {% else %}
-                                                <li class="side__nav-list-item--sub-level-2 side__nav-list--sub-level-2--empty"><a 
+                                                <li class="side__nav-list-item--sub-level-2 side__nav-list--sub-level-2--empty"><a
                                                     class="side__nav-link side__nav-link--empty" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
                                                     {% endif %}
                                                     {% endif %}
                                                 </li>
                                                 {% endfor %}
                                                 {% if colName == "docTopic" and site.baseurl == "/fix-engine" %}
-                                                <li class="side__nav-list-item--sub-level-2 side__nav-list--sub-level-2--empty"><a 
+                                                <li class="side__nav-list-item--sub-level-2 side__nav-list--sub-level-2--empty"><a
                                                     class="side__nav-link--within-page"
                                                         href="{{ site.baseurl }}/_pages/doc/index.html"
                                                         target="_blank">Technical Documentation</a></li>

@@ -30,6 +30,12 @@
             </div>
 
             <nav id="side-nav-menu" class="side__nav-container side__nav-container--hidden">
+                <div class="side__nav-search">
+                    <input id="search" type="search" placeholder="Search">
+                    <div class="side__nav-search-icon">
+                        <i class="fa fa-search"></i>
+                    </div>
+                </div>
 
                 <ul class="side__nav-list">
                     {% for site in data.jekyllResources.sites %}
