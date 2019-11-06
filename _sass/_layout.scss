@@ -198,6 +198,8 @@ time {
         display: flex;
         width: 200px;
         align-items: flex-end;
+        font-size: 12px;
+        margin-bottom: 3px;
 
         .algolia-autocomplete {
             flex: 1;
