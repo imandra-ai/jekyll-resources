@@ -10,7 +10,7 @@ module Rouge
       mimetypes 'text/x-ipl'
 
       keywords = Set.new %w(
-          VerificationPacks action alias assignFrom assignable case
+          VerificationPacks repeatingGroup action alias assignFrom assignable case
           datatype declare default description enum events extend false
           focusOn ignored ign imandramarkets import interLibraryCheck internal int
           invalidfield invalid in let library libraryMarker message missingfield name
@@ -19,7 +19,7 @@ module Rouge
           toInt true truncate unique validate valid when with string bool float
         )
       keyopts = Set.new %w(
-          != && \\( \\) \*\ + , - ==> : ; < == <= >= = > } \? \[ \] \{ \} ! / \|\| @
+          != && \\( \\) \*\ + , - ==> : ; < == <= >= = > } \? \[ \] \{ \} ! / \|\| {\| \|} @
         )
       word_operators = Set.new %w(None Some Case if then else)
       operators = %r([!*+<=>\-\/]+)
