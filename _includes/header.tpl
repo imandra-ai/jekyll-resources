@@ -125,15 +125,20 @@
                                 <ul class="dropdown-content dropdown-content--engine">
                                     <li class="dropdown__item dropdown__item--with-icon">
                                         <img class="dropdown__icon" src="/{{ repo_dir }}/jekyll-resources/assets/img/icon--menu--core.svg" alt="Imandra Core" title="Imandra Core Icon">
-                                        <a class="dropdown__link" href="https://www.imandra.ai/core">Imandra Core</a></li>
+                                        <a class="dropdown__link" href="https://www.imandra.ai/core">Imandra Core</a>
+                                    </li>
+                                    <li class="dropdown__item dropdown__item--with-icon">
                                         <img class="dropdown__icon" src="/{{ repo_dir }}/jekyll-resources/assets/img/icon--menu--demos.svg" alt="Demo Gallery" title="Imandra Demo Gallery Icon">
-                                        <a class="dropdown__link" href="https://www.imandra.ai/demos">Demo Gallery</a></li>
+                                        <a class="dropdown__link" href="https://www.imandra.ai/demos">Demo Gallery</a>
+                                    </li>
                                     <li class="dropdown__item dropdown__item--with-icon">
                                         <img class="dropdown__icon" src="/{{ repo_dir }}/jekyll-resources/assets/img/icon--menu--docs.svg" alt="Docs" title="Docs Icon">
-                                        <a class="dropdown__link" href="https://docs.imandra.ai/">Docs</a></li>
+                                        <a class="dropdown__link" href="https://docs.imandra.ai/">Docs</a>
+                                    </li>
                                     <li class="dropdown__item dropdown__item--with-icon">
                                         <img class="dropdown__icon" src="/{{ repo_dir }}/jekyll-resources/assets/img/icon--menu--research.svg" alt="Research" title="Research Icon">
-                                        <a class="dropdown__link dropdown__link--last" href="https://www.imandra.ai/research">Research</a></li>
+                                        <a class="dropdown__link dropdown__link--last" href="https://www.imandra.ai/research">Research</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="top-nav-bar__item top-nav-bar__item--group dropdown--industries">
