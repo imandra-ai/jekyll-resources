@@ -10,7 +10,7 @@ module Rouge
       mimetypes 'text/x-ipl'
 
       keywords = Set.new %w(
-          VerificationPacks action alias assignFrom assignable case
+          VerificationPacks action messageFlow template alias assignFrom assignable case
           datatype declare default description enum events extend false
           focusOn ignored ign imandramarkets import interLibraryCheck internal int
           invalidfield invalid in let library libraryMarker message missingfield name
