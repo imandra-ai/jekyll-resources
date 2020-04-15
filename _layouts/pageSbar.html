@@ -11,9 +11,9 @@ layout: default
     {% else %}
     {% for colPage in col %}
     {% if forloop.index == 1 %}
-    <h2 id={{colPage.tag}}>{{colPage.title}}</h2>
+    <h2 id={{colPage.tag}}>{{colPage.title | markdownify}}</h2>
     {% else %}
-    <h2 class="internalLink-padding"  id={{colPage.tag}} >{{colPage.title}}</h2>
+    <h2 class="internalLink-padding"  id={{colPage.tag}} >{{colPage.title | markdownify}}</h2>
     {% endif %}
     {{ colPage.content | markdownify }}
     {% endfor %}

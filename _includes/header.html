@@ -43,12 +43,12 @@
                             {% assign topPage = site[colName] | sort: 'sequence' | first %}
                             {% if page.collection == topPage.collection %}
                             {% if topPage.layout=="pageSbar" and col.size ==1 %}
-                            <li class="side__nav-list-item--sub-level-1 side__nav-list--sub-level-1--empty"><a class="side__nav-link side__nav-link--active" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a>
+                            <li class="side__nav-list-item--sub-level-1 side__nav-list--sub-level-1--empty"><a class="side__nav-link side__nav-link--active" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title | markdownify | strip_html}}</a>
                                 {% else %}
                                 {% if col.size ==0 %}
-                            <li class="side__nav-list-item--sub-level-1 side__nav-list--sub-level-1--empty"><a class="side__nav-link side__nav-link--active" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a>
+                            <li class="side__nav-list-item--sub-level-1 side__nav-list--sub-level-1--empty"><a class="side__nav-link side__nav-link--active" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title | markdownify | strip_html}}</a>
                                 {% else %}
-                            <li class="side__nav-list-item--sub-level-1"><a class="side__nav-link side__nav-link--active" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title }}</a>
+                            <li class="side__nav-list-item--sub-level-1"><a class="side__nav-link side__nav-link--active" href="{{ topPage.url | prepend: site.baseurl }}">{{ topPage.title | markdownify | strip_html}}</a>
                                 {% endif %}
                                 {% endif %}
                                 <ul class="side__nav-list--sub-level-2 side__nav-list--sub-level-2--active">
@@ -72,13 +72,13 @@
                                             {% if forloop.index == 1 %}
                                             {% else %}
                                             {% assign newLin = lin.tag | prepend: "#" | prepend: topPage.permalink %}
-                                            <li class="side__nav-list-item--sub-level-2 side__nav-list--sub-level-2--empty"><a class="side__nav-link--within-page" href="{{ newLin | prepend: site.baseurl }}">{{lin.title}}</a>
+                                            <li class="side__nav-list-item--sub-level-2 side__nav-list--sub-level-2--empty"><a class="side__nav-link--within-page" href="{{ newLin | prepend: site.baseurl }}">{{lin.title | markdownify | strip_html}}</a>
                                                 {% endif %}
                                                 {% else %}
                                                 {% if page == lin %}
-                                            <li class="side__nav-list-item--sub-level-2 side__nav-list--sub-level-2--empty"><a class="side__nav-link side__nav-link--active side__nav-link--empty" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
+                                            <li class="side__nav-list-item--sub-level-2 side__nav-list--sub-level-2--empty"><a class="side__nav-link side__nav-link--active side__nav-link--empty" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title | markdownify | strip_html}}</a>
                                                 {% else %}
-                                            <li class="side__nav-list-item--sub-level-2 side__nav-list--sub-level-2--empty"><a class="side__nav-link side__nav-link--empty" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title}}</a>
+                                            <li class="side__nav-list-item--sub-level-2 side__nav-list--sub-level-2--empty"><a class="side__nav-link side__nav-link--empty" href="{{ lin.url | prepend: site.baseurl }}">{{lin.title | markdownify | strip_html}}</a>
                                                 {% endif %}
                                                 {% endif %}
                                             </li>
