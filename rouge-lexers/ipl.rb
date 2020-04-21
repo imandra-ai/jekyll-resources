@@ -10,13 +10,16 @@ module Rouge
       mimetypes 'text/x-ipl'
 
       keywords = Set.new %w(
-          VerificationPacks action messageFlows template alias assignFrom assignable case
+          VerificationPacks action function messageFlows template alias assignFrom assignable case
           datatype declare default description enum events extend false
-          focusOn ignored ign imandramarkets import interLibraryCheck internal int
+          ignored ign imandramarkets import interLibraryCheck internal int
           invalidfield invalid in let library libraryMarker message missingfield name
           optional opt outbound overloadFunction precision present receive record
-          reject repeating require req return scenario send testfile toFloat
-          toInt true truncate unique validate valid when with string bool float
+          reject repeating require req return scenario send toFloat
+          toInt true validate valid when with string bool float
+          add delete subset strlen fresh forall insert remove
+          get getDefault abs makeUTCTimestamp toUTCTimeOnly
+          toMonthYear toUTCDateOnly toLocalMktDate for break
         )
       keyopts = Set.new %w(
           != && \\( \\) \*\ + , - ==> : ; < == <= >= = > } \? \[ \] \{ \} ! / \|\| {\| \|} @
