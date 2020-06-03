@@ -22,9 +22,9 @@ module Rouge
           toMonthYear toUTCDateOnly toLocalMktDate for break
         )
       keyopts = Set.new %w(
-          != && \\( \\) \*\ + , - ==> : ; < == <= >= = > } \? \[ \] \{ \} ! / \|\| {\| \|} @
+          != && \\( \\) \*\ + , - ==> : \| ; < == <= >= = > } \? \[ \] \{ \} ! / \|\| {\| \|} @
         )
-      word_operators = Set.new %w(None Some Case if then else)
+      word_operators = Set.new %w(None Some Case if then else map set list)
       operators = %r([!*+<=>\-\/]+)
       primitives = Set.new %w(int float bool string)
       infix_syms = %r([*+<=>\-\/])
