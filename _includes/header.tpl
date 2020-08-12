@@ -157,7 +157,7 @@
                                         <a class="dropdown__link" href="https://www.imandra.ai/ml">Machine Learning</a>
                                     </li>
                                     <li class="dropdown__item dropdown__item--with-icon">
-                                        <img class="dropdown__icon" src="{{ site.baseurl }}/jekyll-resources/assets/img/icon--menu--government.svg" alt="Machine Learning" title="Machine Learning Icon">
+                                        <img class="dropdown__icon" src="/{{ repo_dir }}/jekyll-resources/assets/img/icon--menu--government.svg" alt="Machine Learning" title="Machine Learning Icon">
                                         <a class="dropdown__link dropdown__link--last" href="https://www.imandra.ai/government">Government and defense</a>
                                     </li>
                                 </ul>
