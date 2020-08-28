@@ -53,7 +53,7 @@
                                         {% else %}
                                         <a class="side__nav-link" href="/{{ repo_dir }}/{{ child.slug }}">{{ child.name }}</a>
                                         {% endif %}
-                                        {% if child.children %}
+                                        {% if child.children | length > 1 %}
                                         <ul class="side__nav-list--sub-level-3">
                                             {% for child in child.children %}
                                             <li class="side__nav-list-item--sub-level-3">
