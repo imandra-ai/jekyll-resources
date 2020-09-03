@@ -45,7 +45,8 @@
                                 {% else %}
                                 {{ section.name }}
                                 {% endif %}
-                                <ul class="side__nav-list--sub-level-2 {% if slug == section.notebookSlug or slug in section.get('children', [])|map(attribute='notebookSlug') %} side__nav-list--sub-level-2--active{% endif %}">
+                                <ul class="side__nav-list--sub-level-2 {% if slug == section.notebookSlug or slug in section.get('children', [])|map(attribute='notebookSlug')                                
+                                 %} side__nav-list--sub-level-2--active{% endif %}">
                                     {% for child in section.children %}
                                     <li class="side__nav-list-item--sub-level-2{% if child.children | length == 0 %} side__nav-list--sub-level-2--empty{% endif %}">
                                         {% if child.notebookSlug %}
@@ -79,7 +80,7 @@
                                     </li>
                                     {% endfor %}
                                 </ul>
-                                {% if section.notebookSlug == slug %}
+                                {% if section.notebookSlug == slug and (not section.ignoreSubheadings)%}
                                 <div class="side__within-page-nav--sub-level-1">
                                 {% include "_includes/page_nav.tpl" %}
                                 </div>
