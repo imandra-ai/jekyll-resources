@@ -1,3 +1,4 @@
+{% if slug == section.notebookSlug or slug in section.get('children', [])|map(attribute='notebookSlug') %}
 {% for item in [{'text':'Beginner','id':'Beginner','tag':'h2'},{'text':'Intermediate','id':'Intermediate','tag':'h2'},{'text':'Advanced','id':'Advanced','tag':'h2'}] %}
   <a class="side__nav-link--within-page side__nav-link--within-page--{{ item['tag'] }}" href="{{site.baseurl}}/notebooks/examples/#{{ item['id'] }}">{{ item['text']}}</a>
   <ul class="side__nav-list--sub-level-3 {% if slug == section.notebookSlug or slug in section.get('children', [])|map(attribute='notebookSlug') %} side__nav-list--sub-level-2--active{% endif %}">
@@ -28,3 +29,4 @@
   {% endif %}
   {% endfor %}
 {% endfor %}
+{% endif %}
