@@ -37,6 +37,9 @@
                         {% if site.name == 'Imandra Core' %}
                         <ul class="side__nav-list--sub-level-1">
                             {% for section in data.nav.sections %}
+                            <!-- if it's an example, then only do level 1 -->
+                            <!-- and insert sub-menu items -->
+                            {% set examples = section.notebookSlug == 'examples' %}
                             <li class="side__nav-list-item--sub-level-1 {% if section.children | length == 0 %}side__nav-list--sub-level-1--empty{% endif %}">
                                 {% if section.notebookSlug %}
                                 <a class="side__nav-link{% if section.notebookSlug == slug %} side__nav-link--active{% endif %}" href="/{{ repo_dir }}/notebooks/{{ section.notebookSlug }}">{{ section.name }}</a>
@@ -45,44 +48,51 @@
                                 {% else %}
                                 {{ section.name }}
                                 {% endif %}
-                                <ul class="side__nav-list--sub-level-2 {% if slug == section.notebookSlug or slug in section.get('children', [])|map(attribute='notebookSlug') %} side__nav-list--sub-level-2--active{% endif %}">
-                                    {% for child in section.children %}
-                                    <li class="side__nav-list-item--sub-level-2{% if child.children | length == 0 %} side__nav-list--sub-level-2--empty{% endif %}">
-                                        {% if child.notebookSlug %}
-                                        <a class="side__nav-link{% if child.notebookSlug == slug %} side__nav-link--active{% endif %}" href="/{{ repo_dir }}/notebooks/{{ child.notebookSlug }}">{{ child.name }}</a>
-                                        {% else %}
-                                        <a class="side__nav-link" href="/{{ repo_dir }}/{{ child.slug }}">{{ child.name }}</a>
-                                        {% endif %}
-                                        {% if child.children | length > 1 %}
-                                        <ul class="side__nav-list--sub-level-3">
-                                            {% for child in child.children %}
-                                            <li class="side__nav-list-item--sub-level-3">
-                                              {% if child.notebookSlug %}
-                                              <a class="side__nav-link{% if child.notebookSlug == slug %} side__nav-link--active{% endif %}" href="/{{ repo_dir }}/notebooks/{{ child.notebookSlug }}">{{ child.name }}</a>
-                                              {% else %}
-                                              <a class="side__nav-link" href="/{{ repo_dir }}/{{ child.slug }}">{{ child.name }}</a>
-                                              {% endif %}
-                                              {% if child.notebookSlug == slug %}
-                                              <div class="side__within-page-nav--sub-level-3">
-                                              {% include "_includes/page_nav.tpl" %}
-                                              </div>
-                                              {% endif %}
-                                            </li>
-                                            {% endfor %}
-                                        </ul>
-                                        {% endif %}
-                                        {% if child.notebookSlug == slug %}
-                                        <div class="side__within-page-nav--sub-level-2">
-                                        {% include "_includes/page_nav.tpl" %}
-                                        </div>
-                                        {% endif %}
-                                    </li>
-                                    {% endfor %}
-                                </ul>
+                                {% if not examples %}
+                                    <ul class="side__nav-list--sub-level-2 {% if slug == section.notebookSlug or slug in section.get('children', [])|map(attribute='notebookSlug') %} side__nav-list--sub-level-2--active{% endif %}">
+                                        {% for child in section.children %}
+                                        <li class="side__nav-list-item--sub-level-2{% if child.children | length == 0 %} side__nav-list--sub-level-2--empty{% endif %}">
+                                            {% if child.notebookSlug %}
+                                            <a class="side__nav-link{% if child.notebookSlug == slug %} side__nav-link--active{% endif %}" href="/{{ repo_dir }}/notebooks/{{ child.notebookSlug }}">{{ child.name }}</a>
+                                            {% else %}
+                                            <a class="side__nav-link" href="/{{ repo_dir }}/{{ child.slug }}">{{ child.name }}</a>
+                                            {% endif %}
+                                            {% if child.children | length > 1 %}
+                                            <ul class="side__nav-list--sub-level-3">
+                                                {% for child in child.children %}
+                                                <li class="side__nav-list-item--sub-level-3">
+                                                {% if child.notebookSlug %}
+                                                <a class="side__nav-link{% if child.notebookSlug == slug %} side__nav-link--active{% endif %}" href="/{{ repo_dir }}/notebooks/{{ child.notebookSlug }}">{{ child.name }}</a>
+                                                {% else %}
+                                                <a class="side__nav-link" href="/{{ repo_dir }}/{{ child.slug }}">{{ child.name }}</a>
+                                                {% endif %}
+                                                {% if child.notebookSlug == slug %}
+                                                <div class="side__within-page-nav--sub-level-3">
+                                                {% include "_includes/page_nav.tpl" %}
+                                                </div>
+                                                {% endif %}
+                                                </li>
+                                                {% endfor %}
+                                            </ul>
+                                            {% endif %}
+                                            {% if child.notebookSlug == slug %}
+                                            <div class="side__within-page-nav--sub-level-2">
+                                            {% include "_includes/page_nav.tpl" %}
+                                            </div>
+                                            {% endif %}
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
                                 {% if section.notebookSlug == slug %}
-                                <div class="side__within-page-nav--sub-level-1">
-                                {% include "_includes/page_nav.tpl" %}
-                                </div>
+                                {% if examples %}
+                                    <div class="side__within-page-nav--sub-level-1">
+                                    {% include "_includes/page_nav.tpl" %}
+                                    </div>
+                                {% else %}
+                                    <div class="side__within-page-nav--sub-level-1">
+                                    {% include "_includes/page_nav.tpl" %}
+                                    </div>
                                 {% endif %}
                             </li>
                             {% endfor %}
