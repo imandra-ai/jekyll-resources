@@ -94,6 +94,7 @@
                                     {% include "_includes/page_nav.tpl" %}
                                     </div>
                                 {% endif %}
+                                {% endif %}
                             </li>
                             {% endfor %}
                         </ul>
