@@ -37,9 +37,10 @@
                         {% if site.name == 'Imandra Core' %}
                         <ul class="side__nav-list--sub-level-1">
                             {% for section in data.nav.sections %}
-                            <!-- if it's an example, then only do level 1 -->
-                            <!-- and insert sub-menu items -->
                             {% set examples = section.notebookSlug == 'examples' %}
+                            {% if examples %}
+                            {% set example_nav_items = section.nav_items %}
+                            {% endif %}
                             <li class="side__nav-list-item--sub-level-1 {% if section.children | length == 0 %}side__nav-list--sub-level-1--empty{% endif %}">
                                 {% if section.notebookSlug %}
                                 <a class="side__nav-link{% if section.notebookSlug == slug %} side__nav-link--active{% endif %}" href="/{{ repo_dir }}/notebooks/{{ section.notebookSlug }}">{{ section.name }}</a>
@@ -84,12 +85,12 @@
                                         {% endfor %}
                                     </ul>
                                 {% endif %}
-                                {% if section.notebookSlug == slug %}
                                 {% if examples %}
                                     <div class="side__within-page-nav--sub-level-1">
-                                    {% include "_includes/page_nav.tpl" %}
+                                    {% include "_includes/examples_page_nav.tpl" %}
                                     </div>
                                 {% else %}
+                                {% if section.notebookSlug == slug %}
                                     <div class="side__within-page-nav--sub-level-1">
                                     {% include "_includes/page_nav.tpl" %}
                                     </div>
