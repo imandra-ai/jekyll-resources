@@ -57,7 +57,7 @@
                                         <li class="side__nav-list-item--sub-level-2 side__nav-list--sub-level-2--empty">
                                         <span class="side__nav-link" style="border-bottom: 1px grey solid;">{{miniSec}}</span>
                                         </li>
-                                        {% set innerSec = section.children|selectattr("difficulty","equalto",miniSec) %}
+                                        {% set innerSec = section.children|selectattr("miniSection","equalto",miniSec) %}
                                         {% else %}
                                         {% set innerSec = miniSec %}
                                         {% endif %}
