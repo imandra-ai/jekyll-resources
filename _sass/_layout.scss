@@ -1021,7 +1021,9 @@ time {
             }
 
             @media #{$max-tablet} {
-                display: none;
+                padding: 0;
+                display: block;
+                background-color: #27D798;
             }
         }
 
@@ -1039,6 +1041,17 @@ time {
         margin: 0em 1em;
     }
 
+    &--explore {
+        @media #{$max-tablet} {
+            width: 100%;
+            margin: 0;
+        }
+
+        margin: 0 0 0 -90px;
+        padding: 1.6em 0;
+        width: 180px;
+    }
+
     &--media {
         @media #{$max-tablet} {
             width: 100%;
@@ -1050,7 +1063,7 @@ time {
         width: 140px;
     }
 
-    &--engine {
+    &--docs {
         @media #{$max-tablet} {
             width: 100%;
             margin: 0;
@@ -1059,6 +1072,17 @@ time {
         margin: 0 0 0 -90px;
         padding: 1.6em 0;
         width: 180px;
+    }
+
+    &--products {
+        @media #{$max-tablet} {
+            width: 100%;
+            margin: 0;
+        }
+
+        margin: 0 0 0 -130px;
+        padding: 1.6em 0;
+        width: 320px;
     }
 
     &--industries {
@@ -1078,9 +1102,9 @@ time {
             margin: 0;
         }
 
-        margin: 0 0 0 -70px;
+        margin: 0 0 0 -90px;
         padding: 1.6em 0;
-        width: 140px;
+        width: 150px;
     }
 
     border-radius: 10px;
@@ -1170,18 +1194,32 @@ time {
     }
 }
 
-//against the desktop first rule:
-@media screen and (min-width: 1024px) {
 
-    .dropdown--engine:hover,
+.dropdown--explore:hover,
+.dropdown--docs:hover,
+.dropdown--products:hover,
+.dropdown--industries:hover,
+.dropdown--media:hover,
+.dropdown--company:hover {
+    & .dropdown-content {
+        display: inline-block;
+    }
+}
+
+@media #{$max-tablet} {
+
+    .dropdown--explore:hover,
+    .dropdown--docs:hover,
+    .dropdown--products:hover,
     .dropdown--industries:hover,
     .dropdown--media:hover,
     .dropdown--company:hover {
         & .dropdown-content {
-            display: inline-block;
+            display: contents;
         }
     }
 }
+
 
 
 
