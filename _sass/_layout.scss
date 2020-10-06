@@ -739,6 +739,10 @@ time {
     line-height: 1.8;
     font-size: 13px;
 
+    @media #{$max-tablet} {
+        margin-top: 20px;
+    }
+
     @media #{$max-wide} {
         margin-left: 0;
         margin-right: 0;
@@ -782,6 +786,7 @@ time {
     max-width: $content-width + $sidebar-right-width;
     display: flex;
     margin-left: $sidebar-left-width;
+
 
     @media #{$max-desktop} {
         max-width: 980px;
