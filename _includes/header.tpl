@@ -134,14 +134,14 @@
 
 
 
-                            <li class="top-nav-bar__item">
+                            <li class="top-nav-bar__item top-nav-bar__item--flex">
                                 <a href="https://www.imandra.ai/" class="top-nav-bar__link">Home</a>
                             </li>
 
 
 
                             <li class="top-nav-bar__item top-nav-bar__item--group dropdown--explore">
-                                <a class="top-nav-bar__link top-nav-bar__link--group" href="">Explore</a>
+                                <p class="top-nav-bar__link top-nav-bar__link--group" onclick="">Explore</p>
                                 <ul class="dropdown-content dropdown-content--explore">
                                     <li class="dropdown__item dropdown__item--with-icon">
                                         <img class="dropdown__icon" src="{{ site.baseurl }}/jekyll-resources/assets/img/icon--menu--core.svg" alt="Try Imandra" title="Try Imandra Icon">
@@ -158,7 +158,7 @@
 
 
                             <li class="top-nav-bar__item top-nav-bar__item--group dropdown--docs">
-                                <a class="top-nav-bar__link top-nav-bar__link--group" href="">Docs</a>
+                                <p class="top-nav-bar__link top-nav-bar__link--group" onclick="">Docs</p>
                                 <ul class="dropdown-content dropdown-content--docs">
                                     <li class="dropdown__item dropdown__item--with-icon">
                                         <img class="dropdown__icon" src="{{ site.baseurl }}/jekyll-resources/assets/img/icon--menu--docs.svg" alt="Docs" title="Docs Icon">
@@ -186,7 +186,7 @@
 
 
                             <li class="top-nav-bar__item top-nav-bar__item--group dropdown--products">
-                                <a class="top-nav-bar__link top-nav-bar__link--group" href="">Products</a>
+                                <p class="top-nav-bar__link top-nav-bar__link--group" onclick="">Products</p>
                                 <ul class="dropdown-content dropdown-content--products">
                                     <li class="dropdown__item dropdown__item--with-icon">
                                         <img class="dropdown__icon" src="{{ site.baseurl }}/jekyll-resources/assets/img/icon--menu--core.svg" alt="Imandra Core" title="Imandra Core Icon">
@@ -206,7 +206,7 @@
 
 
                             <li class="top-nav-bar__item top-nav-bar__item--group dropdown--industries">
-                                <a class="top-nav-bar__link top-nav-bar__link--group" href="">Industries</a>
+                                <p class="top-nav-bar__link top-nav-bar__link--group" onclick="">Industries</p>
                                 <ul class="dropdown-content dropdown-content--industries">
                                     <li class="dropdown__item dropdown__item--with-icon">
                                         <img class="dropdown__icon" src="{{ site.baseurl }}/jekyll-resources/assets/img/icon--menu--financial.svg" alt="Financial Markets" title="Financial Markets Icon">
@@ -221,14 +221,14 @@
                                         <a class="dropdown__link" href="https://www.imandra.ai/ml">Machine Learning</a>
                                     </li>
                                     <li class="dropdown__item dropdown__item--with-icon">
-                                        <img class="dropdown__icon" src="/{{ repo_dir }}/jekyll-resources/assets/img/icon--menu--government.svg" alt="Machine Learning" title="Machine Learning Icon">
+                                        <img class="dropdown__icon" src="{{ site.baseurl }}/jekyll-resources/assets/img/icon--menu--government.svg" alt="Machine Learning" title="Machine Learning Icon">
                                         <a class="dropdown__link dropdown__link--last" href="https://www.imandra.ai/government">Government and defense</a>
                                     </li>
                                 </ul>
                             </li>
 
                             <li class="top-nav-bar__item top-nav-bar__item--group dropdown--media">
-                                <a class="top-nav-bar__link top-nav-bar__link--group" href="">Media</a>
+                                <p class="top-nav-bar__link top-nav-bar__link--group" onclick="">Media</p>
                                 <ul class="dropdown-content dropdown-content--media">
                                     <li class="dropdown__item dropdown__item--with-icon">
                                         <img class="dropdown__icon" src="{{ site.baseurl }}/jekyll-resources/assets/img/icon--menu--media.svg" alt="Media" title="Media Icon">
@@ -242,7 +242,7 @@
                             </li>
 
                             <li class="top-nav-bar__item top-nav-bar__item--group dropdown--company">
-                                <a class="top-nav-bar__link top-nav-bar__link--group" href="">Company</a>
+                                <p class="top-nav-bar__link top-nav-bar__link--group" onclick="">Company</p>
                                 <ul class="dropdown-content dropdown-content--company">
                                     <li class="dropdown__item dropdown__item--with-icon">
                                         <img class="dropdown__icon" src="{{ site.baseurl }}/jekyll-resources/assets/img/icon--menu--about.svg" alt="About" title="About Icon">
@@ -259,18 +259,18 @@
                                 </ul>
                             </li>
                         </ul>
-                        
+
                     </div>
                 </div>
             </nav>
         </div>
 
-        <div class="template-header__image-container template-header__image-container--jupyter">
-            <div class="template-header__image" href ="/{{ repo_dir }}">
-                <img class="site-specific-image" src="/{{ repo_dir }}/static/img/site_specific_image_v_2.svg">
-            </div>
-        </div>
 
+        <div class="template-header__image-container">
+            <a class="template-header__image" href="{{site.baseurl}}">
+                <img class="site-specific-image" src="{{ site.baseurl }}/assets/img/site_specific_image_v_2.svg">
+            </a>
+        </div>
     </div>
 
 

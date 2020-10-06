@@ -199,7 +199,7 @@ time {
         width: 200px;
         align-items: flex-end;
         font-size: 12px;
-        margin-bottom: 3px;
+        margin-bottom: 13px;
 
         .algolia-autocomplete {
             flex: 1;
@@ -974,6 +974,8 @@ time {
         padding: 0;
         background-color: transparent;
         text-align: center;
+        cursor: pointer;
+        user-select: none;
 
         @media #{$max-tablet} {
             margin: 0;
@@ -988,6 +990,11 @@ time {
 
         &--last {
             margin-left: 6em;
+        }
+
+        &--flex {
+            display: flex;
+            align-items: center;
         }
     }
 
@@ -1004,6 +1011,7 @@ time {
 
         @media #{$max-tablet} {
             border-bottom: 1px solid rgba(206, 206, 206, 0.3);
+            width: 100%;
         }
 
         &:hover {
