@@ -33,7 +33,7 @@
                 <ul class="side__nav-list">
                     {% for site in data.jekyllResources.sites %}
                     <li class="side__nav-list-item">
-                        <a class="side__nav-link{% if site.name == 'Imandra Core' %} side__nav-link--active{% endif %}" href="/{{ repo_dir }}">/{{ repo_dir }}</a>
+                        <a class="side__nav-link{% if site.name == 'Imandra Core' %} side__nav-link--active{% endif %}" href="/{{ site.baseurl }}">/{{ site.name }}</a>
                         {% if site.name == 'Imandra Core' %}
                         <ul class="side__nav-list--sub-level-1">
                             {% for section in data.nav.sections %}
@@ -277,7 +277,7 @@
 
         <div class="template-header__image-container">
             <a class="template-header__image" href="/{{ repo_dir }}">
-                <img class="site-specific-image" src="/{{ repo_dir }}/assets/img/site_specific_image_v_2.svg">
+                <img class="site-specific-image" src="/{{ repo_dir }}/jekyll-resources/assets/img/site_specific_image_v_2.svg">
             </a>
         </div>
     </div>
