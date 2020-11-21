@@ -218,7 +218,7 @@
                                 <ul class="dropdown-content dropdown-content--industries">
                                     <li class="dropdown__item dropdown__item--with-icon">
                                         <img class="dropdown__icon" src="/{{ repo_dir }}/jekyll-resources/assets/img/icon--menu--financial.svg" alt="Financial Markets" title="Financial Markets Icon">
-                                        <a class="dropdown__link " href="https://www.imandra.ai/imarkets">Financial Markets</a>
+                                        <a class="dropdown__link " href="https://www.imandra.ai/markets">Financial Markets</a>
                                     </li>
                                     <li class="dropdown__item dropdown__item--with-icon">
                                         <img class="dropdown__icon" src="/{{ repo_dir }}/jekyll-resources/assets/img/icon--menu--autonomy.svg" alt="Autonomous Systems" title="Autonomous Systems Icon">
