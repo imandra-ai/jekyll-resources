@@ -206,7 +206,7 @@
                                     </li>
                                     <li class="dropdown__item dropdown__item--with-icon">
                                         <img class="dropdown__icon" src="/{{ repo_dir }}/jekyll-resources/assets/img/icon--menu--connectivity.svg" alt="Imandra Markets - Connectivity" title="Imandra Markets - Connectivity Icon">
-                                        <a class="dropdown__link dropdown__link--last" href="https://www.imandra.ai/cornectivity">Imandra Markets - Connectivity</a>
+                                        <a class="dropdown__link dropdown__link--last" href="https://www.imandra.ai/connectivity">Imandra Markets - Connectivity</a>
                                     </li>
                                 </ul>
                             </li>
