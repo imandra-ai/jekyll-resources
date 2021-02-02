@@ -13,13 +13,13 @@ module Rouge
           VerificationPacks action function messageFlows template alias assignFrom assignable case
           datatype declare default description enum events extend false
           ignored ign imandramarkets import interLibraryCheck internal int
-          invalidfield invalid in let library libraryMarker message missingfield name
+          invalidfield includeInvalid invalidOnly invalid in let library libraryMarker message missingfield name
           optional opt outbound overloadFunction precision present receive record
           reject repeating require req return scenario send toFloat
           toInt true validate valid when with string bool float
           add delete subset strlen fresh forall insert remove
           get getDefault abs makeUTCTimestamp toUTCTimeOnly
-          toMonthYear toUTCDateOnly toLocalMktDate for break
+          toMonthYear toUTCDateOnly toLocalMktDate for break fun  
         )
       keyopts = Set.new %w(
           != && \\( \\) \*\ + , - ==> : \| ; < == <= >= = > } \? \[ \] \{ \} ! / \|\| {\| \|} @
