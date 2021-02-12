@@ -1,44 +1,46 @@
 # -*- coding: utf-8 -*- #
 
-module Rouge
-  module Lexers
-    class Iml < RegexLexer
-      title "Iml"
-      desc 'Imandra Modelling Language'
-      tag 'iml'
-      filenames '*.iml'
-      mimetypes 'text/x-iml'
+Jekyll::Hooks.register :site, :pre_render do |site|
+  puts "Registering IML lexer"
+  require "rouge"
 
-      def self.keywords
-        @keywords ||= Set.new %w(
+  class Iml < Rouge::RegexLexer
+    title "Iml"
+    desc 'Imandra Modelling Language'
+    tag 'iml'
+    filenames '*.iml'
+    mimetypes 'text/x-iml'
+
+    def self.keywords
+      @keywords ||= Set.new %w(
           as assert begin class constraint do done downto else end
           exception external false for fun function functor if in include
           inherit initializer lazy let match method module mutable new
           nonrec object of open private raise rec sig struct then to true
           try type val virtual when while with
         )
-      end
+    end
 
-      def self.word_operators
-        @word_operators ||= Set.new %w(and asr land lor lsl lxor mod or)
-      end
+    def self.word_operators
+      @word_operators ||= Set.new %w(and asr land lor lsl lxor mod or)
+    end
 
-      def self.primitives
-        @primitives ||= Set.new %w(unit int float bool string char list array)
-      end
+    def self.primitives
+      @primitives ||= Set.new %w(unit int float bool string char list array)
+    end
 
-      def self.imandra_keywords 
-        @imandra_keywords ||= Set.new %w(theorem thm proved Counterexample instance check :testgen verify)
-      end
+    def self.imandra_keywords
+      @imandra_keywords ||= Set.new %w(theorem thm proved Counterexample instance check :testgen verify)
+    end
 
-      operator = %r([;,_!$%&*+./:<=>?@^|~#-]+)
-      id = /[a-z_][\w']*/i
-      upper_id = /[A-Z][\w']*/
+    operator = %r([;,_!$%&*+./:<=>?@^|~#-]+)
+    id = /[a-z_][\w']*/i
+    upper_id = /[A-Z][\w']*/
 
-      state :root do
-        rule /\s+/m, Text
-        rule /false|true|[(][)]|\[\]/, Name::Builtin::Pseudo
-        rule /#{upper_id}(?=\s*[.])/, Name::Namespace, :dotted
+    state :root do
+      rule /\s+/m, Text
+      rule /false|true|[(][)]|\[\]/, Name::Builtin::Pseudo
+      rule /#{upper_id}(?=\s*[.])/, Name::Namespace, :dotted
         rule /`#{id}/, Name::Tag
         rule upper_id, Name::Class
         rule /[(][*](?![)])/, Comment, :comment
@@ -51,7 +53,7 @@ module Rouge
           elsif self.class.primitives.include? match
             token Keyword::Type
           elsif self.class.imandra_keywords.include? match
-            token Keyword::Reserved 
+            token Keyword::Reserved
           else
             token Name
           end
@@ -102,5 +104,5 @@ module Rouge
         rule /[({\[]/, Punctuation, :pop!
       end
     end
-  end
+
 end
