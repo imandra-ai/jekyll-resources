@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*- #
 Jekyll::Hooks.register :site, :pre_render do |site|
-  puts "Registering IML lexer"
+  puts "Registering IPL lexer"
   require "rouge"
 
   class IPL < Rouge::RegexLexer
