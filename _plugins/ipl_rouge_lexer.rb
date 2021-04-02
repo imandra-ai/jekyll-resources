@@ -16,7 +16,7 @@ Jekyll::Hooks.register :site, :pre_render do |site|
           ignored ign imandramarkets import interLibraryCheck internal int
           invalidfield includeInvalid invalidOnly invalid in let library libraryMarker message missingfield name
           optional opt outbound overloadFunction precision present receive record
-          reject repeating require req return scenario send toFloat
+          reject repeatingGroup repeating require req return scenario send toFloat
           toInt true validate valid when with string bool float
           add delete subset strlen fresh forall insert remove
           get getDefault abs makeUTCTimestamp toUTCTimeOnly
