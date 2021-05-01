@@ -2779,21 +2779,21 @@
 
 
     <script>
-        document.getElementById('toggler--left').addEventListener('click', function () {
-            document.querySelector('.side__right-menu-toggler .side__toggle').classList.remove(
-                'side__toggle--active');
-            document.querySelector('.side__left-menu-toggler .side__toggle').classList.toggle(
-                'side__toggle--active');
-            document.getElementsByClassName('side__nav-container')[0].classList.toggle(
-                'side__nav-container--hidden');
-        });
+    document.getElementById('toggler--left').addEventListener('click', function () {
+        document.querySelector('.side__right-menu-toggler .side__toggle').classList.remove(
+            'side__toggle--active');
+        document.querySelector('.side__left-menu-toggler .side__toggle').classList.toggle(
+            'side__toggle--active');
+        document.getElementsByClassName('side__nav-container')[0].classList.toggle(
+            'side__nav-container--hidden');
+    });
 
-        document.getElementById('toggler--right').addEventListener('click', function () {
-            document.querySelector('.side__left-menu-toggler .side__toggle').classList.remove(
-                'side__toggle--active');
-            document.querySelector('.side__right-menu-toggler .side__toggle').classList.toggle(
-                'side__toggle--active');
-        });
+    document.getElementById('toggler--right').addEventListener('click', function () {
+        document.querySelector('.side__left-menu-toggler .side__toggle').classList.remove(
+            'side__toggle--active');
+        document.querySelector('.side__right-menu-toggler .side__toggle').classList.toggle(
+            'side__toggle--active');
+    });
 
     const siteMenuContainer = document.querySelector(".page-nav-menu-container");
     const siteMenuTopNavContainer = document.querySelector(".page-header-nav");
@@ -2844,21 +2844,16 @@
     const siteMobileNavSwitchButton = document.querySelector("#toggler--right");
     const siteMobileNavCloseButton = document.querySelector(".type--nav-close");
     
-    
     //nav menu functions
     const siteMenuCardSetup = (event) => {
       nowOpenCardIndex = event.target.dataset.index;
       menuArrowOffsetX = ((event.target.offsetLeft) + (event.target.clientWidth / 2) - 8 -300);
-    //   menuArrowOffsetX = ((event.target.offsetLeft - 300) + (event.target.clientWidth / 2) - 8) - ((window.innerWidth - 300)/2);
       
       window.requestAnimationFrame( function () {
         siteMenuContainer.style.setProperty('--menuArrowOffset', menuArrowOffsetX + "px");
         siteMenuContainer.style.setProperty('--menuNavWidth', siteMenuSettings[nowOpenCardIndex].pageNavMenuWidth + "px");
         siteMenuContainer.style.setProperty('--menuNavHeight', siteMenuSettings[nowOpenCardIndex].pageNavMenuHeight + "px");
       });
-
-      // siteMenuContainer.style.setProperty('--menuCardOffset', siteMenuSettings[nowOpenCardIndex].cardOffset + "px");
-    //   console.log(siteMenuSettings[nowOpenCardIndex].cardOffset);
     }
   
     const siteMenuCardsSwitch = (event, command) => {
@@ -2893,7 +2888,7 @@
         }; 
   
       } else {
-        //cose old
+        //close old
         siteMenuCards[lastOpenedCardIndex].hidden = true;
         siteMenuCards[lastOpenedCardIndex].style.setProperty('--menuCardOpacity', "0");
         siteMenuCards[lastOpenedCardIndex].style.setProperty('--menuCardOffsetY', "-1rem");
@@ -2938,10 +2933,8 @@
   
   siteMenuButtons.forEach((item) => {
     item.addEventListener("click", (event) => {
-      // console.log("down");
       siteMenuCardSetup(event);
       siteMenuCardsSwitch(event, "close");
-      
     });
 
       item.addEventListener("mouseenter", (event) => {
@@ -2950,14 +2943,11 @@
         siteMenuCardsSwitch(event);
       });
   
-
-  
       item.addEventListener("touchstart", (event) => {
         event.stopImmediatePropagation();
         event.preventDefault();
         siteMenuCardSetup(event);
         siteMenuCardsSwitch(event, "close");
-
   
         // siteMenuContainer.addEventListener("touchstart", (event)=> {
         //   console.log("outclick");
@@ -2968,9 +2958,8 @@
         // },  
         // {once:true, passive: false }, 
         // );
-  
+
       },{passive: false});
-  
     });
   
    console.log(siteMenuNav);
@@ -3006,7 +2995,7 @@
     }
   });
 
-    </script>
+</script>
 
 
     <script type="text/javascript">
