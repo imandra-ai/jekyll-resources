@@ -3,8 +3,8 @@
 {% include head.html %}
 
 <body>
-    <div class="page-container">
-        {% include welcomeheader.html %}
+    {% include welcomeheader.html %}
+    <!-- <div class="page-container"> -->
         <main class="main-content-column">
             <article class="article__container">
                 <div class="main-content">
@@ -13,10 +13,9 @@
             </article>
         </main>
         {% include footer.html %}
-    </div>
+    <!-- </div> -->
     {% if jekyll.environment == 'production' %}
     {% include analytics.html %}
     {% endif %}
 </body>
-
 </html>
