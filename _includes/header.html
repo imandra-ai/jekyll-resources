@@ -2767,10 +2767,10 @@
             </ul>
 
         </nav>
-    </section>
+ </section>
 
 
-    <script>
+<script>
     document.getElementById('toggler--left').addEventListener('click', function () {
         document.querySelector('.side__right-menu-toggler .side__toggle').classList.remove(
             'side__toggle--active');
@@ -2990,53 +2990,53 @@
 </script>
 
 
-    <script>
-        window.onload = function () {
-            var lastId,
-                sideMenu = $("#side-nav-menu"),
-                topMenu = $("#top-menu")
-            var topMenuHeight = topMenu.outerHeight() + 15,
-                // All list items
-                menuItems = sideMenu.find('a[href^="{{page.permalink| prepend: site.baseurl}}#"]'),
-                // Anchors corresponding to menu items
-                scrollItems = menuItems.map(function () {
-                    var item = $(this).attr("href");
-                    var thisItem = item.substring(item.lastIndexOf("/") + 1, item.length)
-                    var linkedItem = $(thisItem)
-                    if (linkedItem.length) {
-                        return linkedItem;
-                    }
-                });
-
-            // Bind to scroll
-            $(window).scroll(function () {
-                // Get container scroll position
-                var fromTop = $(this).scrollTop() + topMenuHeight;;
-
-                // Get id of current scroll item
-                var cur = scrollItems.map(function () {
-                    if ($(this).offset().top < fromTop)
-                        return this;
-                });
-                cur = cur[cur.length - 1];
-
-                // Get the id of the current element
-
-                var id = cur && cur.length ? cur[0].id : "";
-
-                if (lastId != id) {
-
-                    // Set/remove active class
-                    if (lastId != null) {
-                        thisMenuItem = menuItems.filter('a[href^="{{page.permalink| prepend: site.baseurl}}#' + lastId + '"]')
-                        $(thisMenuItem).removeClass("side__nav-link--within-page--active")
-                    }
-                    lastId = id;
-                    if (id != "") menuItems.filter('a[href^="{{page.permalink| prepend: site.baseurl}}#' + id + '"]').addClass("side__nav-link--within-page--active");
+<script>
+    window.onload = function () {
+        var lastId,
+            sideMenu = $("#side-nav-menu"),
+            topMenu = $("#top-menu")
+        var topMenuHeight = topMenu.outerHeight() + 15,
+            // All list items
+            menuItems = sideMenu.find('a[href^="{{page.permalink| prepend: site.baseurl}}#"]'),
+            // Anchors corresponding to menu items
+            scrollItems = menuItems.map(function () {
+                var item = $(this).attr("href");
+                var thisItem = item.substring(item.lastIndexOf("/") + 1, item.length)
+                var linkedItem = $(thisItem)
+                if (linkedItem.length) {
+                    return linkedItem;
                 }
-
             });
-        }
-    </script>
+
+        // Bind to scroll
+        $(window).scroll(function () {
+            // Get container scroll position
+            var fromTop = $(this).scrollTop() + topMenuHeight;;
+
+            // Get id of current scroll item
+            var cur = scrollItems.map(function () {
+                if ($(this).offset().top < fromTop)
+                    return this;
+            });
+            cur = cur[cur.length - 1];
+
+            // Get the id of the current element
+
+            var id = cur && cur.length ? cur[0].id : "";
+
+            if (lastId != id) {
+
+                // Set/remove active class
+                if (lastId != null) {
+                    thisMenuItem = menuItems.filter('a[href^="{{page.permalink| prepend: site.baseurl}}#' + lastId + '"]')
+                    $(thisMenuItem).removeClass("side__nav-link--within-page--active")
+                }
+                lastId = id;
+                if (id != "") menuItems.filter('a[href^="{{page.permalink| prepend: site.baseurl}}#' + id + '"]').addClass("side__nav-link--within-page--active");
+            }
+
+        });
+    }
+</script>
 
 </header>
