@@ -3,15 +3,13 @@
 {% include head.html %}
 
 <body>
-    <!-- <div class="page-container"> -->
-        {% include header.html %}
-        <main class="main-content-column">
-            <article class="article__container">
-                {{ content }}
-            </article>
-        </main>
-        {% include footer.html %}
-    <!-- </div> -->
+    {% include header.html %}
+    <main class="main-content-column">
+        <article class="article__container">
+            {{ content }}
+        </article>
+    </main>
+    {% include footer.html %}
     {% if jekyll.environment == 'production' %}
     {% include analytics.html %}
     {% endif %}
