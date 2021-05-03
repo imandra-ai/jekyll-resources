@@ -144,7 +144,7 @@
                     </nav>
     
                         <div class="page-nav-menu-container" hidden>
-                            <div aria-hidden="true" class="page-nav-menu__arrow" hidden></div>
+                            <div class="page-nav-menu__arrow" hidden></div>
                             <nav class="page-nav-menu">
                     
                                 <ul class="page-nav-menu__list">
@@ -1448,7 +1448,7 @@
     </div>
     <div class="template-header__image-container">
         <a class="template-header__image" href="{{site.baseurl}}">
-            <img class="site-specific-image" src="{{ site.baseurl }}/assets/img/site_specific_image_v_2.svg">
+            <img class="site-specific-image" src="{{ site.baseurl }}/assets/img/site_specific_image_v_2.svg" alt="Main image">
         </a>
     </div>
     </div>
@@ -2954,7 +2954,6 @@
       },{passive: false});
     });
   
-   console.log(siteMenuNav);
     siteMenuNav.addEventListener("mouseenter", (event) => {
       cardCloseSwitch = false;
     });
