@@ -1454,7 +1454,7 @@
 
         <div class="template-header__image-container">
             <a class="template-header__image" href="/{{ repo_dir }}">
-                <img class="site-specific-image" src="/{{ repo_dir }}/static/img/site_specific_image_v_2.svg">
+                <img class="site-specific-image" src="/{{ repo_dir }}/static/img/site_specific_image_v_2.svg" alt="Site image">
             </a>
         </div>
     </div>
