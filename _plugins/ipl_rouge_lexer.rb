@@ -38,7 +38,7 @@ Jekyll::Hooks.register :site, :pre_render do |site|
       rule %r(@description:), Keyword, :descComment
       rule %r(\.\.\.), Text
       rule %r(/\*.*?\*/)m, Comment::Multiline
-      rule %r(\b#{ keywords.to_a.join('|') }\b), Keyword
+      rule %r(\b(#{ keywords.to_a.join('|') })\b), Keyword
       rule %r(#{ keyopts.to_a.reverse.join('|') }), Operator
       rule %r((#{ infix_syms }|#{ prefix_syms })?#{ operators }), Operator
       rule %r(\b(#{ word_operators.to_a.join('|') })\b), Operator::Word
