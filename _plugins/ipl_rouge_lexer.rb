@@ -38,11 +38,11 @@ Jekyll::Hooks.register :site, :pre_render do |site|
       rule %r(@description:), Keyword, :descComment
       rule %r(\.\.\.), Text
       rule %r(/\*.*?\*/)m, Comment::Multiline
-      rule %r(#{ keywords.to_a.map{|w| "\b#{w}\b"}.join('|') }), Keyword
+      rule %r(\b#{ keywords.to_a.join('|') }\b), Keyword
       rule %r(#{ keyopts.to_a.reverse.join('|') }), Operator
       rule %r((#{ infix_syms }|#{ prefix_syms })?#{ operators }), Operator
-      rule %r(\b(#{ word_operators.to_a.map{|w| "\b#{w}\b"}.join('|') })\b), Operator::Word
-      rule %r(\b(#{ primitives.to_a.map{|w| "\b#{w}\b"}.join('|') })\b), Keyword::Type
+      rule %r(\b(#{ word_operators.to_a.join('|') })\b), Operator::Word
+      rule %r(\b(#{ primitives.to_a.join('|') })\b), Keyword::Type
       rule %r([\.]?([a-zA-Z_$][a-zA-Z\d_$]*\.)*[a-zA-Z_$][a-zA-Z\d_$]*), Name
       rule %r(-?\d[\d_]*(\.[\d_]*)*), Num::Float
       rule %r(\d[\d_]*), Num::Integer
