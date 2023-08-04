@@ -8,8 +8,8 @@ menu,nav,output,ruby,section,summary,time,mark,audio,video
   font-size:100%; font: inherit; line-height:inherit; vertical-align:baseline;
   text-align: inherit; color: inherit; background: transparent; }
 
-table { 
-  border-collapse: collapse; 
+table {
+  border-collapse: collapse;
   border-spacing: 0;
 }
 *,  *:before,  *:after { box-sizing: border-box; }
@@ -49,9 +49,9 @@ li > *:first-child { margin-top: 0 }
 
 /* Links and anchors */
 
-a { 
-  text-decoration: none; 
-  color:#2C5CBD; 
+a {
+  text-decoration: none;
+  color:#2C5CBD;
   background: #f7f7f7;
 }
 
@@ -73,7 +73,7 @@ a.anchor:before {
 
 a.anchor:hover {}
 
-a.anchor { 
+a.anchor {
   visibility: hidden; position: absolute; /* top: 0px; */
   margin-left: -3ex;
   font-weight: normal;
@@ -114,7 +114,7 @@ code a {
 tt, code, pre
 { font-family: Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
   font-weight: normal;
-  font-size: 0.7rem; 
+  font-size: 0.7rem;
   }
 
 h1 tt, h1 code, h2 tt, h2 code, .h7 tt, .h7 code { font-size: 1.125rem }
@@ -223,11 +223,6 @@ h1 + .modules, h1 + .sel { margin-top: 0.625rem }
 
 
 /* AI Customs */
-.logo_fix_engine {
-  width: auto;
-  height: 6.44rem;
-}
-
 .logo_main {
   width: auto;
   height: 8.03rem;

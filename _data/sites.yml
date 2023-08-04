@@ -9,6 +9,3 @@
 
 - name: Imandra Rule Synth
   baseurl: /imandra-rule-synth
-
-- name: FIX Engine
-  baseurl: /fix-engine
