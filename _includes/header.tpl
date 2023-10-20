@@ -114,7 +114,6 @@
 
 
     <div class="template-header">
-       <div class="template-header">
         <div class="top-bar">
 
             <nav class="top-bar__nav-container" id="top-menu">
@@ -1184,7 +1183,7 @@
                                                     </li>
 
                                                     <li class="page-nav-menu__card-list-menuitem-container">
-                                                        <a class="page-nav-menu__card-list-menuitem" tabindex="-1" href="https://www.imandra.ai/community">
+                                                        <a class="page-nav-menu__card-list-menuitem" tabindex="-1" href="https://discord.com/invite/byQApJ3">
                                                             <span class="page-nav-menu__card-list-icon-container" data-element="icon">
 
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" class="page-nav-menu__card-list-icon">
@@ -2359,7 +2358,7 @@
                             </li>
 
                             <li class="page-nav-menu__card-list-menuitem-container">
-                                <a class="page-nav-menu__card-list-menuitem" tabindex="-1" href="https://www.imandra.ai/community">
+                                <a class="page-nav-menu__card-list-menuitem" tabindex="-1" href="https://discord.com/invite/byQApJ3">
                                     <span class="page-nav-menu__card-list-icon-container" data-element="icon">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" class="page-nav-menu__card-list-icon">
