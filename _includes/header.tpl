@@ -2585,12 +2585,12 @@
     let menuArrowOffsetX;
     let cardCloseSwitch = false;
 
-    const siteMenuSettings = [
+   const siteMenuSettings = [
       {
         type:"products",
         pageNavMenuOffset: 0,
         pageNavMenuWidth: 672,
-        pageNavMenuHeight: 352,
+        pageNavMenuHeight: 390,
         cardOffset: 0,
       },
       {
@@ -2604,14 +2604,14 @@
         type:"docs",
         pageNavMenuOffset: 0,
         pageNavMenuWidth: 672,
-        pageNavMenuHeight: 288,
+        pageNavMenuHeight: 230,
         cardOffset: 0,
       },
       {
         type:"company",
         pageNavMenuOffset: 0,
         pageNavMenuWidth: 672,
-        pageNavMenuHeight: 266,
+        pageNavMenuHeight: 216,
         cardOffset: 0,
       },
     ];
