@@ -9,3 +9,6 @@
 
 - name: Imandra Rule Synth
   baseurl: /imandra-rule-synth
+
+- name: Imandra Connectivity
+  baseurl: /connectivity-docs
