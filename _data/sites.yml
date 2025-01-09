@@ -4,6 +4,9 @@
 - name: Imandra Core
   baseurl: /imandra-docs
 
+- name: ImandraX
+  baseurl: /imandrax
+
 - name: Imandra Protocol Language
   baseurl: /ipl
 
