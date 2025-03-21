@@ -7,6 +7,9 @@
 - name: ImandraX
   baseurl: /imandrax
 
+- name: Imandra Universe
+  baseurl: /universe
+
 - name: Imandra Protocol Language
   baseurl: /ipl
 
