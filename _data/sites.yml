@@ -15,3 +15,6 @@
 
 - name: Imandra Rule Synth
   baseurl: /imandra-rule-synth
+
+- name: Finance Cookbook
+  baseurl: /finance-cookbook
