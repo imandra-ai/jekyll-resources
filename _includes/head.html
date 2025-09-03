@@ -1,18 +1,38 @@
 <head>
-	  <meta charset="utf-8">
-	  <meta http-equiv="x-ua-compatible" content="ie=edge">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if jekyll.environment == 'production' %} {% include gtm-script.html %} {%
+  endif %}
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  	  <meta name="description" content="Imandra is a suite of AI tools based on groundbreaking automated reasoning and formal verification technology. Whether you're writing mission-critical code or need to understand the countless complex decisions that a system may make, use Imandra to ensure the algorithms you create are safe, explainable and fair.">
-	  <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl | append: "/favicon.ico"}}">
-	  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i%7CMerriweather:300,300i,400,400i%7CRoboto+Slab:300,300i,400,400i">
-      <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    
-	  <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
-	  <script src="{{site.baseurl}}/jekyll-resources/assets/js/copyFunctions.js"></script>
-      <script src="https://kit.fontawesome.com/4d352d3410.js" crossorigin="anonymous"></script>
+  <title>
+    {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+  </title>
+  <meta
+    name="description"
+    content="Imandra is a suite of AI tools based on groundbreaking automated reasoning and formal verification technology. Whether you're writing mission-critical code or need to understand the countless complex decisions that a system may make, use Imandra to ensure the algorithms you create are safe, explainable and fair."
+  />
+  <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl | append:
+  "/favicon.ico"}}"> <link rel="stylesheet" href="{{ "/css/main.css" | prepend:
+  site.baseurl }}">
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i%7CMerriweather:300,300i,400,400i%7CRoboto+Slab:300,300i,400,400i"
+  />
+  <link
+    rel="canonical"
+    href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+  />
+
+  <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+  <script src="{{site.baseurl}}/jekyll-resources/assets/js/copyFunctions.js"></script>
+  <script
+    src="https://kit.fontawesome.com/4d352d3410.js"
+    crossorigin="anonymous"
+  ></script>
 </head>
