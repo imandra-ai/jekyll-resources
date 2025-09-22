@@ -3709,60 +3709,70 @@
       }
     };
 
-    siteMenuButtons.forEach((item) => {
-      item.addEventListener("click", (event) => {
-        siteMenuCardSetup(event);
-        siteMenuCardsSwitch(event, "close");
-      });
-
-      item.addEventListener("mouseenter", (event) => {
-        cardCloseSwitch = false;
-        siteMenuCardSetup(event);
-        siteMenuCardsSwitch(event);
-      });
-
-      item.addEventListener(
-        "touchstart",
-        (event) => {
-          event.stopImmediatePropagation();
-          event.preventDefault();
+    if (siteMenuButtons && siteMenuButtons.length > 0) {
+      siteMenuButtons.forEach((item) => {
+        item.addEventListener("click", (event) => {
           siteMenuCardSetup(event);
           siteMenuCardsSwitch(event, "close");
-        },
-        { passive: false }
-      );
-    });
+        });
 
-    siteMenuNav.addEventListener("mouseenter", (event) => {
-      cardCloseSwitch = false;
-    });
+        item.addEventListener("mouseenter", (event) => {
+          cardCloseSwitch = false;
+          siteMenuCardSetup(event);
+          siteMenuCardsSwitch(event);
+        });
 
-    siteMenuNav.addEventListener("mouseleave", (event) => {
-      cardCloseSwitch = true;
-      setTimeout(() => {
-        siteMenuCardClose();
-      }, 50);
-    });
+        item.addEventListener(
+          "touchstart",
+          (event) => {
+            event.stopImmediatePropagation();
+            event.preventDefault();
+            siteMenuCardSetup(event);
+            siteMenuCardsSwitch(event, "close");
+          },
+          { passive: false }
+        );
+      });
+    }
 
-    siteMenuTopNavContainer.addEventListener("mouseleave", (event) => {
-      cardCloseSwitch = true;
-      setTimeout(() => {
-        siteMenuCardClose();
-      }, 50);
-    });
+    if (siteMenuNav) {
+      siteMenuNav.addEventListener("mouseenter", (event) => {
+        cardCloseSwitch = false;
+      });
 
-    siteMobileNavSwitchButton.addEventListener("mousedown", (event) => {
-      if (siteMobileMenuContainer.hidden === true) {
-        siteMobileMenuContainer.hidden = false;
-        event.target.setAttribute("aria-expanded", true);
-      }
-    });
+      siteMenuNav.addEventListener("mouseleave", (event) => {
+        cardCloseSwitch = true;
+        setTimeout(() => {
+          siteMenuCardClose();
+        }, 50);
+      });
+    }
 
-    siteMobileNavCloseButton.addEventListener("mousedown", (event) => {
-      if (siteMobileMenuContainer.hidden === false) {
-        siteMobileMenuContainer.hidden = true;
-        siteMobileNavSwitchButton.setAttribute("aria-expanded", false);
-      }
-    });
+    if (siteMenuTopNavContainer) {
+      siteMenuTopNavContainer.addEventListener("mouseleave", (event) => {
+        cardCloseSwitch = true;
+        setTimeout(() => {
+          siteMenuCardClose();
+        }, 50);
+      });
+    }
+
+    if (siteMobileNavSwitchButton && siteMobileMenuContainer) {
+      siteMobileNavSwitchButton.addEventListener("mousedown", (event) => {
+        if (siteMobileMenuContainer.hidden === true) {
+          siteMobileMenuContainer.hidden = false;
+          event.target.setAttribute("aria-expanded", true);
+        }
+      });
+    }
+
+    if (siteMobileNavCloseButton && siteMobileMenuContainer) {
+      siteMobileNavCloseButton.addEventListener("mousedown", (event) => {
+        if (siteMobileMenuContainer.hidden === false) {
+          siteMobileMenuContainer.hidden = true;
+          siteMobileNavSwitchButton.setAttribute("aria-expanded", false);
+        }
+      });
+    }
   </script>
 </header>
