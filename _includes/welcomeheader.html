@@ -3709,70 +3709,60 @@
       }
     };
 
-    if (siteMenuButtons && siteMenuButtons.length > 0) {
-      siteMenuButtons.forEach((item) => {
-        item.addEventListener("click", (event) => {
+    siteMenuButtons.forEach((item) => {
+      item.addEventListener("click", (event) => {
+        siteMenuCardSetup(event);
+        siteMenuCardsSwitch(event, "close");
+      });
+
+      item.addEventListener("mouseenter", (event) => {
+        cardCloseSwitch = false;
+        siteMenuCardSetup(event);
+        siteMenuCardsSwitch(event);
+      });
+
+      item.addEventListener(
+        "touchstart",
+        (event) => {
+          event.stopImmediatePropagation();
+          event.preventDefault();
           siteMenuCardSetup(event);
           siteMenuCardsSwitch(event, "close");
-        });
+        },
+        { passive: false }
+      );
+    });
 
-        item.addEventListener("mouseenter", (event) => {
-          cardCloseSwitch = false;
-          siteMenuCardSetup(event);
-          siteMenuCardsSwitch(event);
-        });
+    siteMenuNav.addEventListener("mouseenter", (event) => {
+      cardCloseSwitch = false;
+    });
 
-        item.addEventListener(
-          "touchstart",
-          (event) => {
-            event.stopImmediatePropagation();
-            event.preventDefault();
-            siteMenuCardSetup(event);
-            siteMenuCardsSwitch(event, "close");
-          },
-          { passive: false }
-        );
-      });
-    }
+    siteMenuNav.addEventListener("mouseleave", (event) => {
+      cardCloseSwitch = true;
+      setTimeout(() => {
+        siteMenuCardClose();
+      }, 50);
+    });
 
-    if (siteMenuNav) {
-      siteMenuNav.addEventListener("mouseenter", (event) => {
-        cardCloseSwitch = false;
-      });
+    siteMenuTopNavContainer.addEventListener("mouseleave", (event) => {
+      cardCloseSwitch = true;
+      setTimeout(() => {
+        siteMenuCardClose();
+      }, 50);
+    });
 
-      siteMenuNav.addEventListener("mouseleave", (event) => {
-        cardCloseSwitch = true;
-        setTimeout(() => {
-          siteMenuCardClose();
-        }, 50);
-      });
-    }
+    siteMobileNavSwitchButton.addEventListener("mousedown", (event) => {
+      if (siteMobileMenuContainer.hidden === true) {
+        siteMobileMenuContainer.hidden = false;
+        event.target.setAttribute("aria-expanded", true);
+      }
+    });
 
-    if (siteMenuTopNavContainer) {
-      siteMenuTopNavContainer.addEventListener("mouseleave", (event) => {
-        cardCloseSwitch = true;
-        setTimeout(() => {
-          siteMenuCardClose();
-        }, 50);
-      });
-    }
-
-    if (siteMobileNavSwitchButton && siteMobileMenuContainer) {
-      siteMobileNavSwitchButton.addEventListener("mousedown", (event) => {
-        if (siteMobileMenuContainer.hidden === true) {
-          siteMobileMenuContainer.hidden = false;
-          event.target.setAttribute("aria-expanded", true);
-        }
-      });
-    }
-
-    if (siteMobileNavCloseButton && siteMobileMenuContainer) {
-      siteMobileNavCloseButton.addEventListener("mousedown", (event) => {
-        if (siteMobileMenuContainer.hidden === false) {
-          siteMobileMenuContainer.hidden = true;
-          siteMobileNavSwitchButton.setAttribute("aria-expanded", false);
-        }
-      });
-    }
+    siteMobileNavCloseButton.addEventListener("mousedown", (event) => {
+      if (siteMobileMenuContainer.hidden === false) {
+        siteMobileMenuContainer.hidden = true;
+        siteMobileNavSwitchButton.setAttribute("aria-expanded", false);
+      }
+    });
   </script>
 </header>

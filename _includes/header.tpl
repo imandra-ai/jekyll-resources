@@ -7280,14 +7280,12 @@
       }, 50);
     });
 
-    if (siteMenuTopNavContainer) {
-      siteMenuTopNavContainer.addEventListener("mouseleave", (event) => {
-        cardCloseSwitch = true;
-        setTimeout(() => {
-          siteMenuCardClose();
-        }, 50);
-      });
-    }
+    siteMenuTopNavContainer.addEventListener("mouseleave", (event) => {
+      cardCloseSwitch = true;
+      setTimeout(() => {
+        siteMenuCardClose();
+      }, 50);
+    });
 
     siteMobileNavSwitchButton.addEventListener("mousedown", (event) => {
       if (siteMobileMenuContainer.hidden === true) {
