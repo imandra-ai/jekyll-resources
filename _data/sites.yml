@@ -1,11 +1,11 @@
 - name: Documentation Home
   baseurl: /
 
-- name: Imandra Core
-  baseurl: /imandra-docs
-
 - name: ImandraX
   baseurl: /imandrax
+
+- name: Imandra Core
+  baseurl: /imandra-docs
 
 - name: Imandra Universe
   baseurl: /universe
