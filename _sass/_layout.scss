@@ -1374,9 +1374,9 @@ time {
 
     &__repository-title {
         color: dodgerblue;
-        width: 50%;
         font-weight: 300;
         margin: 0;
+        white-space: nowrap;
     }
 
     &__repository-excerpt {
