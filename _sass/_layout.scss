@@ -94,89 +94,56 @@ time {
     Navigation
 --------------------------------------------------- */
 
-// Top row with Sidemenu
+// Top bar
 .top-row-container {
     position: fixed;
     top: 0;
     left: 0;
-    width: $sidebar-left-width;
-    background: rgba(255, 255, 255, 0);
-    height: 100%;
+    width: 100%;
     z-index: 3;
     border-bottom: 1px solid lighten($light, 30%);
     box-shadow: 0px 1px 1px RGBA(4, 25, 54, .1);
-    background: aliceblue;
-    overflow-y: auto;
-
-    @media #{$max-tablet} {
-        position: relative;
-        overflow-y: visible;
-        width: 100%;
-        padding: 0;
-        background: white;
-    }
+    background: white;
 }
 
 .top-row {
     max-width: $content-width;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    @media #{$max-tablet} {
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: row;
-    }
+    align-items: center;
+    padding: 12px 24px;
 }
 
 .side {
     &__logo-container {
         display: flex;
-        width: auto;
-        padding: 6px 0 0 0;
-
-        @media #{$max-small-mobile} {
-            justify-content: center;
-        }
-        
-        @media #{$max-tablet} {
-            justify-content: center;
-        }
-
+        align-items: center;
     }
 
     &__logo {
         width: auto;
-        height: 16px;
-        margin: 20px 0 0 20px;
+        height: 20px;
 
-        @media (max-width : 420px) {
-            display: none
-        }
-
-        @media (max-width : 1024px) {
-            margin: 0;
+        @media (max-width: 420px) {
+            display: none;
         }
     }
 
     &__logo--min {
         width: auto;
-        height: 16px;
+        height: 20px;
         display: none;
-        margin: 6px 0 0 0;
 
-        @media (max-width : 420px) {
-            display: flex
+        @media (max-width: 420px) {
+            display: flex;
         }
-
     }
 
     &__logo-link {
+        display: flex;
+        align-items: center;
         margin: 0;
         padding: 0;
-        height: 30px;
 
         img {
             vertical-align: middle;
@@ -654,7 +621,7 @@ time {
 
         @media #{$max-tablet} {
             justify-content: flex-start;
-            
+
         }
     }
 
@@ -732,7 +699,7 @@ time {
 --------------------------------------------------- */
 
 .main-content-column {
-    padding: 0;
+    padding: 60px 0 0 0;
 }
 
 .main-content {
@@ -790,7 +757,7 @@ time {
     position: relative;
     max-width: $content-width + $sidebar-right-width;
     display: flex;
-    margin-left: $sidebar-left-width;
+    margin: 0 auto;
 
 
     @media #{$max-desktop} {
@@ -849,7 +816,7 @@ time {
     margin: 0;
 
     &__image-container {
-        margin-left: $sidebar-left-width;
+        margin-left: 0;
         display: flex;
         flex-grow: 1;
         justify-content: flex-start;
@@ -1387,6 +1354,8 @@ time {
 
     &__repository-icon {
         width: 3em;
+        height: 3em;
+        object-fit: contain;
         margin: 0 1em 0 0;
     }
 
@@ -1803,9 +1772,9 @@ a:hover+.box,
 --------------------------------------------------- */
 
 :root {
-    [hidden] { 
+    [hidden] {
         display: none;
-        visibility: hidden; 
+        visibility: hidden;
     }
 }
 
@@ -1813,7 +1782,7 @@ html {
     --mainFontSize:16px;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    --fontFamily: 
+    --fontFamily:
     --fontWeight: 300;
     --font-Weight--bold: 600;
 
@@ -1877,7 +1846,7 @@ html {
     --columnPadding: var(--generalPadding);
     --headerPadding: var(--generalPadding);
     --navButtonPadding: 0 var(--space--1);
-    --navButtonPadding--cta: var(--space--d2) var(--space--2) var(--space--d2) var(--space--1); 
+    --navButtonPadding--cta: var(--space--d2) var(--space--2) var(--space--d2) var(--space--1);
     --navButtonBackground: transparent;
 
 
@@ -2069,8 +2038,8 @@ html {
         background: var(--buttonBackgroundColor--cta);
 
         &:hover {
-            background: var(--buttonBackgroundColor--cta--hover); 
-          
+            background: var(--buttonBackgroundColor--cta--hover);
+
         }
     }
     &__icon {
@@ -2079,7 +2048,7 @@ html {
     &__icon-path {
         fill: var(--buttonIconColour--cta);
     }
-    &__icon-path--close { 
+    &__icon-path--close {
         fill: var(--menuIconNavCloseColour);
     }
 }
@@ -2157,7 +2126,7 @@ html {
     width: 100%;
     min-height: 100vh;
     z-index: var(--menuZIndex);
-    
+
     & .type--mobile {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 0;
@@ -2265,7 +2234,7 @@ html {
         text-decoration: none;
         // perspective: 10rem;
         &:focus {
-            outline: var(--outlineFocusVisibility); 
+            outline: var(--outlineFocusVisibility);
         }
         &:hover {
             --colorSvgPath: var(--color--DogerBlue--100);
@@ -2280,7 +2249,7 @@ html {
                 transform: translateX(24px);
                 opacity: 1;
             }
-        } 
+        }
     }
     &__card-list-menuitem-arrow {
         position: absolute;
