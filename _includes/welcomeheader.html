@@ -1,19 +1,6 @@
 <header>
   <div class="top-row-container">
     <div class="top-row">
-      <div
-        id="toggler--left"
-        class="side__left-menu-toggler"
-        onclick="toggleNavigation()"
-      >
-        <div class="side__toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <p class="side__toggle-text">Docs</p>
-      </div>
-
       <div class="side__logo-container">
         <a class="side__logo-link" href="{{ site.url }}">
           <img
@@ -30,26 +17,6 @@
       </div>
 
       <div id="flex-space-helper"></div>
-
-      <nav class="side__nav-container side__nav-container--hidden">
-        <ul class="side__nav-list">
-          {% for mainsite in site.data.sites %}
-          <li class="side__nav-list-item">
-            {% if mainsite.baseurl == "/" %}
-            <a
-              class="side__nav-link side__nav-link--active"
-              href="{{ mainsite.baseurl }}"
-              >{{ mainsite.name }}</a
-            >
-            {% else %}
-            <a class="side__nav-link" href="{{ mainsite.baseurl }}"
-              >{{ mainsite.name }}</a
-            >
-            {% endif %}
-          </li>
-          {% endfor %}
-        </ul>
-      </nav>
     </div>
   </div>
 
@@ -107,21 +74,4 @@
     </nav>
   </div>
 
-  <script>
-    function toggleNavigation() {
-      // Toggle the hamburger menu animation
-      const toggleButton = document.querySelector(
-        ".side__left-menu-toggler .side__toggle"
-      );
-      if (toggleButton) {
-        toggleButton.classList.toggle("side__toggle--active");
-      }
-
-      // Toggle the navigation visibility
-      const navContainer = document.querySelector(".side__nav-container");
-      if (navContainer) {
-        navContainer.classList.toggle("side__nav-container--hidden");
-      }
-    }
-  </script>
 </header>
