@@ -1,36 +1,69 @@
 ---
 layout: welcomedefault
 ---
+
 {% assign jd = site.url | append: "/jekyll-resources/assets/img/" %}
 <div class="intro__content">
+  <h2 class="intro__title">Welcome{{ page.title }}</h2>
+  <div class="intro__excerpt-container">{{ content }}</div>
 
-    <h2 class="intro__title">Welcome{{ page.title }}</h2>
-    <div class="intro__excerpt-container">
-        {{ content }}
-    </div>
+  <div class="intro__repositories">
+    <a class="intro__repository" href="https://www.imandrax.dev/docs">
+      <div class="intro__repository-brand-container">
+        <img
+          class="intro__repository-icon"
+          src=" {{'icon-docs-imandra-x.svg' | prepend: jd}} "
+          alt="Repository Icon"
+        />
+        <h3 class="intro__repository-title">ImandraX</h3>
+      </div>
+      <div class="intro__repository-info-container">
+        <p class="intro__repository-excerpt">
+          ImandraX is a cloud-native reasoning engine and theorem prover that
+          integrates directly into AI agents and governance workflows. Prove
+          code correct, synthesize counterexamples, and bring mathematical rigor
+          to the AI era.
+        </p>
+        <p class="intro__repository-link">Learn more -&gt;</p>
+      </div>
+    </a>
 
-    <div class="intro__repositories">
-
-        <a class="intro__repository" href="https://www.imandrax.dev/docs">
-            <div class="intro__repository-brand-container">
-                <img class="intro__repository-icon" src=" {{'icon-docs-imandra-x.svg' | prepend: jd}} " alt="Repository Icon">
-                <h3 class="intro__repository-title">ImandraX</h3>
-            </div>
-            <div class="intro__repository-info-container">
-                <p class="intro__repository-excerpt">ImandraX is a cloud-native reasoning engine and theorem prover that integrates directly into AI agents and governance workflows. Prove code correct, synthesize counterexamples, and bring mathematical rigor to the AI era.</p>
-                <p class="intro__repository-link">Learn more -&gt;</p>
-            </div>
-        </a>
-
-        <a class="intro__repository" href="https://www.codelogician.dev/docs">
-            <div class="intro__repository-brand-container">
-                <img class="intro__repository-icon" src=" {{'icon-docs-codelogician.svg' | prepend: jd}} " alt="Repository Icon">
-                <h3 class="intro__repository-title">CodeLogician</h3>
-            </div>
-            <div class="intro__repository-info-container">
-                <p class="intro__repository-excerpt">CodeLogician makes AI coding agents structure their reasoning in logic and uses a dedicated reasoning engine to systematically analyze what the code can actually do. So you catch edge cases, surface hidden behaviors, and ship with confidence instead of guesswork.</p>
-                <p class="intro__repository-link">Learn more -&gt;</p>
-            </div>
-        </a>
-    </div>
+    <a class="intro__repository" href="https://www.codelogician.dev/docs">
+      <div class="intro__repository-brand-container">
+        <img
+          class="intro__repository-icon"
+          src=" {{'icon-docs-codelogician.svg' | prepend: jd}} "
+          alt="Repository Icon"
+        />
+        <h3 class="intro__repository-title">CodeLogician</h3>
+      </div>
+      <div class="intro__repository-info-container">
+        <p class="intro__repository-excerpt">
+          CodeLogician makes AI coding agents structure their reasoning in logic
+          and uses a dedicated reasoning engine to systematically analyze what
+          the code can actually do. So you catch edge cases, surface hidden
+          behaviors, and ship with confidence instead of guesswork.
+        </p>
+        <p class="intro__repository-link">Learn more -&gt;</p>
+      </div>
+    </a>
+    <a class="intro__repository" href="https://ipl.dev">
+      <div class="intro__repository-brand-container">
+        <img
+          class="intro__repository-icon"
+          src=" {{'icon-docs-ipl.svg' | prepend: jd}} "
+          alt="IPL Icon"
+        />
+        <h3 class="intro__repository-title">IPL</h3>
+      </div>
+      <div class="intro__repository-info-container">
+        <p class="intro__repository-excerpt">
+          IPL, the Imandra Protocol Language, formalises banking and financial
+          messaging languages such as FIX, SWIFT, and IBAN so teams can reason
+          about protocols with precision.
+        </p>
+        <p class="intro__repository-link">Learn more -&gt;</p>
+      </div>
+    </a>
+  </div>
 </div>
